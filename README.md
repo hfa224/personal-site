@@ -4,7 +4,7 @@
 
 In Powershell run
 
-C:\Projects\personal_cv_site\Scripts\Activate.ps1
+personal-site\venv\Scripts\Activate.ps1
 
 To deactivate type
 
