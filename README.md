@@ -1,14 +1,16 @@
 
 
-## Starting the virtual environment
+## Running using poetry
 
-In Powershell run
+Either run 
 
-personal-site\venv\Scripts\Activate.ps1
+poetry run python .\app.py
 
-To deactivate type
+Other start the poetry shell
 
-deactivate
+poetry shell 
+
+then run the app. 
 
 ## Running the app
 

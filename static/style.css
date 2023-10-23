@@ -47,6 +47,23 @@
   color: #7A9E9F;
 }
 
+/* The navigation menu links */
+.post a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #EEF5DB;
+  display: block;
+  font-family: Averta, sans-serif, Helvetica;
+}
+
+/* When you mouse over the navigation links, change their color */
+.post a:hover {
+  color: #FE5F55;
+  font-family: Averta, sans-serif, Helvetica;
+}
+
+
 /* Style page content */
 .sphinx {
   margin-left: 160px; /* Same as the width of the sidebar */
