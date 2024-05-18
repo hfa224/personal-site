@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-		<title>CSS Example</title>
-		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-	</head>
-    <body>
-		<!-- Side navigation -->
-		<div class="sidenav">
-		  <a href="/">Home</a>
-		</div>
+{% extends 'base.html' %}
 
-		<!-- Page content -->
-		<!-- Page content -->
-		<div class="main">
+{% block header %}
+  <h1>{% block title %}User info{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
 			<div class="post">
 				<h1>Week 28/08/2023 - 02/09/2023 &#10024;</h1>
 				<p>📖 Reading - The Ragged Trousered Philanphropist</p>
@@ -38,5 +30,4 @@
 			  <p>🎵 Listening - Sol feo, Sonic Youth</p>
 		  </div>
       </div>
-    </body>
-</html>
+	  {% endblock %}
