@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Personal site</title>
+		<!--link rel="stylesheet" href="https://edwardtufte.github.io/tufte-css/tufte.css" type="text/css" -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='wrapped.css') }}">
+	</head>
+    <body>
+		
+		<script src="{{ url_for('static', filename='js/scroll_sections.js') }}"></script>
+
+<main class="scroll-container">
+	<section data-index="1">
+		<h2>Section 1</h2>
+	</section>
+	<section data-index="2">
+		<h2>Section 2</h2>
+	</section>
+	<section data-index="3">
+		<h2>Section 3</h2>
+	</section>
+	<section data-index="4">
+		<h2>Section 4</h2>
+	</section>
+</main>
+</body>

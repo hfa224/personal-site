@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from read_data import read_book_data, read_book_isbns
 app = Flask(__name__)
 
 
@@ -14,6 +15,17 @@ def slideshow():
 def newsletter():
     return render_template('newsletter.html')
 
+@app.route('/book_club')
+def book_club():
+    read_book_data()
+    book_array = read_book_isbns()
+    return render_template('book_club.html', book_array=book_array)
+
+@app.route('/book_club_wrapped')
+def book_club_wrapped():
+    read_book_data()
+    book_array = read_book_isbns()
+    return render_template('book_club_wrapped.html', book_array=book_array)
 
 if __name__ == '__main__':
     app.run(debug=True)
