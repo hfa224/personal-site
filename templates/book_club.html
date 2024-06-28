@@ -1,15 +1,15 @@
 {% extends 'base_book_club.html' %}
 
 {% block header %}
-  <h1>{% block title %}Berlin beer and book club 🍻 📚 {% endblock %}</h1>
+
 {% endblock %}
 
 {% block content %}
 {% for book in book_array %}
 	<div class="post">
-		<h2>{{ book['title'] }} by  {{ book['author'] }} picked by  {{ book['picker'] }} in  {{ book['date'] }}</h2>
-		<img src={{ book['cover_image_url'] }}></img>
-		<p>Helen's rating was 
+		<h3>{{ book['title'] }} by  {{ book['author'] }} picked by  {{ book['picker'] }} in  {{ book['date'] }}</h3>
+		<img class="img11" src={{ book['cover_image_url'] }}></img>
+		<p>Helen's rating was
 			{% set index =  book['rating']['H'] | int() %}
 			{% for i in range(index+1) %}
 			🍻

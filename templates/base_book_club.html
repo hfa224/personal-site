@@ -2,18 +2,37 @@
 <html>
     <head>
 		<title>{% block title %}{% endblock %} - Personal site</title>
-		<link rel="stylesheet" href="https://edwardtufte.github.io/tufte-css/tufte.css" type="text/css">
+		<link rel="stylesheet" href="https://unpkg.com/bamboo.css" type="text/css">
+		<style>
+		    .center {
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              width: 50%;
+            }
+            .img11 {
+                transform: rotate(0deg);
+                border: 0.5em solid #f4f4f4;
+                box-shadow: 0.5em 0.5em 0.5em #ccc;
+            }
+            .img11:hover {
+                transform: rotate(-12deg);
+                border: 0.5em solid #f4f4f4;
+                box-shadow: 0.5em 0.5em 0.5em #ccc;
+            }
+		</style>
 	</head>
     <body>
-		<!-- Side navigation -->
+		<!-- Side navigation
 		<div class="sidenav">
 		  <a href="{{ url_for('slideshow') }}">Slideshow</a>
 		  <a href="{{ url_for('newsletter') }}">Newsletter</a>
-		</div>
+		</div -->
 
 		<!-- Page content -->
 		<div class="main">
 			<header>
+			    <img class="center" src="{{ url_for('static', filename='images/BBandBC-2.png') }}"></img>
 				{% block header %}{% endblock %}
 			  </header>
 			  {% for message in get_flashed_messages() %}
