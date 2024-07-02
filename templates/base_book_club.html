@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-		<title>{% block title %}{% endblock %} - Personal site</title>
+		<title>{% block title %}{% endblock %} - Berlin Beer and Book club</title>
 		<link rel="stylesheet" href="https://unpkg.com/bamboo.css" type="text/css">
 		<style>
 		    .center {
@@ -12,12 +12,10 @@
             }
             .img11 {
                 transform: rotate(0deg);
-                border: 0.5em solid #f4f4f4;
                 box-shadow: 0.5em 0.5em 0.5em #ccc;
             }
             .img11:hover {
                 transform: rotate(-12deg);
-                border: 0.5em solid #f4f4f4;
                 box-shadow: 0.5em 0.5em 0.5em #ccc;
             }
 		</style>
@@ -33,6 +31,7 @@
 		<div class="main">
 			<header>
 			    <img class="center" src="{{ url_for('static', filename='images/BBandBC-2.png') }}"></img>
+				<a class="center" href="{{ url_for('book_club_about') }}">?</a>
 				{% block header %}{% endblock %}
 			  </header>
 			  {% for message in get_flashed_messages() %}
