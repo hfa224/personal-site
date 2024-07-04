@@ -10,6 +10,14 @@
               margin-right: auto;
               width: 50%;
             }
+			.nav-button {
+				width: 100px;
+				height: auto;
+            }
+			.logo-button {
+				width: 200px;
+				height: auto;
+            }
             .img11 {
                 transform: rotate(0deg);
                 box-shadow: 0.5em 0.5em 0.5em #ccc;
@@ -21,17 +29,11 @@
 		</style>
 	</head>
     <body>
-		<!-- Side navigation
-		<div class="sidenav">
-		  <a href="{{ url_for('slideshow') }}">Slideshow</a>
-		  <a href="{{ url_for('newsletter') }}">Newsletter</a>
-		</div -->
-
 		<!-- Page content -->
 		<div class="main">
 			<header>
-			    <img class="center" src="{{ url_for('static', filename='images/BBandBC-2.png') }}"></img>
-				<a class="center" href="{{ url_for('book_club_about') }}">?</a>
+			    <a href="{{ url_for('book_club') }}"><img class="center logo-button" src="{{ url_for('static', filename='images/BBandBC-2.png') }}"></img></a>
+				<a href="{{ url_for('book_club_about') }}"><img class="center nav-button" src="{{ url_for('static', filename='images/about.png') }}"></a>
 				{% block header %}{% endblock %}
 			  </header>
 			  {% for message in get_flashed_messages() %}

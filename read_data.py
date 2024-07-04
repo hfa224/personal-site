@@ -1,5 +1,8 @@
 import csv
 
+from datetime import datetime
+
+
 class Book:
   def __init__(self, title, author, picker, date, genre, cover_image_url, rating):
         self.title = title
@@ -15,7 +18,8 @@ class Book:
      rating = {
         "H": row[4],
         "M": row[5],
-        "B": row[6]
+        "B": row[6],
+        "Average": row[8]
      }
 
      cover_img = "https://covers.openlibrary.org/b/isbn/"+ row[9] + "-M.jpg"
@@ -50,4 +54,5 @@ def read_book_isbns() :
         else:
             line_count += 1
             book_array.append(Book.make_from_row(row))
-  return book_array
+  sorted_books = sorted(book_array, key=lambda x: datetime.strptime(x.date, '%m-%Y').date(), reverse=True)
+  return sorted_books

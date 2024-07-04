@@ -5,12 +5,14 @@
 {% endblock %}
 
 {% block content %}
+<h3>The current book is:</h3>
 {% for book in book_array %}
 	<div class="post">
+		{% set index =  book['rating']['Average'] | int() %}
 		<h3>{{ book['title'] }} by  {{ book['author'] }} picked by  {{ book['picker'] }} in  {{ book['date'] }}</h3>
 		<img class="img11" src={{ book['cover_image_url'] }}></img>
-		<p>Helen's rating was
-			{% set index =  book['rating']['H'] | int() %}
+		{% if index > 0 %}
+		<p>The average rating was
 			{% set vars = {'rating': book['rating']['H'] | float() } %}
 			{% for i in range(index+1) %}
 				{% if (vars.rating >= 1) %}
@@ -24,36 +26,7 @@
 			{% endfor %}
 			/5
 		</p>
-		<p>Beth's rating was
-			{% set index =  book['rating']['B'] | int() %}
-			{% set vars = {'rating': book['rating']['B'] | float() } %}
-			{% for i in range(index+1) %}
-				{% if (vars.rating >= 1) %}
-					<img src={{ url_for('static', filename='images/full_star.png') }}></img>
-				{% elif (vars.rating == 0) %}	
-					<img></img>
-				{% else %}	
-					<img src={{ url_for('static', filename='images/half_star.png') }}></img>
-				{% endif %}
-				{% if vars.update({'rating': vars.rating - 1}) %}{% endif %}
-			{% endfor %}
-			/5
-		</p>
-		<p>Max's rating was
-			{% set index =  book['rating']['M'] | int() %}
-			{% set vars = {'rating': book['rating']['M'] | float() } %}
-			{% for i in range(index+1) %}
-				{% if (vars.rating >= 1) %}
-					<img src={{ url_for('static', filename='images/full_star.png') }}></img>
-				{% elif (vars.rating == 0) %}	
-					<img></img>
-				{% else %}	
-					<img src={{ url_for('static', filename='images/half_star.png') }}></img>
-				{% endif %}
-				{% if vars.update({'rating': vars.rating - 1}) %}{% endif %}
-			{% endfor %}
-			/5
-		</p>
+		{% endif %}
 	</div>
 {% endfor %}
 {% endblock %}
