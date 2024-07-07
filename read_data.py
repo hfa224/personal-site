@@ -44,7 +44,7 @@ def read_book_data() :
 def get_book_image_url(isbn):
   image_url = "https://covers.openlibrary.org/b/isbn/" + isbn + "-M.jpg";
   if (requests.head(image_url + "?default=false" ).status_code == 404):
-    return 'static/image/' + isbn +".png" # assume i've provided an image
+    return 'static/images/' + isbn +".png" # assume i've provided an image
   else:
      return image_url
 
