@@ -35,5 +35,11 @@ def book_club_about():
     book_array = read_book_isbns()
     return render_template('book_club_about.html', book_array=book_array)
 
+@app.route('/<string:name>/book_club_stats')
+def book_club_stats(name):
+    read_book_data()
+    book_array = read_book_isbns()
+    return render_template('book_club_stats.html', book_array=book_array, name=name)
+
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))

@@ -5,6 +5,9 @@
 {% endblock %}
 
 {% block content %}
+<h3> Click here to view your stats:</h3>
+{% set name =  "Helen" %}
+<a class="action" href="{{ url_for('book_club_stats', name=name) }}">Edit</a>
 <h3>The current book is:</h3>
 {% for book in book_array %}
 	<div class="post">
@@ -13,7 +16,7 @@
 		<img class="img11" src={{ book['cover_image_url'] }}></img>
 		{% if index > 0 %}
 		<p>The average rating was
-			{% set vars = {'rating': book['rating']['H'] | float() } %}
+			{% set vars = {'rating': book['rating']['Average'] | float() } %}
 			{% for i in range(index+1) %}
 				{% if (vars.rating >= 1) %}
 					<img src={{ url_for('static', filename='images/full_star.png') }}></img>

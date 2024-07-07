@@ -16,9 +16,9 @@ class Book:
   def make_from_row(row):
 
      rating = {
-        "H": row[4],
-        "M": row[5],
-        "B": row[6],
+        "Helen": row[4],
+        "Max": row[5],
+        "Beth": row[6],
         "Average": row[8]
      }
 
