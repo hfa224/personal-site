@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html>
     <head>
-		<title>Personal site</title>
+		<title>Secret book club page</title>
 		<!--link rel="stylesheet" href="https://edwardtufte.github.io/tufte-css/tufte.css" type="text/css" -->
 		<link rel="stylesheet" href="{{ url_for('static', filename='wrapped.css') }}">
 	</head>
     <body>
-		
-		<ol>
-			<li>A partridge in a pear tree</li>
-			<li>Two turtle doves</li>
-			<li>Three french hens</li>
-			<li>Four calling birds</li>
-			<li>Five golden rings</li>
-			<li>Six geese-a-laying</li>
-			<li>Seven swans a-swimming</li>
-			<li>Eight maids a-milking</li>
-			<li>Nine ladies dancing</li>
-			<li>Ten lords a-leaping</li>
-			<li>Eleven pipers piping</li>
-			<li>Twelve drummers drumming</li>
-		</ol>
-		
-		<!-- svg describing a cursor to suggest scrolling -->
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 22 32" width="44" height="64">
-			<g fill="none" stroke-width="2" stroke="currentColor">
-				<!-- describe the offset through a custom property to animate the path to that value (its opposite since it's more entertaining) -->
-				<path style="--offset: -5;" id="offset" d="M 10 8 v 5" stroke-linecap="round" stroke-dasharray="5" stroke-dashoffset="5" />
-				<rect width="20" height="30" rx="10" />
-			</g>
-		</svg>
+
+<div role="img" class="intro" aria-label="Scroll down for the magic">
+  <span>⬇️</span>
+</div>
+<div class="box">
+  <p class="text">Welcome to your book club wrapped!</p>
+</div>
+<div class="box">
+  <p class="text">We've read 11 books so far!</p>
+</div>
+<div class="box">
+  <p class="text">Your highest rated book is</p>
+    <img class="tag" src="https://covers.openlibrary.org/b/isbn/9780552142373-M.jpg">
+</div>
+<div class="box">
+  <p class="text">You've picked 4 books</p>
+    <img class="tag" src="https://covers.openlibrary.org/b/isbn/9780007149834-M.jpg">
+      <img class="tag" src="https://covers.openlibrary.org/b/isbn/9781534312357-M.jpg">
+        <img class="tag" src="{{ url_for('static', filename='images/orlam.jpg') }}">
+          <img class="tag" src="{{ url_for('static', filename='images/the-good-asian.png') }}">
+</div>
+<div class="box">
+  <p class="text">Your most liked book was</p>
+    <img class="tag" src="{{ url_for('static', filename='images/the-good-asian.png') }}">
+</div>
+<!--div class="smile" role="img" aria-hidden>
+  <div>
+    <span>🙂</span>
+    <span>😉</span>
+  </div -->
+</div>
 </body>
