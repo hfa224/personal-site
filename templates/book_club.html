@@ -5,9 +5,6 @@
 {% endblock %}
 
 {% block content %}
-<h3> Click here to view your stats:</h3>
-{% set name =  "Helen" %}
-<a class="action" href="{{ url_for('book_club_stats', name=name) }}">Edit</a>
 <h3>The current book is:</h3>
 {% for book in book_array %}
 	<div class="post">

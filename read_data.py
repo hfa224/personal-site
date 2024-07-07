@@ -1,4 +1,5 @@
 import csv
+import requests
 
 from datetime import datetime
 
@@ -22,7 +23,7 @@ class Book:
         "Average": row[8]
      }
 
-     cover_img = "https://covers.openlibrary.org/b/isbn/"+ row[9] + "-M.jpg"
+     cover_img = get_book_image_url(row[9]) #"https://covers.openlibrary.org/b/isbn/"+ row[9] + "-M.jpg"
 
      return Book(row[0], row[1], row[2], row[3], row[7], cover_img, rating)
 
@@ -41,7 +42,11 @@ def read_book_data() :
     print(f'Processed {line_count} lines.')
 
 def get_book_image_url(isbn):
-  return "https://covers.openlibrary.org/b/isbn/" + isbn + "-M.jpg";
+  image_url = "https://covers.openlibrary.org/b/isbn/" + isbn + "-M.jpg";
+  if (requests.head(image_url + "?default=false" ).status_code == 404):
+    return 'static/image/' + isbn +".png" # assume i've provided an image
+  else:
+     return image_url
 
 def read_book_isbns() :
   book_array = []

@@ -11,25 +11,24 @@
   <span>⬇️</span>
 </div>
 <div class="box">
-  <p class="text">Welcome to your book club wrapped!</p>
+  <p class="text">{{name}}, welcome to your book club wrapped!</p>
 </div>
 <div class="box">
-  <p class="text">We've read 11 books so far!</p>
+  <p class="text">We've read {{ book_array|length }}books so far!</p>
 </div>
 <div class="box">
-  <p class="text">Your highest rated book is</p>
-    <img class="tag" src="https://covers.openlibrary.org/b/isbn/9780552142373-M.jpg">
+  <p class="text">Your highest rated book is {{highest_rated_book['title']}}</p>
+    <img class="tag" src={{highest_rated_book['cover_image_url'] }}>
 </div>
 <div class="box">
-  <p class="text">You've picked 4 books</p>
-    <img class="tag" src="https://covers.openlibrary.org/b/isbn/9780007149834-M.jpg">
-      <img class="tag" src="https://covers.openlibrary.org/b/isbn/9781534312357-M.jpg">
-        <img class="tag" src="{{ url_for('static', filename='images/orlam.jpg') }}">
-          <img class="tag" src="{{ url_for('static', filename='images/the-good-asian.png') }}">
+  <p class="text">You've picked {{ picked_books|length }} books</p>
+  {% for book in picked_books %}
+    <img class="tag" src={{book['cover_image_url'] }}>
+  {% endfor %}
 </div>
 <div class="box">
-  <p class="text">Your most liked book was</p>
-    <img class="tag" src="{{ url_for('static', filename='images/the-good-asian.png') }}">
+  <p class="text">Your most liked book was {{highest_rated_picked_book['title']}} </p>
+    <img class="tag" src={{highest_rated_picked_book['cover_image_url'] }}>
 </div>
 <!--div class="smile" role="img" aria-hidden>
   <div>

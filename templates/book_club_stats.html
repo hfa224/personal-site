@@ -8,7 +8,6 @@
 	<div>
 	The website is for a book clube set up by {{ name }} in Berlin in summer 2022
 	</div>
-	{% set picked_books = book_array|selectattr("picker", name) %}
 	{% for book in picked_books %}
 	<div class="post">
 		{% set index =  book['rating'][name] | int() %}

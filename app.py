@@ -23,23 +23,30 @@ def book_club():
     book_array = read_book_isbns()
     return render_template('book_club.html', book_array=book_array)
 
-@app.route('/book_club_wrapped')
-def book_club_wrapped():
-    read_book_data()
-    book_array = read_book_isbns()
-    return render_template('book_club_wrapped.html', book_array=book_array)
-
 @app.route('/book_club_about')
 def book_club_about():
+    return render_template('book_club_about.html')
+
+@app.route('/<string:name>/book_club_wrapped')
+def book_club_wrapped(name):
     read_book_data()
     book_array = read_book_isbns()
-    return render_template('book_club_about.html', book_array=book_array)
+    
+    picked_books = [x for x in book_array if x.picker.strip() == name.strip()]
+    highest_rated_book = max(book_array, key=lambda book: book.rating[name])
+    highest_rated_picked_book = max(picked_books, key=lambda book: book.rating["Average"])
+    return render_template('book_club_wrapped.html', book_array=book_array, picked_books=picked_books, name=name, 
+                           highest_rated_book=highest_rated_book, highest_rated_picked_book=highest_rated_picked_book)
 
 @app.route('/<string:name>/book_club_stats')
 def book_club_stats(name):
     read_book_data()
     book_array = read_book_isbns()
-    return render_template('book_club_stats.html', book_array=book_array, name=name)
+    picked_books = [x for x in book_array if x.picker.strip() == name.strip()]
+    highest_rated_book = max(book_array, key=lambda book: book.rating[name])
+    highest_rated_picked_book = max(picked_books, key=lambda book: book.rating["Average"])
+    return render_template('book_club_stats.html', book_array=book_array, picked_books=picked_books, name=name, 
+                           highest_rated_book=highest_rated_book, highest_rated_picked_book=highest_rated_picked_book)
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
