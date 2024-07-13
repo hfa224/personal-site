@@ -18,11 +18,11 @@
 			{% set vars = {'rating': book['rating'][name] | float() } %}
 			{% for i in range(index+1) %}
 				{% if (vars.rating >= 1) %}
-					<img src={{ url_for('static', filename='images/full_star.png') }}></img>
+					<img src={{ url_for('static', filename='images/site_images/full_star.png') }}></img>
 				{% elif (vars.rating == 0) %}	
 					<img></img>
 				{% else %}	
-					<img src={{ url_for('static', filename='images/half_star.png') }}></img>
+					<img src={{ url_for('static', filename='images/site_images/half_star.png') }}></img>
 				{% endif %}
 				{% if vars.update({'rating': vars.rating - 1}) %}{% endif %}
 			{% endfor %}

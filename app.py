@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from read_data import read_book_data, read_book_isbns
 import os
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -21,7 +22,10 @@ def newsletter():
 def book_club():
     read_book_data()
     book_array = read_book_isbns()
-    return render_template('book_club.html', book_array=book_array)
+
+    current_book = max(book_array, key=lambda book: datetime.strptime(book.date, "%m-%Y").date())
+    book_array.remove(current_book)
+    return render_template('book_club.html', book_array=book_array, current_book=current_book)
 
 @app.route('/book_club_about')
 def book_club_about():
@@ -29,7 +33,6 @@ def book_club_about():
 
 @app.route('/<string:name>/book_club_wrapped')
 def book_club_wrapped(name):
-    read_book_data()
     book_array = read_book_isbns()
     
     picked_books = [x for x in book_array if x.picker.strip() == name.strip()]
@@ -40,7 +43,6 @@ def book_club_wrapped(name):
 
 @app.route('/<string:name>/book_club_stats')
 def book_club_stats(name):
-    read_book_data()
     book_array = read_book_isbns()
     picked_books = [x for x in book_array if x.picker.strip() == name.strip()]
     highest_rated_book = max(book_array, key=lambda book: book.rating[name])
