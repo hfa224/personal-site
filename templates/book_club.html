@@ -9,7 +9,7 @@
 <h3>{{ current_book['title'] }} by  {{ current_book['author'] }} picked by  {{ current_book['picker'] }} in  {{ current_book['date'] }}</h3>
 <div class="bgimg">
 	{% if 'http' in current_book['cover_image_url'] %}
-	<img class="center tag" src={{ current_book['cover_image_url'] }}>
+	<img class="center-book" src={{ current_book['cover_image_url'] }}>
   {% else %}
 	<img src={{ url_for('static', filename=current_book['cover_image_url']) }}></img>
   {% endif %}
