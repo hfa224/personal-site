@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Photos{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+	<section>
+		<nav>
+			<ul>
+				<li><a href="{{ url_for('berlin_2022') }}">Berlin and Prague, Summer 2022</a></li>
+			</ul>
+		  </nav>
+		</section>
+{% endblock %}

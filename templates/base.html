@@ -2,24 +2,33 @@
 <html>
     <head>
 		<title>{% block title %}{% endblock %} - Personal site</title>
-		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="https://unpkg.com/normalize.css">
+		<link rel="stylesheet" href="https://unpkg.com/magick.css">
 	</head>
     <body>
-		<!-- Side navigation -->
-		<div class="sidenav">
-		  <a href="{{ url_for('slideshow') }}">Slideshow</a>
-		  <a href="{{ url_for('newsletter') }}">Newsletter</a>
-		</div>
+		
 
 		<!-- Page content -->
-		<div class="main">
+		<main>
 			<header>
 				{% block header %}{% endblock %}
-			  </header>
+				<nav>
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="{{ url_for('about') }}">About</a></li>
+						<li><a href="{{ url_for('photos') }}">Photos</a></li>
+						<li><a href="https://helenffion.omg.lol/now">Now Page</a></li>
+					</ul>
+		  		</nav>
+			</header>
 			  {% for message in get_flashed_messages() %}
 				<div class="flash">{{ message }}</div>
 			  {% endfor %}
 			  {% block content %}{% endblock %}
-      </div>
+			<footer>
+				<hr>
+				<p>Uses <a href="https://css.winterveil.net/">magick.css</a> by winterveil</p>
+			</footer>
+		</main>
     </body>
 </html>

@@ -1,21 +1,26 @@
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1>{% block title %}User info{% endblock %}</h1>
+  <h1>{% block title %}A nice cup of tea{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
-<div class="post">
-			  <h1>Helen Adams</h1>
-			  <p>I'm a software engineer with full-stack experience, mainly using Java and Python.</p>
-			  <p>Sphinx of black quartz, judge my vow.</p>
-			  <p>I also have training in coaching and managment, and I'm passionate about mentoring and helping people with their professional and personal development.</p>
-		  </div>
-			<div class="post">
-		  <img src="{{ url_for('static', filename='images/PXL_20230705_123303815.jpg') }}"></img>
-		  </div>
-			<div class="post">
-		  <img src="{{ url_for('static', filename='images/PXL_20230706_132243625.jpg') }}"></img>
-		  </div>
-      </div>
-	  {% endblock %}
+<section>
+<aside>I don't have much to say</aside>
+<p>This is my personal site.</p>
+</section>
+<section>
+<h2>Haiku</h2>
+<blockquote><pre>Over the wintry
+	forest, winds howl in rage
+	with no leaves to blow.</pre>
+<footer>Natsume Sōseki</footer>
+</blockquote>
+</section>
+<section>
+<figure>
+<aside>How about an aide to a picture - does that work? I'd like to be able to display a square image in line with text nicely. how about if I remove the figure? Or put the saide in the figure?</aside>
+<img src="{{ url_for('static', filename='images/glowing_orb.jpg') }}">
+</figure>
+</section>
+{% endblock %}

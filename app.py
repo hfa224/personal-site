@@ -6,13 +6,21 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
     
-@app.route('/slideshow')
-def slideshow():
-    return render_template('slideshow.html')
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/photos')
+def photos():
+    return render_template('photos.html')
+
+@app.route('/2022_10_22')
+def berlin_2022():
+    return render_template('2022_10_22.html')
     
-@app.route('/newsletter')
-def newsletter():
-    return render_template('newsletter.html')
+@app.route('/cultivation')
+def cultivation():
+    return render_template('cultivation.html')
 
 
 if __name__ == '__main__':
