@@ -22,6 +22,10 @@ def berlin_2022():
 def cultivation():
     return render_template('cultivation.html')
 
+@app.route('/digital_garden')
+def digital_garden():
+    return render_template('digital_garden.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
