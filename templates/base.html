@@ -4,6 +4,31 @@
 		<title>{% block title %}{% endblock %} - Personal site</title>
 		<link rel="stylesheet" href="https://unpkg.com/normalize.css">
 		<link rel="stylesheet" href="https://unpkg.com/magick.css">
+		<!-- add custom styling for details element -->
+		<style> 
+
+			summary {
+				list-style-type: '⬇ ';
+			} 
+			details[open] > summary {
+  				list-style-type: '⬆ ';
+			}
+			/* overwrite this to change bg and text colour
+			:root {
+				 Theme colors 
+				--fg: #335749;
+				--bg: #60c9b3;
+			}*/
+			.highlight {
+				display: flex; 
+				flex-wrap: wrap; 
+				gap: 1em; 
+				background: #dfef87; 
+				color: #111; 
+				border-radius: .5em; 
+				padding: 1em;
+			}
+		</style>
 	</head>
     <body>
 		

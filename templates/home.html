@@ -1,29 +1,31 @@
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1>{% block title %}A nice cup of tea{% endblock %}</h1>
+<h1>{% block title %}A nice cup of tea{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
 <section>
-<aside>I don't have much to say</aside>
-<p>This is my personal site.</p>
+	<aside>I don't have much to say</aside>
+	<p>This is my personal site.</p>
 </section>
 <section>
 	<script src="https://status.lol/helenffion.js?time&link&fluent&pretty"></script>
 </section>
 <section>
-<h2>Haiku</h2>
-<blockquote><pre>Over the wintry
+	<h2>Haiku</h2>
+	<blockquote>
+		<pre>Over the wintry
 	forest, winds howl in rage
 	with no leaves to blow.</pre>
-<footer>Natsume Sōseki</footer>
-</blockquote>
+		<footer>Natsume Sōseki</footer>
+	</blockquote>
 </section>
 <section>
-<figure>
-<aside>How about an aide to a picture - does that work? I'd like to be able to display a square image in line with text nicely. how about if I remove the figure? Or put the saide in the figure?</aside>
-<img src="{{ url_for('static', filename='images/glowing_orb.jpg') }}">
-</figure>
+	<figure>
+		<aside>How about an aide to a picture - does that work? I'd like to be able to display a square image in line
+			with text nicely. how about if I remove the figure? Or put the saide in the figure?</aside>
+		<img src="{{ url_for('static', filename='images/glowing_orb.jpg') }}">
+	</figure>
 </section>
 {% endblock %}
