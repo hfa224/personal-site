@@ -6,13 +6,17 @@
 
 {% block content %}
 <section>
-	<aside>I don't have much to say</aside>
-	<p>This is my personal site.</p>
+	<figure>
+	<img src="{{ url_for('static', filename='images/snorkmaiden_resize.png') }}"></img>
+	</figure>
+	<p>I'm Helen and this is my personal website - it's a space for tinkering and arranging my collection of thoughts
+		and things I find on the internet. Check out the About link above for more about me and this site :)
+	</p>
 </section>
 <section>
 	<script src="https://status.lol/helenffion.js?time&link&fluent&pretty"></script>
 </section>
-<section>
+<!-- section>
 	<h2>Haiku</h2>
 	<blockquote>
 		<pre>Over the wintry
@@ -27,5 +31,5 @@
 			with text nicely. how about if I remove the figure? Or put the saide in the figure?</aside>
 		<img src="{{ url_for('static', filename='images/glowing_orb.jpg') }}">
 	</figure>
-</section>
+</section -->
 {% endblock %}

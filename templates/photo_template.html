@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Photos{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+	{% for n in range(1, no_of_photos) %}
+	{% if (n < 10) %}
+		{% set n_str =  '0' + (n | string()) %}
+	{% else  %}
+		{% set n_str = n | string() %}
+	{% endif %}
+	<section>
+		<figure>
+			<img src="{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}"></img>
+			<figcaption>
+				{% if descriptions|length > 0 %}
+					{{ descriptions[n-1] }}
+				{% endif %}
+			</figcaption>
+		</figure>
+	</section>
+	{% endfor %}
+{% endblock %}
