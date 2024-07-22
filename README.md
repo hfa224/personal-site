@@ -16,7 +16,13 @@ then run the app.
 
 Run python app.py
 
-## Tutorials
+## Deploy
+
+This site can be deployed as a static website by running python freeze.py, which will then put static site files in a "build" folder.
+
+This site is deployed on https://dynamic-yeot-d8376f.netlify.app/
+
+## Tutorials Used
 
 https://medium.com/@francescaguiducci/how-to-build-a-simple-personal-website-with-python-flask-and-netlify-d800c97c283d
 
