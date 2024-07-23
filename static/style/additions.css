@@ -33,13 +33,18 @@ details[open] > summary {
 
 /* version of magick css aside designed to put text next to images */
 .image-aside {
-    float: right; /* 2 */
-    clear: right; /* 3 */
-    width: 50%; /* 4 */
-    margin: 1rem 1rem 1rem 3rem; /* 5 */
-    padding: 0.5rem 0.5rem 0.5rem 2rem; /* 5 */
-    border-left: 3px solid var(--fg); /* 5 */
+    float: right;
+    clear: right;
+    width: 50%;
+    margin: 1rem 1rem 1rem 3rem;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    border-left: 3px solid var(--fg);
     line-height: 1.8; /* 6 */
+}
+
+.aside-image {
+    margin: 1rem 1rem 1rem 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
 /* Prevent double top margins */

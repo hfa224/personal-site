@@ -1,28 +1,44 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Hag Chat July 2024</title>
+		<link rel="stylesheet" href="https://unpkg.com/normalize.css">
+		<link rel="stylesheet" href="https://unpkg.com/magick.css">
+		<!-- add custom styling additions -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='style/additions.css') }}">
+	</head>
+    <body>
+		
 
-{% block header %}
-  <h1>{% block title %}HAG CHAT JULY 2024
-	{% endblock %}</h1>
-{% endblock %}
-
-{% block content %}
+		<!-- Page content -->
+		<main>
+			<header>
+				<h1>Hag Chat July 2024</h1>
+				<nav>
+					<ul>
+						<li><a href="/">Back to substack</a></li>
+					</ul>
+		  		</nav>
+			</header>
+			  {% for message in get_flashed_messages() %}
+				<div class="flash">{{ message }}</div>
+			  {% endfor %}
 	<section>
 		<h2>Hags Surf the web</h2>
 
-		<figure>
-			<img src={{ url_for('static', filename='images/hg_chat/The_witches_web.PNG') }}>
-			<figcaption>Hags online</figcaption>
-		</figure>
-
+		<div class="image-aside" style="width: 60%">I can't kick my instagram habit, but I've been trying to replace the websites I browse to be less - horrible? I've tried 
+			hacker.news but the users seem to be the most pedantic humourless bunch ever (hello software devs). But you can find fun stuff like <a href="https://tidings.potato.horse/2024-07-15/aethelred">this website</a> that gives you current affairs in the style of Mediaeval poems, and <a href="https://drawing.garden/">emoji gardens</a>.
+			 </div>
+		<img class="aside-image" src={{ url_for('static', filename='images/hg_chat/The_witches_web.PNG') }}>
+</section>
+<section>
 		<figure>
 			<img src={{ url_for('static', filename='images/hg_chat/witch_surfing.PNG') }}>
-			<figcaption>(while looking for this image I found this article <a href="https://www.carvemag.com/2023/10/was-britains-first-surfer-a-witch/">Was Britains first surfer a witch?)</a></figcaption>
+			<figcaption>(while looking for this image I found this article: <a href="https://www.carvemag.com/2023/10/was-britains-first-surfer-a-witch/">Was Britains first surfer a witch?)</a></figcaption>
 		</figure>
-<p>I can't kick my instagram habit, but I've been trying to replace the websites I browse to be less - horrible?
-Hacker.news I like the stuff that's linked on this site but the users seem to be the most pedantic humourless bunch ever (hello software devs). 
+<p>
 </p>
-<p>But you can find fun stuff like <a href="https://tidings.potato.horse/2024-07-15/aethelred">this website</a> that gives you current affairs in the style of Mediaeval poems, and <a href="https://drawing.garden/">emoji gardens</a>.
-This is working because it's inspired me to make my own static websites, which is a better use of my time than sitting on my phone probably?
+<p>This is working because it's inspired me to make my own static websites, which is a better use of my time than sitting on my phone probably? You can see this section of newsletter as a static site here as an example.
 	</p>
 	</section>
 	<section><h2>Hags do Pilates</h2>
@@ -30,16 +46,22 @@ This is working because it's inspired me to make my own static websites, which i
 		I also tried out a pilates class and was introduced to the pilates reformer, a terrifying machine we did all sorts of things with. 
 	</section>
 	<section>
-		<h2>Hags have a scary summer</h2>
-		<h3>Longlegs</h3>
-		<p>I'm pretty conflicted over Longlegs - immaculate horror vibes and a weird wackiness to it - some parts were almost fun - that 
-		</p>
-		<h3>Maxxine</h3>
-		<p>I was disappointed by Maxxxine - maybe my expectations were too high, </p>
+		<h2>Hags Horror Summer</h2>
+
+		<p>This month we've seen <b>Maxxxine</b> and <b>Longlegs</b></p>
+
+		<p>I've been thinking about horror hype - how a film can never be as scary as you want or as good as you want. </p>
+
 		<h3>Texas Chain Saw Massacre</h3>
 		<p>I'd never seen this film and they were playing a 4k restoration at the old IMAX so I had to go - on a sunny hot day. There was a disappointing turn-out. We had a talk beforehand 
 		</p>
 		<p>My enthusiasm is undaunted however, as here are other films slated to come out I'm still excited for <b>Cuckoo</b> (Aug 2024), <b>I Saw The Tv Glow</b> (July 26th) and <b>Alien Romulus</b> (16th August). To prepare for Romulus I've done a bit
 		of an Aliens binge this month, watching <b>Alien Resurrection</b>, <b>Alien: Convenant</b> and <b>AVP: Alien vs. Predator</b></p>
 	</section>
-{% endblock %}
+	<footer>
+		<hr>
+		<p>Uses <a href="https://css.winterveil.net/">magick.css</a> by winterveil</p>
+	</footer>
+</main>
+</body>
+</html>
