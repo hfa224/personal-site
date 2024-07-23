@@ -47,6 +47,10 @@ def digital_garden():
 def newsletter():
     return render_template('newsletter.html')
 
+@app.route('/hag_chat')
+def hag_chat():
+    return render_template('hag_chat.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -3,17 +3,15 @@
 {% block header %}
 <h1>{% block title %}A nice cup of tea{% endblock %}</h1>
 {% endblock %}
-
 {% block content %}
 <section>
-	<figure>
+	<h2>Welcome</h2>
+	<div class="image-aside">I'm Helen and this is my personal website - it's a space for tinkering and arranging my collection of thoughts
+		and things I find on the internet. Check out the About link above for more about me and this site :)</div>
 	<img src="{{ url_for('static', filename='images/snorkmaiden_resize.png') }}"></img>
-	</figure>
-	<p>I'm Helen and this is my personal website - it's a space for tinkering and arranging my collection of thoughts
-		and things I find on the internet. Check out the About link above for more about me and this site :)
-	</p>
 </section>
 <section>
+	<h2>Status</h2>
 	<script src="https://status.lol/helenffion.js?time&link&fluent&pretty"></script>
 </section>
 <!-- section>

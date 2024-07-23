@@ -1,0 +1,55 @@
+/*
+ * Additions for this website based on the base theme, which is
+ * Magick css by: winterveil (https://github.com/wintermute-cell/)
+ * The additional styling aspects are heavily influenced by that theme
+ * version: 0.0.1
+*/
+
+/* used to style summary css element */
+summary {
+    list-style-type: '⬇ ';
+} 
+/* used to style details part summary css element */
+details[open] > summary {
+      list-style-type: '⬆ ';
+}
+/* overwrite this to change bg and text colour
+:root {
+     Theme colors 
+    --fg: #335749;
+    --bg: #60c9b3;
+}*/
+
+/* div class to highlight text in a box */
+.highlight {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 1em; 
+    background: #dfef87; 
+    color: #111; 
+    border-radius: .5em; 
+    padding: 1em;
+}
+
+/* version of magick css aside designed to put text next to images */
+.image-aside {
+    float: right; /* 2 */
+    clear: right; /* 3 */
+    width: 50%; /* 4 */
+    margin: 1rem 1rem 1rem 3rem; /* 5 */
+    padding: 0.5rem 0.5rem 0.5rem 2rem; /* 5 */
+    border-left: 3px solid var(--fg); /* 5 */
+    line-height: 1.8; /* 6 */
+}
+
+/* Prevent double top margins */
+.image-aside h1, .image-aside h2, .image-aside h3, .image-aside h4 {
+    margin-top: 0;
+}
+
+/* override magick css styling of figcaption - I want the text to be smaller */
+figcaption {
+    margin: 0.8rem 0;
+    font-size: 1.4rem;
+    line-height: 1.3;
+}

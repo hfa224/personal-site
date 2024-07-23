@@ -6,40 +6,29 @@
 
 {% block content %}
 	<section>
-		<h2>About</h2>
-		<h3>Professional</h3>
-		<div class="highlight">🌥️ I want to highlight this text</div>
+		<!-- no professional section for now-->
+		<!--h3>Professional</h3>
 		<p>I'm a software engineer with full-stack experience, mainly using Java and Python.</p>
-		<p>I also have training in coaching and managment, and I'm passionate about mentoring and helping people with their professional and personal development.</p>
-		<h3>Hobbies</h3>
-		I climb, watch <a href="https://letterboxd.com/Bluebottles/">a lot of films</a>, enjoy reading and have a <a href="https://letterboxd.com/Bluebottles/">bookclub</a> with my friends, and like taking <a href="{{ url_for('photos') }}">photographs</a>. I also dabble in life drawing, get sucked into the occasional video game and journal almost every day. I run a <a href="https://just2hags.substack.com/">newsletter</a> with my friend Bethany. 
+		<p>I also have training in coaching and managment, and I'm passionate about mentoring and helping people with their professional and personal development.</p -->
+		<h3>About me</h3>
+		<p>I climb, watch <a href="https://letterboxd.com/Bluebottles/">a lot of films</a>, enjoy reading and have a 
+			<a href="https://letterboxd.com/Bluebottles/">bookclub</a> with my friends, and like taking 
+			<a href="{{ url_for('photos') }}">photographs</a>. I really love a crossword. 
+			I also dabble in life drawing, get sucked into the occasional video game and journal almost every day. 
+			I run a <a href="https://just2hags.substack.com/">newsletter</a> with my friend Bethany.</p> 
+		<p>I work as a consultant at a software company in Bristol, and do a bit of coding and a bit of management.</p>
 	</section>
 	<section>
-		<h2>About this site</h2>
-		<p>Coded in python using flask with jinja2. Uses magick.css.</p>
-		<h3>Plans for this site</h3>
+		<h3>About this site</h3>
+		<p>Coded in python using flask with jinja2. Styled with magick.css.</p>
+		<h3>Plans / Changelog</h3>
 		<ul>
 			<li>Make static using flask-freeze</li>
 			<li>Custom styling for drop-down</li>
-			<li>Create a highlight css section</li>
+			<li><s>Create a highlight css section</s></li>
 			<li>Create now page instead of using omg.lol/now</li>
 			<li>Update photo section and compress image files</li>
 			<li>Look into a domain and where to host</li>
-		</ul>
-	</section>
-	<section>
-		<h2>Favourites</h2>
-		<h3>Newsletters</h3>
-		<aside>A lot of these are American - I do love americana but I'd appreciate any British reccommendations</aside>
-		<ul>
-			<li><a href="https://annekadet.substack.com/">Cafe Anne</a></li>
-			<li><a href="https://www.annfriedman.com/">Ann Friedman</a></li>
-			<li>Bristol Cable</li>
-		</ul>
-		<h3>Sites to kill time</h3>
-		<ul>
-			<li>Bear Blog</li> 
-			I like <a href="https://tiramisu.bearblog.dev/">tiramisu</a>
 		</ul>
 	</section>
 {% endblock %}
