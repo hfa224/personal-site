@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>{% block title %}{% endblock %} - Personal site</title>
+	<link rel="stylesheet" href="https://unpkg.com/normalize.css">
+	<link rel="stylesheet" href="https://unpkg.com/magick.css">
+	<!-- add custom styling additions -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='style/additions.css') }}">
+</head>
+
+<body>
+
+
+	<!-- Page content -->
+	<main>
+		<header style="margin-bottom:0rem;margin-top:4rem">
+			<h1>Hags surf the web</h1>
+			<nav>
+				<ul>
+					<li><a href="/">Home</a></li>
+				</ul>
+			</nav>
+		</header>
+		{% block content %}{% endblock %}
+		<footer>
+			<hr>
+			<p>Uses <a href="https://css.winterveil.net/">magick.css</a> by winterveil</p>
+		</footer>
+	</main>
+</body>
+
+</html>

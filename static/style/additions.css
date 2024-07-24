@@ -34,7 +34,7 @@ details[open] > summary {
 /* version of magick css aside designed to put text next to images */
 .image-aside {
     float: right;
-    clear: right;
+    /*clear: right;*/
     width: 50%;
     margin: 1rem 1rem 1rem 3rem;
     padding: 0.5rem 0.5rem 0.5rem 2rem;
@@ -43,6 +43,7 @@ details[open] > summary {
 }
 
 .aside-image {
+    float: none;
     margin: 1rem 1rem 1rem 1rem;
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
