@@ -51,6 +51,11 @@ def newsletter():
 def hag_chat():
     return render_template('hag_chat.html')
 
+@app.route('/sub_hag_chat/')
+def sub_hag_chat():
+    return render_template('sub_hag_chat.html')
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
