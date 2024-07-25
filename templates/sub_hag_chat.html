@@ -2,35 +2,39 @@
 
 {% block content %}
 <section>
-		<aside>This doesn't always look good... it gets the text by asking the webpage for it so sometimes it's too long 
+		<!--aside>This doesn't always look good... it gets the text by asking the webpage for it so sometimes it's too long 
 			or too short ¯\_(ツ)_/¯ same for the image so sometimes that's the wrong size too. That's coding!
-		</aside>
-		Click the dice below to see a random link<br>
-		<button type="button" style="border: 0px" onclick='getRandomImg()'>
-			<img style="width:100px" src={{ url_for('static', filename='images/hg_chat/17-50-28-149_512.webp' )}}></button>
+		</aside -->
+		<br>
+		
 </section>
-<section id="description">
-
+<section class="highlight" >
+	<button type="button" style="border: 0px;padding:0px;margin:0rem" onclick='getRandomImg()'>
+		<img style="width:100px" src={{ url_for('static', filename='images/hg_chat/17-50-28-149_512.webp' )}}></button>
+		<p id="description">Click the dice to see a random link!</p>
 </section>
 <section>
 	<script>
 		let linkArray = [
-			["https://marginalia.nu", "The random search on this site is great for finding some weird and idosyncratic personal sites - as it says 'attempts to show you sites you perhaps weren't aware of in favor of the sort of sites you probably already knew existed.'."],
+			["https://marginalia.nu", "The random search on this site is great for finding " +
+			 "some<br> weird and idosyncratic personal sites - as it says<br> 'attempts to show " +
+			 "you sites you perhaps weren't aware of in<br> favor of the sort of sites you probably already knew existed.'."],
 			["https://drawing.garden","Fun "],
 			["https://tidings.potato.horse/","Very stupid but very nicely put together "],
-			["https://letterboxd.com/journal/all-of-us-strangers-andrew-haigh-andrew-scott-paul-mescal-interview","aous"],
-			["https://mcmansionhell.com/","Recently rediscovered McMansion and the amazing annotated images"],
-			["https://www.theonion.com/fucking-loser-at-movie-all-by-himself-1819575335","Read"],
+			["https://dreamwiki.sixey.es/","beautiful"],
+			["https://mcmansionhell.com/","Recently rediscovered McMansion and the amazing<br> annotated images"],
+			["https://goblin-heart.net/sadgrl/magnet-poetry/","Magnet poetry"],
 			["https://www.pcgamer.com/the-metaverse-is-bullshit/","Enjoyed this pcgamer metaverse rant "]
 		]
 		function randChoice(size) {
 			return Math.floor(Math.random() * size)
 		}
 		function getRandomImg() {
-			var randNo = randChoice(6) + 1
+			var randNo = randChoice(7) + 1
 			var api_url = "https://api.microlink.io/?url=" + linkArray[randNo - 1][0]
 			document.getElementById('random-link-api').setAttribute('api', api_url);
-			document.getElementById('description').innerHTML = linkArray[randNo - 1][1];
+			document.getElementById('description').innerHTML = randNo + linkArray[randNo - 1][1];
+			document.getElementById('random-link').setAttribute('href', linkArray[randNo - 1][0]);
 			//document.getElementById('aside').innerHTML = descriptionArray[randNo - 1]
 
 		}
@@ -39,7 +43,7 @@
 </section>
 
 <script type="module" src="../static/js/link-peek.js"></script>
-<section>
+<section style="height:500px">
 	<template id="link-peek-template">
 		<div style="width: 50%;float:right;margin:1rem;">
 			<img data-key="data.image.url" />
@@ -47,13 +51,19 @@
 		<div class="aside-image">
 			<a data-key="data.title, link"></a>
 			<p data-key="data.description"></p>
-			more text more text more text more text more text more txe
 		</div>
 	</template>
 
 	<link-peek id="random-link-api" api="https://api.microlink.io/?url=${link}">
 		<a id="random-link" href="https://tidings.potato.horse/"></a>
 	</link-peek>
+</section>
+<section class="highlight" >
+	<details>
+		<summary>How I made this</summary>
+		I based the styling on moku.blog (a lot cuter than this) and link-peek, with some changes to the JavaScript
+		to make the link data refresh when the link is changed.
+	</details>
 </section>
 
 {% endblock %}

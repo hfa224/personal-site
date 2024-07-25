@@ -49,13 +49,15 @@ export class LinkPeek extends HTMLElement {
   }
 
   handleKey(object, key) {
-    const parsedKeyInt = parseFloat(key);
+    if (object !=null) {
+      const parsedKeyInt = parseFloat(key);
 
-    if (Number.isNaN(parsedKeyInt)) {
-      return object[key];
-    }
+      if (Number.isNaN(parsedKeyInt)) {
+        return object[key];
+      }
 
-    return object[parsedKeyInt];
+      return object[parsedKeyInt];
+    } // if this is the image url, replace with another image?
   }
 
   getValue(string, data) {
