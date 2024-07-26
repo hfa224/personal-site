@@ -41,8 +41,9 @@ class LinkPeek extends HTMLElement {
 
   populateSlot(slot, value) {
     if (typeof value == "string" && value.startsWith("http")) {
-      if (slot.localName === "img") slot.src = value;
       if (slot.localName === "a") slot.href = value;
+    } if (typeof value == "string" && slot.localName === "img") { // remove http check for image to allow default img
+      slot.src = value;
     } else {
       slot.textContent = value;
     }
@@ -58,6 +59,7 @@ class LinkPeek extends HTMLElement {
 
       return object[parsedKeyInt];
     } // if this is the image url, replace with another image?
+    return "./17-50-28-149_512.webp"
   }
 
   getValue(string, data) {
