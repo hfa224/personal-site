@@ -21,14 +21,12 @@ details[open] > summary {
 }*/
 
 /* div class to highlight text in a box */
-.highlight {
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 1em; 
+.highlight { 
     background: #FDE4D8; 
     color: #111; 
     border-radius: .5em; 
     padding: 1em;
+    font-size: 15
 }
 
 /* version of magick css aside designed to put text next to images */

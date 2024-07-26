@@ -8,25 +8,31 @@
 		<br>
 		
 </section>
-<section class="highlight" >
-	<button type="button" style="border: 0px;padding:0px;margin:0rem" onclick='getRandomImg()'>
-		<img style="width:100px" src={{ url_for('static', filename='images/hg_chat/17-50-28-149_512.webp' )}}></button>
-		<p id="description">Click the dice to see a random link!</p>
+<section>
+<div class="highlight" style="min-height: 130px;">
+	<button type="button" style="border: 0px;margin:0rem;float:left;padding:0px" onclick='getRandomImg()'>
+		<img style="height:100px;float:left;margin:0rem;padding-right:1em" src={{ url_for('static', filename='images/hg_chat/17-50-28-149_512.webp' )}}>
+	</button>
+	<div style="float:none;
+    display: flex; 
+    flex-wrap: wrap;" id="description">Click the dice to see a random link! This doesn't always look good... it gets the text by asking the webpage for it so sometimes it's too long 
+		or too short ¯\_(ツ)_/¯ same for the image so sometimes that's the wrong size too.</div>
+</div>
 </section>
 <section>
 	<script>
 		let linkArray = [
-			["https://marginalia.nu", "Try 'random' on this site to find some interesting sites - as it says<br>" +
-			 " 'attempts to show <br>" +
-			 "you sites you perhaps weren't aware of in<br> favor of the sort of sites you probably already knew existed.'."],
-			["https://drawing.garden",""],
+			["https://marginalia.nu", "Try 'random' on this site to find some interesting sites - as it says " +
+			 " 'attempts to show " +
+			 "you sites you perhaps weren't aware of in favor of the sort of sites you probably already knew existed.'."],
+			["https://drawing.garden","A garden :)"],
 			["https://rain.computer/","A very cute personal site"],
-			["https://dreamwiki.sixey.es/","beautiful"],
-			["https://mcmansionhell.com/","Recently rediscovered McMansion and the amazing<br> annotated images"],
-			["https://goblin-heart.net/sadgrl/magnet-poetry/","Magnet poetry"],
+			["https://dreamwiki.sixey.es/","Weird ascii art"],
+			["https://mcmansionhell.com/","Recently rediscovered McMansion and the amazing annotated images"],
+			["https://goblin-heart.net/sadgrl/magnet-poetry/","An online magnet poetry maker"],
 			["https://www.pcgamer.com/the-metaverse-is-bullshit/","Enjoyed this pcgamer metaverse rant "],
 			["https://www.cs.cmu.edu/~sef/sefSmiley.htm", "Simley lore"],
-			["https://www.shortboxcomicsfair.com/", ""]
+			["https://www.shortboxcomicsfair.com/", "The shortbox digital comics fair has an amazing selection of digital comics to browse - it starts in Oct but you can still check out the exhibitors."]
 		]
 		function randChoice(size) {
 			return Math.floor(Math.random() * size)
@@ -35,7 +41,7 @@
 			var randNo = randChoice(9) + 1
 			var api_url = "https://api.microlink.io/?url=" + linkArray[randNo - 1][0]
 			document.getElementById('random-link-api').setAttribute('api', api_url);
-			document.getElementById('description').innerHTML = randNo + linkArray[randNo - 1][1];
+			document.getElementById('description').innerHTML = linkArray[randNo - 1][1];
 			document.getElementById('random-link').setAttribute('href', linkArray[randNo - 1][0]);
 			//document.getElementById('aside').innerHTML = descriptionArray[randNo - 1]
 
@@ -45,12 +51,12 @@
 </section>
 
 <script type="module" src="../static/js/link-peek.js"></script>
-<section style="height:500px">
+<section style="height:300px">
 	<template id="link-peek-template">
-		<div style="width: 50%;float:right;margin:1rem;">
-			<img data-key="data.image.url" />
+		<div style="float:left;margin:1rem;">
+			<img data-key="data.logo.url" />
 		</div>
-		<div class="aside-image">
+		<div style="float:none;margin:1rem;">
 			<a data-key="data.title, link"></a>
 			<p data-key="data.description"></p>
 		</div>
@@ -63,8 +69,11 @@
 <section class="highlight" >
 	<details>
 		<summary><b>What did I use?</b></summary>
-		I based the styling on moku.blog (a lot cuter than this) and link-peek, with some changes to the JavaScript
-		to make the link data refresh when the link is changed.
+		<p>I based the styling on moku.blog (a lot cuter than this) and link-peek, with some changes to the JavaScript
+		to make the link data refresh when the link is changed.</p>
+		<p>And then I realised the link-peek javascript wouldn't work where I wanted to upload this, so I ditched it
+			and went back to using some simpler javascript that just displays an image I uploaded and text I wrote for each site.
+		</p>
 	</details>
 </section>
 
