@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Roll the dice!</title>
+	<link rel="stylesheet" href="https://unpkg.com/normalize.css">
+	<link rel="stylesheet" href="https://unpkg.com/magick.css">
+	<!-- add custom styling additions -->
+	<link rel="stylesheet" href="./hag_chat.css">
+</head>
+
+<body>
+
+
+	<!-- Page content -->
+	<main>
+		<header style="margin-bottom:0rem;margin-top:4rem">
+		</header>
+
+		<!--section>
+		<aside>This doesn't always look good... it gets the text by asking the webpage for it so sometimes it's too long 
+			or too short ¯\_(ツ)_/¯ same for the image so sometimes that's the wrong size too. That's coding!
+		</aside>
+		<br>
+		
+</section -->
+		<section>
+			<div class="highlight" style="min-height: 130px;">
+				<button type="button" style="border: 0px;margin:0rem;padding:0px" onclick='getRandomImg()'>
+					<img class="image-container" style="width:100px" src=./17-50-28-149_512.webp>
+				</button>
+				<div class="text-container" id="description">Click the dice to see a random link! <small>This doesn't
+						always look good... it gets the text by asking the webpage for it so sometimes it's too long
+						or too short ¯\_(ツ)_/¯ same for the image so sometimes that's the wrong size too. That's
+						life!</small></div>
+			</div>
+		</section>
+		<section>
+			<script>
+				let linkArray = [
+					"Go to a cafe or pub and read a book",
+					"Create a cosy reading / work space in the living room",
+					"Cook and eat tasty food 🥘",
+					"Make plans",
+					"Take pictures ",
+					"See a film by myself",
+					"Go to Bath and sit in the Raven, watch a film in the little cinema",
+					"Go for a walk with a good podcast"
+				]
+				function randChoice(size) {
+					return Math.floor(Math.random() * size)
+				}
+				function getRandomImg() {
+					var randNo = randChoice(linkArray.length) + 1
+					document.getElementById('description').innerHTML = linkArray[randNo - 1];
+
+				}
+			</script>
+			<noscript>Sorry, your browser does not support JavaScript! So this button will not work :(</noscript>
+		</section>
+		<section class="highlight">
+			<details>
+				<summary><i>What did I use?</i></summary>
+				<p>I based the styling on <a href="https://moku.blog/">moku.blog</a> (a lot cuter than this) and <a
+						href="https://darn.es/link-peek-web-component/">link-peek</a>, with some changes to the
+					JavaScript
+					to make the link data refresh when the link is changed.</p>
+				<p><s>And then I realised the link-peek javascript wouldn't work where I wanted to upload this, so I
+						ditched it
+						and went back to using some simpler javascript that just displays an image I uploaded and text I
+						wrote for each site.</s>
+				</p>
+				<p>Actually, I did get it work by importing it differently! I then uploaded as a bunch of html, css,
+					image and js files to <a href="yay.boo">yay.boo</a> and
+					made some minor tweaks to make it work. And that's it.</p>
+			</details>
+		</section>
+
+
+		<footer>
+			<hr>
+			<p>Style based on <a href="https://css.winterveil.net/">magick.css</a> by winterveil</p>
+		</footer>
+	</main>
+</body>
+
+</html>

@@ -44,13 +44,14 @@
 			["https://goblin-heart.net/sadgrl/magnet-poetry/","An online magnet poetry maker"],
 			["https://www.pcgamer.com/the-metaverse-is-bullshit/","Enjoyed this pcgamer metaverse rant."],
 			["https://www.cs.cmu.edu/~sef/sefSmiley.htm", "Short webpage written by the guy who invented the smiley face :-)"],
-			["https://www.shortboxcomicsfair.com/", "The shortbox digital comics fair has an amazing selection of digital comics to browse - it starts in Oct but you can still check out the exhibitors."]
+			["https://www.shortboxcomicsfair.com/", "The shortbox digital comics fair has an amazing selection of digital comics to browse - it starts in Oct but you can still check out the exhibitors."],
+			["https://gatoshop.mx/", "I haven't looked at this site much but I've signed up to the newsletter just based on the site."]
 		]
 		function randChoice(size) {
 			return Math.floor(Math.random() * size)
 		}
 		function getRandomImg() {
-			var randNo = randChoice(9) + 1
+			var randNo = randChoice(linkArray.length) + 1
 			var url = linkArray[randNo - 1][0]
 			var api_url = "https://api.microlink.io/?url=" + url;
 			document.getElementById('random-link').setAttribute('href', url);
@@ -65,10 +66,8 @@
 <script type="text/javascript" src="./link-peek.js"></script>
 <section style="height:250px">
 	<template id="link-peek-template">
-		<div style="float:right;margin:1rem;width:auto">
-			<img data-key="data.logo.url" />
-		</div>
-		<div style="float:none;margin:1rem;width:70%">
+		<img style="float:right;margin:1rem;width:40%" data-key="data.image.url" />
+		<div style="float:none;margin:1rem;width:55%">
 			<a data-key="data.title, link"></a>
 			<p data-key="data.description"></p>
 		</div>
