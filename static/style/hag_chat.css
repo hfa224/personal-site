@@ -1,0 +1,127 @@
+/*
+ * Additions for this website based on the base theme, which is
+ * Magick css by: winterveil (https://github.com/wintermute-cell/)
+ * The additional styling aspects are heavily influenced by that theme
+ * version: 0.0.1
+*/
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Solway:wght@400;700&display=swap');
+
+/* used to style summary css element */
+summary {
+    list-style-type: '⬇ ';
+} 
+/* used to style details part summary css element */
+details[open] > summary {
+      list-style-type: '⬆ ';
+}
+/* overwrite this to change bg and text colour
+:root {
+     Theme colors 
+    --fg: #335749;
+    --bg: #60c9b3;
+}*/
+
+/* div class to highlight text in a box */
+.highlight { 
+    display:flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    background: #FDE4D8; 
+    color: #111; 
+    border-radius: .5em; 
+    padding: 1em;
+}
+
+.highlight .image-container {
+    flex: 0 0 1em;
+    font-size: 3em;
+    padding-right: 0;
+}
+
+.highlight .text-container {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    margin: 0 0 0 0;
+    text-align: left;
+    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
+}
+
+/* version of magick css aside designed to put text next to images */
+.image-aside {
+    float: right;
+    /*clear: right;*/
+    width: 50%;
+    margin: 1rem 1rem 1rem 3rem;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    border-left: 3px solid var(--fg);
+    line-height: 1.8; /* 6 */
+}
+
+.aside-image {
+    float: none;
+    margin: 1rem 1rem 1rem 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+/* Prevent double top margins */
+.image-aside h1, .image-aside h2, .image-aside h3, .image-aside h4 {
+    margin-top: 0;
+}
+
+:root {
+--tangerine: #F7A278;
+--orange: #c94c10;
+--champagne: #FDE4D8;
+--dusty-champagne: #EFC6B8;
+--charcoal: #626262;
+
+    /* Theme colors */
+--fg: var(--charcoal);  /*#0e0e0e;*/
+/*--bg: var(--champagne);*/
+--form-bg: #fbfbfb;
+--form-fg: #00004d;
+--form-fg-placeholder: #00004d9a;
+
+--emoji-picker-rounding: 6px;
+--emoji-picker-label: #774519;
+--emoji-picker-marker: #b9712f;
+
+--image-max-size: 324px;
+
+--font-family: 'Solway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    font-size: 1.8rem; /* 1 */
+    background-color: var(--bg); /* 2 */
+    color: var(--fg); /* 2 */
+    font-family: var(--font-family); /* 3 */
+    font-style: normal; /* 3 */
+    line-height: 2.2rem; /* 3 */
+    font-weight: 300; /* 3 */
+
+    counter-reset: sidenote-counter; /* 4 */
+}
+a.subtle {
+    font-weight: normal;
+}
+
+a.subtle:hover {
+    color: var(--orange);
+}
+a {
+    color: var(--orange);
+    font-weight: bold;
+    text-decoration: none;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 2px;
+}
+
+a:hover {
+    text-decoration: wavy underline;
+}
