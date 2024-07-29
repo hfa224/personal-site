@@ -35,17 +35,23 @@
 <section>
 	<script>
 		let linkArray = [
-			["https://search.marginalia.nu/", "Try the 'random' button! - as it says " +
-			 " 'attempts to show you sites you perhaps weren't aware of in favor of the sort of sites you probably already knew existed.'."],
+			["https://search.marginalia.nu/", "'Attempts to show you sites you perhaps weren't aware of in favor of the sort of sites you probably already knew existed.' Try clicking the random button at the top..."],
 			["https://drawing.garden","A garden :)"],
 			["https://rain.computer/","A very cute personal site"],
 			["https://dreamwiki.sixey.es/","Weird ascii art"],
 			["https://mcmansionhell.com/","Recently rediscovered McMansion and the annotated images. I'd reccommend you skip down to the 'texas gothic revival' post and start there."],
-			["https://goblin-heart.net/sadgrl/magnet-poetry/","An online magnet poetry maker"],
+			["https://goblin-heart.net/sadgrl/","An archived personal site with some fun stuff like an online magnet poetry maker and a lot of website making resources."],
 			["https://www.pcgamer.com/the-metaverse-is-bullshit/","Enjoyed this pcgamer metaverse rant."],
 			["https://www.cs.cmu.edu/~sef/sefSmiley.htm", "Short webpage written by the guy who invented the smiley face :-)"],
 			["https://www.shortboxcomicsfair.com/", "The shortbox digital comics fair has an amazing selection of digital comics to browse - it starts in Oct but you can still check out the exhibitors."],
-			["https://gatoshop.mx/", "I haven't looked at this site much but I've signed up to the newsletter just based on the site."]
+			["https://gatoshop.mx/", "I haven't looked at this much but I've signed up to the newsletter just based on the site design."],
+			["https://www.bbc.com/travel/article/20240723-the-ridgway-hike-the-5000-year-old-pathway-thats-britains-oldest-road", "BBC article about hiking Britain's oldest road"],
+			["https://frills.dev/", "Cool personal site of a Uk site designer with an emphasis on accessibility"],
+			["https://maya.land/spaced-repetition/", "A very personal and idosyncratic website - lots of stuff to read, from heraldry to indie web resources."],
+			["https://filesfound.net/articles/neko95", "Files found is a site with articles about old software and files the owener digs up - this article is" +
+			"about Neko software, a cat friend for your desktop."],
+			["https://lija.neocities.org/blog/posts/the-web-but-actually/", "Blog post by lija on the value of a personal site and what the internet has changed" +
+			"into. 'To use a real extra analogy, services like Twitter, YouTube, and Instagram have replaced the web and are wearing its corpse.']
 		]
 		function randChoice(size) {
 			return Math.floor(Math.random() * size)
@@ -66,8 +72,10 @@
 <script type="text/javascript" src="./link-peek.js"></script>
 <section style="height:250px">
 	<template id="link-peek-template">
-		<img style="float:right;margin:1rem;width:40%" data-key="data.image.url" />
-		<div style="float:none;margin:1rem;width:55%">
+		<div style="float:right;margin:1rem;width:50%">
+		<img style="margin:1rem;height:200px" data-key="data.image.url" />
+		</div>
+		<div style="float:none;margin:1rem;width:45%">
 			<a data-key="data.title, link"></a>
 			<p data-key="data.description"></p>
 		</div>
