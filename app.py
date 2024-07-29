@@ -17,23 +17,15 @@ def photos():
 
 @app.route('/2022_10_22/')
 def photos_2022_10():
-    root_img_name="images/2022_10_22/0000051500"
-    no_of_photos=20
-    return render_template('photo_template.html', root_img_name=root_img_name, no_of_photos=no_of_photos, descriptions=[])
+    return produce_photo_page('2022_10_22', '0000051500', [1, 2, 5, 7, 8, 9, 10, 11, 12, 15, 17, 18, 19, 20])
 
 @app.route('/2024_04_22/')
 def photos_2024_04():
-    root_img_name="images/2024_04_22/0000050400"
-    no_of_photos=38
-    with open('static/images/2024_04_22/descriptions.txt') as f:
-        lines = [line.rstrip('\n') for line in f]
-    return render_template('photo_template.html', root_img_name=root_img_name, no_of_photos=no_of_photos, descriptions=lines)
+    return produce_photo_page('2024_04_22', '0000050400', range(1, 39))
 
 @app.route('/2024_07_21/')
 def photos_2024_07():
-    root_img_name="images/2024_07_21/0000093500"
-    no_of_photos=26
-    return render_template('photo_template.html', root_img_name=root_img_name, no_of_photos=no_of_photos, descriptions=[])
+    return produce_photo_page('2024_07_21', '0000093500', range(1, 27))
     
 @app.route('/cultivation/')
 def cultivation():
@@ -50,6 +42,13 @@ def newsletter():
 @app.route('/hag_chat/')
 def hag_chat():
     return render_template('hag_chat.html')
+
+def produce_photo_page(photos_folder_name, photo_file_prefix, indexes_of_displayed_photos):
+    root_img_name='images/' + photos_folder_name + '/' + photo_file_prefix
+    with open('static/images/' + photos_folder_name + '/descriptions.txt') as f:
+        lines = [line.rstrip('\n') for line in f]
+    return render_template('photo_template.html', root_img_name=root_img_name, indexes_of_displayed_photos=indexes_of_displayed_photos, descriptions=lines)
+    
 
 
 if __name__ == '__main__':
