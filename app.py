@@ -21,11 +21,11 @@ def photos_2022_10():
 
 @app.route('/2024_04_22/')
 def photos_2024_04():
-    return produce_photo_page('2024_04_22', '0000050400', range(1, 39))
+    return produce_photo_page('2024_04_22', '0000050400', [1, 2, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36])
 
 @app.route('/2024_07_21/')
 def photos_2024_07():
-    return produce_photo_page('2024_07_21', '0000093500', range(1, 27))
+    return produce_photo_page('2024_07_21', '0000093500', [2, 4, 5, 6, 7, 8, 11, 12, 13, 17, 18, 20, 21, 22, 23, 24, 25, 26])
     
 @app.route('/cultivation/')
 def cultivation():
