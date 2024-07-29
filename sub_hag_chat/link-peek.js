@@ -40,12 +40,16 @@ class LinkPeek extends HTMLElement {
   }
 
   populateSlot(slot, value) {
-    if (typeof value == "string" && value.startsWith("http")) {
-      if (slot.localName === "a") slot.href = value;
-    } if (typeof value == "string" && slot.localName === "img") { // remove http check for image to allow default img
+    if (slot.localName === "a") { 
+      if (typeof value == "string" && value.startsWith("http")) {
+        slot.href = value;
+      } else {
+        slot.textContent = value;
+      }
+    } else if (slot.localName === "img") {
       slot.src = value;
-    } else {
-      if (!value.startsWith("http")) slot.textContent = value;
+    }  else {
+      slot.textContent = value;
     }
   }
 
