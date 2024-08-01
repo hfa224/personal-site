@@ -1,3 +1,4 @@
+"""Freezes the personal site app to static files"""
 from flask_frozen import Freezer
 from app import app
 
