@@ -16,7 +16,7 @@
 			<img src="{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}"></img>
 			<figcaption>
 				{% if descriptions|length > 0 %}
-					{{ descriptions[n-1] }}
+					{{ descriptions[n-1] |safe }}
 				{% endif %}
 			</figcaption>
 		</figure>
