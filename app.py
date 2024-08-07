@@ -1,4 +1,6 @@
 """Serves up the personal site"""
+
+import re
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -115,12 +117,33 @@ def produce_photo_page(
     with open(
         "static/images/" + photos_folder_name + "/descriptions.txt", encoding="utf-8"
     ) as f:
-        lines = [line.rstrip("\n") for line in f]
+        lines = [put_links_in_descriptions(line.rstrip("\n")) for line in f]
     return render_template(
         "photo_template.html",
         root_img_name=root_img_name,
         indexes_of_displayed_photos=indexes_of_displayed_photos,
         descriptions=lines,
+    )
+
+
+def put_links_in_descriptions(desc):
+    """Finds links in the format [link text] in description and replaces with wikipedia link"""
+    link_regex = re.compile(
+        r"\[([\w\s,]+)\]"
+    )  # match anything in the description in format [words words]
+    return link_regex.sub(linkrepl, desc)
+
+
+def linkrepl(matchobj):
+    """replace link in [link text] format with wikipedia hyperlink to 'link_text'"""
+    stripped_string = matchobj.group(0).replace("[", "").replace("]", "")
+    match_string = stripped_string.replace(" ", "_")
+    return (
+        '<a href="https://en.wikipedia.org/wiki/'
+        + match_string
+        + '">'
+        + stripped_string
+        + "</a>"
     )
 
 
