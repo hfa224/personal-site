@@ -3,7 +3,7 @@
     <head>
 		<title>{% block title %}{% endblock %} - Personal site</title>
 		<link rel="stylesheet" href="https://unpkg.com/normalize.css">
-		<link rel="stylesheet" href="https://unpkg.com/magick.css">
+		<link rel="stylesheet" href="{{ url_for('static', filename='style/magick.css') }}">
 		<!-- add custom styling additions -->
 		<link rel="stylesheet" href="{{ url_for('static', filename='style/additions.css') }}">
 	</head>
@@ -31,7 +31,13 @@
 			  {% block content %}{% endblock %}
 			<footer>
 				<hr>
-				<p>Uses <a href="https://css.winterveil.net/">magick.css</a> by winterveil</p>
+				<nav>
+					<ul>
+						<li>❄️ Uses <a href="https://css.winterveil.net/">magick.css</a> by winterviel</li>
+						<li><a href="{{ url_for('colophon') }}">Colophon</a></li>
+						<li><a href="{{ url_for('changelog') }}">Changelog</a></li>
+					</ul>
+		  		</nav>
 			</footer>
 		</main>
     </body>
