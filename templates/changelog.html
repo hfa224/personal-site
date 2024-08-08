@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}About{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+	<section>
+		<h3>08/08/2024</h3>
+		<p>Added this changelog page, colophone page, updated footer with links, downloaded local version of magick.css version 1.6 as unpkg uses version 1.5. Also added August 2024 photo page.
+		</p>
+	</section>
+	<section>
+		<h3>Plans / Changelog</h3>
+		<ul>
+			<li>Custom styling for drop-down</li>
+			<li>Create now page instead of using omg.lol/now</li>
+			<li>Update photo section and compress image files</li>
+			<li>Look into a domain and where to host</li>
+			<li><s>Make static using flask-freeze</s></li>
+			<li><s>Create a highlight css section</s></li>
+		</ul>
+	</section>
+{% endblock %}

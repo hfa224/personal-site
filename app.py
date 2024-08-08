@@ -105,6 +105,16 @@ def digital_garden():
     """Renders digital garden page"""
     return render_template("digital_garden.html")
 
+@app.route("/colophon/")
+def colophon():
+    """Renders colophon page"""
+    return render_template("colophon.html")
+
+@app.route("/changelog/")
+def changelog():
+    """Renders changelog page"""
+    return render_template("changelog.html")
+
 
 @app.route("/newsletter/")
 def newsletter():

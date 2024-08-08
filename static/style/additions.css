@@ -5,6 +5,29 @@
  * version: 0.0.1
 */
 
+/* overwrite this to change bg and text colour
+:root {
+     Theme colors 
+    --fg: #335749;
+    --bg: #60c9b3;
+}*/
+
+/* overwrite default dark colour scheme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fg: #f5edd6;
+        --bg: #29304e;
+        --form-bg: #29304e;
+        --form-fg: #f5edd6;
+        --form-fg-placeholder: #fefefe9a;
+    }
+}
+
+/* used to style summary css element */
+summary {
+    list-style-type: '⬇ ';
+} 
+
 /* used to style summary css element */
 summary {
     list-style-type: '⬇ ';
@@ -13,14 +36,9 @@ summary {
 details[open] > summary {
       list-style-type: '⬆ ';
 }
-/* overwrite this to change bg and text colour
-:root {
-     Theme colors 
-    --fg: #335749;
-    --bg: #60c9b3;
-}*/
 
-/* div class to highlight text in a box */
+
+/* div class to highlight text in a rounded box */
 .highlight {
     display: flex; 
     flex-wrap: wrap; 

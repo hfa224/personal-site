@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Colophon{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+	<section>
+		<h3>About this site</h3>
+		<p>Written in python using Flask with Jinja. Styled with magick.css. Static files generated with flask-freeze.</p>
+	</section>
+{% endblock %}
