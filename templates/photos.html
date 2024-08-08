@@ -6,9 +6,14 @@
 
 {% block content %}
 	<section>
-		<img src="{{ url_for('static', filename='images/stickers/STK-20240725-WA0002.webp') }}" style="float:left; height:100px" alt="cube cinema ticket stubs">
+		<img src="{{ url_for('static', filename='images/stickers/STK-20240725-WA0002.webp') }}" style="float:left; height:200px" alt="cube cinema ticket stubs">
+		This is where I store all the film photos I've developed. I got into film photography when my friend gave me her old camera in 2023 (see left!). It's a very basic camera, just a point-and-click.
+		I usually use Kodak gold film - I prefer shooting in colour.
+	</section>
+	<section>
 		<nav>
 			<ul>
+				<li><a href="{{ url_for('photos_2024_08') }}">Bristol, colour, August 2024</a></li>
 				<li><a href="{{ url_for('photos_2024_07') }}">Bristol, colour, July 2024</a></li>
 				<li><a href="{{ url_for('photos_2024_04') }}">Weymouth and Bristol, B&W, April 2024</a></li>
 				<li><a href="{{ url_for('photos_2022_10') }}">Berlin and Prague, Colour, October 2022</a></li>
