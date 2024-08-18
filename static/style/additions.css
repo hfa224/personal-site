@@ -70,6 +70,17 @@ details[open] > summary {
     margin-top: 0;
 }
 
+/* On mobile devices, display image aside below image */
+@media (max-width: 600px) {
+    .image-aside {
+        width: 50%;
+        margin: 1rem 1rem 1rem 3rem;
+        padding: 0.5rem 0.5rem 0.5rem 2rem;
+        border-left: 3px solid var(--fg);
+        line-height: 1.8; /* 6 */
+    }
+}
+
 /* override magick css styling of figcaption - I want the text to be smaller */
 figcaption {
     margin: 0.8rem 0;
