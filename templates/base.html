@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+		<meta charset="UTF-8">
+		<meta name="description" content="This is the personal site of Helen Ffion, with photos and other things I'm interested in">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="robots" content="noindex, nofollow">
+		<!-- Not set up yet -->
+		<!-- link rel="canonical" href="https://helenffion.co.uk" -->
+		<!-- link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" -->
 		<title>{% block title %}{% endblock %} - Personal site</title>
 		<link rel="stylesheet" href="https://unpkg.com/normalize.css">
 		<link rel="stylesheet" href="{{ url_for('static', filename='style/magick.css') }}">
@@ -30,7 +37,7 @@
 			  {% endfor %}
 			  {% block content %}{% endblock %}
 			<footer>
-				<hr>
+				<hr> <!-- Line to seperate footer from content -->
 				<nav>
 					<ul>
 						<li>❄️ Uses <a href="https://css.winterveil.net/">magick.css</a> by winterviel</li>
