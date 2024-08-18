@@ -60,11 +60,6 @@ details[open] > summary {
     line-height: 1.8; /* 6 */
 }
 
-.aside-image {
-    margin: 1rem 1rem 1rem 1rem;
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-}
-
 /* Prevent double top margins */
 .image-aside h1, .image-aside h2, .image-aside h3, .image-aside h4 {
     margin-top: 0;
@@ -73,6 +68,7 @@ details[open] > summary {
 /* On mobile devices, display image aside below image */
 @media (max-width: 600px) {
     .image-aside {
+        width: 100%;
         margin: 1rem 1rem 1rem 3rem;
         padding: 0.5rem 0.5rem 0.5rem 2rem;
         border-left: 3px solid var(--fg);
