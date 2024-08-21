@@ -121,11 +121,11 @@ def newsletter():
     """Renders now page TODO: under construction/hiden"""
     return render_template("newsletter.html")
 
+@app.route("/counters/")
+def counters():
+    """Renders counters page"""
+    return render_template("counters.html")
 
-@app.route("/hag_chat/")
-def hag_chat():
-    """Renders hag chat page TODO: under construction/hiden"""
-    return render_template("hag_chat.html")
 
 
 def produce_photo_page(
