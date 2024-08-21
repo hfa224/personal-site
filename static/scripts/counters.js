@@ -4,7 +4,6 @@
 // and updates an elemnt with the text every minute
 
 // months are indexed 0
-var targetDate1 = new Date(2024, 2, 8) // 08/03/2024 since i totaled my car
 var targetDate2 = new Date(2024, 3, 25) // 25/04/2024 started sertraline
 var targetDate3 = new Date(2023, 5, 29) // 29/05/2023 fred asked me out
 var targetDate4 = new Date(2023, 10, 10) // 10/10/2023 passed my driving test
@@ -34,7 +33,6 @@ function update(targetDate, id) {
 }
 
 function updateCounters() {
-    update(targetDate1, "targetDate1");
     update(targetDate2, "targetDate2");
     update(targetDate3, "targetDate3");
     update(targetDate4, "targetDate4");

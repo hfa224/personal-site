@@ -127,6 +127,12 @@ def hag_chat():
     """Renders hag chat page TODO: under construction/hiden"""
     return render_template("hag_chat.html")
 
+@app.route("/counters/")
+def counters():
+    """Renders counters page"""
+    return render_template("counters.html")
+
+
 
 def produce_photo_page(
     photos_folder_name, photo_file_prefix, indexes_of_displayed_photos
