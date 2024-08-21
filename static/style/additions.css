@@ -73,7 +73,11 @@ details[open] > summary {
         padding: 0.5rem 0.5rem 0.5rem 2rem;
         border-left: 3px solid var(--fg);
         line-height: 1.8; /* 6 */
-    }  
+    }
+    .aside-image {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* override magick css styling of figcaption - I want the text to be smaller */
