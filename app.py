@@ -19,6 +19,11 @@ def about():
     """Renders about page"""
     return render_template("about.html")
 
+@app.route("/cinema/")
+def cinema():
+    """Renders cinema page"""
+    return render_template("cinema.html")
+
 
 @app.route("/photos/")
 def photos():

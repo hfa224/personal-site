@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Kino{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+	<section>
+
+        <div class="highlight" style="display: grid;
+        grid-template-columns: 10% 90%;
+        grid-template-rows: 100%;
+        grid-gap: 15px;
+        width:100%;
+        align-items: stretch;">
+            <div style="font-size: 3.0em;padding-top:10px;">🎟️</div>
+            <div style="padding-right: 5px">This page is under construction. Eventually I want it to be a shrine to all of my favourite cinemas.</div>
+        </div>
+    </section>
+    <section>
+
+		<img src="{{ url_for('static', filename='images/stickers/STK-20240725-WA0003.webp') }}" style="float:left; height:100px" alt="cube cinema ticket stubs"> I go to a lot of local Bristol cinemas,
+		here's a collection of off-cuts from them - I save all my cinema tickets and maybe one day I'll do something with them. I like the cube cinema and the watershed the best.
+		<img src="{{ url_for('static', filename='images/stickers/STK-20240725-WA0001.webp') }}" alt="cube cinema membership card" style="float:right; height:100px">
+
+	</section>
+{% endblock %}
