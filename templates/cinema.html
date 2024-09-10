@@ -1,27 +1,42 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
 
-{% block header %}
-  <h1>{% block title %}Kino{% endblock %}</h1>
-{% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="This is the personal site of Helen Ffion, with photos and other things I'm interested in">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Not set up yet -->
+    <!-- link rel="canonical" href="https://helenffion.co.uk" -->
+    <!-- link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" -->
+    <title>{% block title %}{% endblock %} - Personal site</title>
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/kino.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inder&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap" rel="stylesheet">
 
-{% block content %}
-	<section>
 
-        <div class="highlight" style="display: grid;
-        grid-template-columns: 10% 90%;
-        grid-template-rows: 100%;
-        grid-gap: 15px;
-        width:100%;
-        align-items: stretch;">
-            <div style="font-size: 3.0em;padding-top:10px;">🎟️</div>
-            <div style="padding-right: 5px">This page is under construction. Eventually I want it to be a shrine to all of my favourite cinemas.</div>
-        </div>
-    </section>
-    <section>
+</head>
 
-		<img src="{{ url_for('static', filename='images/stickers/STK-20240725-WA0003.webp') }}" style="float:left; height:100px" alt="cube cinema ticket stubs"> I go to a lot of local Bristol cinemas,
-		here's a collection of off-cuts from them - I save all my cinema tickets and maybe one day I'll do something with them. I like the cube cinema and the watershed the best.
-		<img src="{{ url_for('static', filename='images/stickers/STK-20240725-WA0001.webp') }}" alt="cube cinema membership card" style="float:right; height:100px">
+<body>
+    <header>
+        <h1>Kino</h1>
+    </header>
+    <main>
+        <section class="content">
+            <img src="{{ url_for('static', filename='images/stickers/STK-20240725-WA0003.webp') }}"
+                style="float:left; height:100px" alt="cube cinema ticket stubs"> I go to a lot of local Bristol cinemas,
+            here's a collection of off-cuts from them - I save all my cinema tickets and maybe one day I'll do something
+            with them. I like the cube cinema and the watershed the best.
+            <img src="{{ url_for('static', filename='images/stickers/STK-20240725-WA0001.webp') }}"
+                alt="cube cinema membership card" style="float:right; height:100px">
+                This page is under construction, but I'd like it to be a shrine to all my favourite things about the cinema - quotes,
+                pictures of my cinema memorabilia, eventually my collection of cinema postcards. The background image is from 
+                <i>Fallen Leaves, 2023</i> by Aki Kaurismäki.
 
-	</section>
-{% endblock %}
+        </section>
+    </main>
+</body>
+
+</html>
