@@ -10,32 +10,48 @@
     <!-- Not set up yet -->
     <!-- link rel="canonical" href="https://helenffion.co.uk" -->
     <!-- link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" -->
-    <title>{% block title %}{% endblock %} - Personal site</title>
+    <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="https://unpkg.com/normalize.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='style/kino.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Inder&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap" rel="stylesheet">
 
 
 </head>
 
 <body>
     <header>
-        <h1>Kino</h1>
+        <h1>Cinema</h1>
+        <nav>
+            <ul>
+                <li><a href="">Why I love the cinema</a></li>
+                <li><a href="">Trip to The Little Theatre, Bath</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <section class="content">
-            <img src="{{ url_for('static', filename='images/stickers/STK-20240725-WA0003.webp') }}"
-                style="float:left; height:100px" alt="cube cinema ticket stubs"> I go to a lot of local Bristol cinemas,
-            here's a collection of off-cuts from them - I save all my cinema tickets and maybe one day I'll do something
-            with them. I like the cube cinema and the watershed the best.
-            <img src="{{ url_for('static', filename='images/stickers/STK-20240725-WA0001.webp') }}"
+        <section class="content" style="height:100%">
+            <img align="left" src="{{ url_for('static', filename='images/stickers/pile-of-cube-tickets.webp') }}"
+                 style="height:100px" alt="cube cinema ticket stubs">
+            <p>I go to a lot of local Bristol cinemas,
+                here's a collection of off-cuts from them - I save all my cinema tickets and maybe one day I'll do
+                something with them. I like the cube cinema and the watershed the best.</p>
+            <!--img src="{{ url_for('static', filename='images/stickers/cube-membership-card.webp') }}"
                 alt="cube cinema membership card" style="float:right; height:100px">
-                This page is under construction, but I'd like it to be a shrine to all my favourite things about the cinema - quotes,
-                pictures of my cinema memorabilia, eventually my collection of cinema postcards. The background image is from 
-                <i>Fallen Leaves, 2023</i> by Aki Kaurismäki.
-
-        </section>
+            <p>This page is under construction, but I'd like it to be a shrine to all my favourite things about the
+                cinema - quotes, pictures of my cinema memorabilia, eventually my collection of cinema postcards. The
+                background image is
+                from <i>Fallen Leaves, 2023</i> by Aki Kaurismäki.
+            </p>
+            <img src="{{ url_for('static', filename='images/stickers/20th-century-flicks-card.webp') }}"
+                alt="20th century flicks card" style="float:left; height:100px">
+            I'd also like to add cinema tourism reviews, drawings and photographs of my favourite cinemas, writing about
+            film festivals
+            and the films available where I live in south west england.
+            <img src="{{ url_for('static', filename='images/stickers/watershed-maxxxine-ticket.webp') }}"
+                alt="watershed maxxxine ticket" style="float:right; height:100px">
+            <p>I'd also like to add cinema tourism reviews, drawings and photographs of my favourite cinemas, writing about
+            film festivals
+            and the films available where I live in south west england.</p>
+        </section-->
     </main>
 </body>
 
