@@ -7,18 +7,11 @@
 
 @charset "UTF-8";
 
-/* Importing the fonts. 
-Cerviche One and Inder
-*/
 @font-face {
-    font-family: SwearBoldCitali;
-    src: url('../fonts/Swear Banner/SwearBannerDemo-BoldCilati.otf') format("opentype");
-}
+    font-family: "devo";
+    src: url("../fonts/devo/DEVO.woff") format('woff');
+  }
 
-@font-face {
-    font-family: SwearRegular;
-    src: url('../fonts/Yumex/YumexDemo-Light.otf') format("opentype");
-}
 
 /* Simple CSS Reset */
 * {
@@ -69,12 +62,12 @@ html {
     4) Reset the counter for sidenotes.
 */
 body {
-    font-size: 2.0rem; /* 1 */
+    font-size: 1.8rem; /* 1 */
     color: var(--fg); /* 2 */
     font-family: "Averia Serif Libre", serif; /* 3 */
     font-style: normal; /* 3 */
     line-height: 2.0rem; /* 3 */
-    font-weight: 300; /* 3 */
+    font-weight: 600; /* 3 */
     background-image: url('../images/cinema/fallen_leaves_still.jpg');
     background-size: 120%;
     counter-reset: sidenote-counter; /* 4 */
@@ -195,7 +188,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: "SwearBoldCitali"; /* 1 */
+    font-family: "devo"; /* 1 */
     color: var(--bg); /* 1 */
     font-style: normal; /* 1 */
     font-weight: 600; /* 1 */
@@ -204,7 +197,7 @@ h4 {
 
 /* h1 headings are uppercase and 2x the size of the base font. */
 h1 {
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-size: 5.0rem;
     line-height: 3.3rem;
 }
@@ -212,7 +205,7 @@ h1 {
 /* h2 headings are uppercase and 1.250x (major third) the size of the base font. */
 h2 {
     font-size: 2.25rem;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     margin: 1.2rem 0 1.2rem 0;
 }
 

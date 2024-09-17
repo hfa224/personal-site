@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="This is the personal site of Helen Ffion, with photos and other things I'm interested in">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Not set up yet -->
+    <!-- link rel="canonical" href="https://helenffion.co.uk" -->
+    <!-- link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" -->
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/kino.css') }}">
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Trip to the Little Theatre, Bath</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('cinema') }}">Back</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <p>On one of my wednesday's off I went to Bath to watch The Third Man.</p>
+        </section>
+    </main>
+</body>
+
+</html>

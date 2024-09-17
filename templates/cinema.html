@@ -19,36 +19,25 @@
 
 <body>
     <header>
-        <h1>Cinema</h1>
+        <h1>CiNeMa</h1>
         <nav>
             <ul>
                 <li><a href="">Why I love the cinema</a></li>
-                <li><a href="">Trip to The Little Theatre, Bath</a></li>
+                <li><a href="{{ url_for('little_theatre') }}">Trip to The Little Theatre, Bath</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="content" style="height:100%">
-            <img align="left" src="{{ url_for('static', filename='images/stickers/pile-of-cube-tickets.webp') }}"
-                 style="height:100px" alt="cube cinema ticket stubs">
+        <section class="content">
             <p>I go to a lot of local Bristol cinemas,
                 here's a collection of off-cuts from them - I save all my cinema tickets and maybe one day I'll do
                 something with them. I like the cube cinema and the watershed the best.</p>
-            <!--img src="{{ url_for('static', filename='images/stickers/cube-membership-card.webp') }}"
-                alt="cube cinema membership card" style="float:right; height:100px">
             <p>This page is under construction, but I'd like it to be a shrine to all my favourite things about the
                 cinema - quotes, pictures of my cinema memorabilia, eventually my collection of cinema postcards. The
                 background image is
                 from <i>Fallen Leaves, 2023</i> by Aki Kaurismäki.
             </p>
-            <img src="{{ url_for('static', filename='images/stickers/20th-century-flicks-card.webp') }}"
-                alt="20th century flicks card" style="float:left; height:100px">
             I'd also like to add cinema tourism reviews, drawings and photographs of my favourite cinemas, writing about
-            film festivals
-            and the films available where I live in south west england.
-            <img src="{{ url_for('static', filename='images/stickers/watershed-maxxxine-ticket.webp') }}"
-                alt="watershed maxxxine ticket" style="float:right; height:100px">
-            <p>I'd also like to add cinema tourism reviews, drawings and photographs of my favourite cinemas, writing about
             film festivals
             and the films available where I live in south west england.</p>
         </section-->
