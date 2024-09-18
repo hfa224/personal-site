@@ -29,6 +29,11 @@ def little_theatre():
     """Renders cinema page"""
     return render_template("cinema/little_theatre_2024_09.html")
 
+@app.route("/cinema_love/")
+def cinema_love():
+    """Renders cinema page"""
+    return render_template("cinema/cinema_love.html")
+
 
 @app.route("/photos/")
 def photos():

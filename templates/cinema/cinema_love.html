@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="This is the personal site of Helen Ffion, with photos and other things I'm interested in">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Not set up yet -->
+    <!-- link rel="canonical" href="https://helenffion.co.uk" -->
+    <!-- link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" -->
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/kino.css') }}">
+
+
+</head>
+
+<body>
+    <header>
+        <h1>WhY I LoVe The CinEma</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('cinema') }}">Back</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <p>Watching films is one of my main hobbies. I love being transported by beautiful or interesting imagery or falling in love with a character.
+
+            I like a good plot but it doesn't matter to me if a film is more about the picture or the characters. I think about this tweet a lot.</p>
+            
+            tweet
+            
+            <p>I like genre films, mainly horror but I also watch a lot of action films - the Alien and Bond franchises. I like what I guess are art house films, and particularly love watching films from the 70s and 80s. I'm a big fan of Americana, some of my favourite directors are Robert Altman, Pedro Almodovar, Eric Rohmer, and Peter Strickland, and Alice Rohrwacher. I like Ealing comedies, Aki Kaurismäki's proletariat triology and a tight 90.
+            
+            I got into watching so many films after moving to a city with good cinemas that show a lot of stuff I'd never heard of before, and having no friends so I'd go to the cinema four times a week. I now have friends but I go to the cinema with them (and my boyfriend who watches even more films than me).
+            
+            I watch some films at home but I prefer the cinema. I own a DVD player and pick up a lot of films in second hand shops - I like a director's commentary.
+            
+            I have about a zillion films on my watchlist at the moment and I don't know when I'll ever be able to see them all!
+            
+            A big part of my hobby though is making plans to see films and scheduling what films I'll see during the week or what's on my radar - so I've added that to my new now page - I'm not totally happy with the concept of a now page - and not sure if it works for me yet - but a film update is something I'll always be happy to do.</p>
+        </section>
+    </main>
+</body>
+
+</html>
