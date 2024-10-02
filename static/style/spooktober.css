@@ -63,6 +63,7 @@ a:hover {
 
 .day {
   display: grid;
+  position: relative; /* to be able to position the overlay div on top of theday div content */
   place-content: top;
   color: #ffffff;
   background: #acbfa4;
@@ -93,6 +94,7 @@ a:hover {
 
 .inner-day {
   display: grid;
+  position: relative; /* to be able to position the overlay div on top of theday div content */
   aspect-ratio: auto;
   border: 0px;
   place-content: top;
@@ -101,6 +103,26 @@ a:hover {
   text-shadow: 0 1px 0 var(--fg);
   padding: 0px;
   background-position: center;
+}
+
+#overlay {
+  background: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  padding: 2px;
+  opacity: 0;
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+  position:absolute;
+  width:100%;
+  height:100%;
+}
+
+.day:hover #overlay {
+  opacity: 1;
+}
+
+.inner-day:hover #overlay {
+  opacity: 1;
 }
 
 .container-tab {
