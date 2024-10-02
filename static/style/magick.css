@@ -122,8 +122,8 @@ footer>*:last-child {
 
 /* Add large margins to the header to visually separate it from the main content. */
 header {
-    margin-top: 12rem;
-    margin-bottom: 8rem;
+    margin-top: 8rem;
+    margin-bottom: 4rem;
 }
 
 /* On mobile devices, reduce the margin around the header to save space. */
