@@ -1,0 +1,391 @@
+/*
+ * Magick CSS
+ * by: winterveil (https://github.com/wintermute-cell/)
+ * license: MIT
+ * version: 1.0.5
+*/
+
+@charset "UTF-8";
+
+@font-face {
+    font-family: "devo";
+    src: url("../fonts/devo/DEVO.woff") format('woff');
+  }
+
+
+/* Simple CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Theme colors */
+    --fg: #0e0e0e;
+    --bg: #fefefe;
+    --form-bg: #fbfbfb;
+    --form-fg: #00004d;
+    --form-fg-placeholder: #00004d9a;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fg: #fefefe;
+        --bg: #0e0e0e;
+        --form-bg: #1a1a1a;
+        --form-fg: #fefefe;
+        --form-fg-placeholder: #fefefe9a;
+    }
+}
+
+/*
+    1) Modify the base font-size to 62.5% so that 1.6rem = 16px.
+    2) Set box-sizing globally to handle padding and border widths.
+*/
+html {
+    font-size: 62.5%; /* 1 */
+    box-sizing: border-box; /* 2 */
+}
+
+/* Use smaller sizes on mobile devices. */
+@media (max-width: 600px) {
+    html {
+        font-size: 56%;
+    }
+}
+
+/*
+    1) Set the base font-size to 18px with a normal weight.
+    2) Set the text and background colors to match the theme.
+    3) Use the 'Averia Serif Libre' font for the body text.
+    4) Reset the counter for sidenotes.
+*/
+body {
+    font-size: 1.8rem; /* 1 */
+    color: var(--fg); /* 2 */
+    font-family: "Averia Serif Libre", serif; /* 3 */
+    font-style: normal; /* 3 */
+    line-height: 2.0rem; /* 3 */
+    font-weight: 300; /* 3 */
+    background-image: url('../images/cinema/fallen_leaves_still.jpg');
+    background-size: 120%;
+    counter-reset: sidenote-counter; /* 4 */
+}
+
+/*
+    1) Center the main content.
+    2) Set the width of the element to 760px, with lower padding on mobile devices.
+    3) Relative position as the default allows for absolute positioning of child elements.
+*/
+article,
+main {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    /* margin-left: auto;*/
+    margin-right: auto;
+    max-width: 40%; /* 2 */
+    padding: 0 1rem; /* 2 */
+    width: 100%; /* 2 */
+    position: relative; /* 3 */
+    background-color: rgba(255, 255, 255, 80%);
+}
+
+@media (max-width: 600px) {
+    article,
+    main {
+        padding: 0 0.2rem; /* 2 */
+    }
+}
+
+/* ========================================================================================================================= */
+/*  Structure & Layout ===================================================================================================== */
+/* ========================================================================================================================= */
+
+/* Display the header, main, and footer sections as distinctly separate blocks. */
+header ,
+section,
+footer {
+    margin: 0.7rem;
+    padding: 0.7rem;
+}
+
+header {
+    color: #ffffff;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+    /* margin-left: auto;*/
+    margin-right: auto;
+}
+
+/* On mobile devices, a smaller margin looks more fitting due to the smaller view. */
+@media (max-width: 600px) {
+    header,
+    section,
+    footer {
+        margin-top: 0.2rem;
+        margin-bottom: 0.2rem;
+    }
+}
+
+/* Avoid double margin on the last child of each section */
+header>*:last-child,
+section>*:last-child,
+footer>*:last-child {
+    margin-bottom: 0;
+}
+
+/* On mobile devices, reduce the margin around the header to save space. */
+@media (max-width: 600px) {
+    header {
+        margin: 0;
+        padding: 1.2rem;
+    }
+}
+
+/*
+    1) Center align the text in the footer.
+    2) Add a margin to the top of the footer to visually separate it from the main content.
+    3) Add a margin to the bottom of the footer to not have it stuck to the bottom of the page.
+*/
+footer {
+    text-align: center; /* 1 */
+    margin-top: 5rem; /* 2 */
+    margin-bottom: 2rem; /* 3 */
+}
+
+/* ========================================================================================================================= */
+/*  Typography & Links ===================================================================================================== */
+/* ========================================================================================================================= */
+
+/* Add some space between paragraphs. */
+p {
+    margin: 1.6rem 0; /* 1 */
+}
+
+/* Remove link color. */
+a {
+    color: var(--fg);
+}
+
+/* Make string a little more bold, to adjust for the font. */
+b,
+strong {
+    font-weight: 600;
+}
+
+/* Make emphasized text a little larger, to adjust for the font. */
+i,
+em {
+    font-size: calc(1em + 0.1rem);
+}
+
+/*
+    1) Set the font-family, color, and font-style for the headings.
+    2) Add a margin to the top and bottom of the headings.
+*/
+h1,
+h2,
+h3,
+h4 {
+    font-family: "devo"; /* 1 */
+    font-style: normal; /* 1 */
+    font-weight: 600; /* 1 */
+    margin: 1.6rem 0 1.6rem 0; /* 2 */
+}
+
+/* h1 headings are uppercase and 2x the size of the base font. */
+h1 {
+    /*text-transform: uppercase;*/
+    font-size: 5.0rem;
+    line-height: 3.3rem;
+}
+
+/* h2 headings are uppercase and 1.250x (major third) the size of the base font. */
+h2 {
+    font-size: 2.25rem;
+    /*text-transform: uppercase;*/
+    margin: 1.2rem 0 1.2rem 0;
+}
+
+/* h3 headings are 1.125x (major second) the size of the base font. */
+h3 {
+    font-size: 2.025rem;
+}
+
+/* Add a decorative element before h3 headings. */
+h3:before {
+    font-family: "Noto Sans Symbols 2", sans-serif;
+    content: "🙛 ";
+}
+
+/* h4 headings are the same size as h3 headings, but italic and without the decorative element. */
+h4 {
+    font-style: italic;
+    font-size: 2.025rem;
+}
+
+/*
+    1) Set font size and family
+    2) Remove default markers
+    3) Add a margin to the top of the nav links.
+*/
+header nav ul,
+footer nav ul {
+    font-size: 2.5rem; /* 1 */
+    font-family: "SwearBoldCitali"; /* 1 */
+    list-style-type: none; /* 2 */
+    margin-top: 1.0rem; /* 3 */
+}
+
+/* Add a margin to the navigational list */
+header nav ul li,
+footer nav ul li {
+    margin: 0 1.2rem;
+    padding: 5px;
+}
+
+/* Remove default link styles. */
+header nav ul li a,
+footer nav ul li a {
+    text-decoration: none;
+    color: var(--bg);
+}
+
+/* Add a hover effect to the navigation links. */
+header nav ul li a::before,
+footer nav ul li a::before {
+    content: "❯ "; /* 1 */
+    opacity: 0; /* 1 */
+}
+header nav ul li a:hover::before,
+footer nav ul li a:hover::before {
+    opacity: 1; /* 1 */
+}
+
+/* ===================================================================================================================== */
+/*       Lists     ===================================================================================================== */
+/* ===================================================================================================================== */
+
+/*
+    1) Add some indentation to the list items.
+    2) Add a margin to the top and bottom of the list.
+*/
+:where(main ol, main ul) {
+    margin-inline-start: 0; /* 1 */
+    padding-inline-start: 3rem; /* 1 */
+    margin: 0.8rem 0; /* 2 */
+}
+
+/* Add some vertical space around a definition list. */
+dl {
+    margin: 0.8rem 0;
+}
+
+/* Add an indent to the definition term. */
+dd {
+    margin: 0 1.6rem;
+}
+
+/* ===================================================================================================================== */
+/*      Media      ===================================================================================================== */
+/* ===================================================================================================================== */
+
+/*
+    1) Set the maximum width of the image to 100% so they don't overflow the main column.
+    2) Set the height in respect to the width to prevent the image from stretching.
+    3) Add some margin to standalone images.
+*/
+img {
+    max-width: 100%; /* 1 */
+    height: auto; /* 2 */
+    margin: 0.8rem 0; /* 3 */
+}
+
+/* Images in figures should not have their own margins */
+figure img {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+    1) Set margins and padding for figures.
+    2) Center align any text inside figures.
+*/
+figure {
+    margin: 2rem 0; /* 1 */
+    padding: 0; /* 1 */
+    text-align: center; /* 2 */
+}
+
+/* Center align any element that is part of a figure */
+figure * {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* We don't want to center prealigned text or code in figures */
+figure code,
+figure pre {
+    text-align: left;
+}
+
+/* Set the typography for the figure captions */
+figcaption {
+    margin: 0.8rem 0;
+    font-size: 1.8rem;
+}
+
+/* ============================================================================================================================ */
+/*   Preformatting, Quotes & Code  ============================================================================================ */
+/* ============================================================================================================================ */
+
+/*
+    1) Set custom padding and margins.
+    2) Hide the vertical scroll bar.
+    3) Set the width to fit just around the content, but limit it to 80% of the main column.
+    4) Center the blockquote horizontally and add some vertical margins.
+*/
+blockquote {
+    padding: 1rem 1.6rem; /* 1 */
+    overflow-y: hidden; /* 2 */
+    width: fit-content; /* 3 */
+    max-width: 80%; /* 3 */
+    margin: 2rem auto; /* 4 */
+}
+
+/*
+    1) Set a custom font for blockquote text paragraphs.
+    2) Add some space between the paragraphs.
+*/
+blockquote p {
+    font-family: "Spectral", serif; /* 1 */
+    font-style: italic; /* 1 */
+    font-size: 2.1rem; /* 1 */
+    font-weight: 300; /* 1 */
+    line-height: 2.4rem; /* 1 */
+    margin: 2.1rem 0; /* 2 */
+}
+
+/* Add a footer to the blockquote for citations. */
+/*
+    1) Reset any margins and padding from the main footer.
+    2) Set the footer to float and align to the right.
+    3) Limit the width of the footer to 55% of the main column.
+    4) Set a custom font for the footer.
+*/
+blockquote footer {
+    margin: 0; /* 1 */
+    padding: 0; /* 1 */
+    float: right; /* 2 */
+    text-align: right; /* 2 */
+    width: 55%; /* 3 */
+    font-family: "Spectral", serif; /* 4 */
+    font-style: normal; /* 4 */
+    font-size: 1.4rem; /* 4 */
+}
+
+/* Make the actual citation italic */
+blockquote footer cite {
+    font-style: italic;
+}

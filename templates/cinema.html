@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="This is the personal site of Helen Ffion, with photos and other things I'm interested in">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Not set up yet -->
+    <!-- link rel="canonical" href="https://helenffion.co.uk" -->
+    <!-- link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" -->
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/kino.css') }}">
+
+
+</head>
+
+<body>
+    <header>
+        <h1>CiNeMa</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('cinema_love') }}">Why I love the cinema</a></li>
+                <li><a href="{{ url_for('little_theatre') }}">Trip to The Little Theatre, Bath</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <p>I go to a lot of local Bristol cinemas,
+                here's a collection of off-cuts from them - I save all my cinema tickets and maybe one day I'll do
+                something with them. I like the cube cinema and the watershed the best.</p>
+                <h2>PlAnS</h2>
+            <p>This page is under construction, but I'd like it to be a shrine to all my favourite things about the
+                cinema - quotes, pictures of my cinema memorabilia, eventually my collection of cinema postcards. The
+                background image is
+                from <i>Fallen Leaves, 2023</i> by Aki Kaurismäki.
+            </p>
+            I'd also like to add cinema tourism reviews, drawings and photographs of my favourite cinemas, writing about
+            film festivals
+            and the films available where I live in south west england.</p>
+        </section-->
+    </main>
+</body>
+
+</html>
