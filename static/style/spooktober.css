@@ -52,6 +52,13 @@ a:hover {
   /* [2] */
 }
 
+/* On mobile devices, reduce the margin around the header to save space. */
+@media (max-width: 600px) {
+  .calendar {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .calendar {
   width: 100%;
   max-width: 100%;
