@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description"
+    content="This is the personal site of Helen Ffion, with photos and other things I'm interested in">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <!-- Not set up yet -->
+  <!-- link rel="canonical" href="https://helenffion.co.uk" -->
+  <!-- link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" -->
+  <title>Spooktober Calendar</title>
+  <link rel="stylesheet" href="https://unpkg.com/normalize.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/spooktober.css') }}">
+  <script type="text/javascript" src="{{ url_for('static', filename='scripts/spooktober.js') }}"></script>
+
+  <!-- https://grid.malven.co/ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="header-info">
+      <div>
+        <a href="https://imgbb.com/"><img align="left" height="100px"
+            src="https://i.ibb.co/5cLTF9V/tumblr-2bc9628ce5a9289255fa5ff9e94eef05-bcf44a4a-250.png"
+            alt="https://www.tumblr.com/transparensies/search/halloween" border="0"></a>
+      </div>
+      <div><h1 class="creepster-regular">Spooktober calendar</h1></div>
+
+      <div class="creepster-regular"> 3 / 31 </div>
+    </div>
+  </header>
+  <main>
+    <div class="calendar">
+      <div class="day" onclick="openTab('2024-09-30');" style="background-image:url(https://images.mubicdn.net/images/film/59757/cache-120611-1695720751/image-w1280.jpg);
+">30/09/2024</div>
+      <div class="day" onclick="openTab('2024-10-01');"
+        style="background-image:url(https://a.ltrbxd.com/resized/film-poster/1/1/1/5/9/4/111594-alison-s-birthday-0-2000-0-3000-crop.jpg?v=5233050fce);">
+        01/10/2024
+      </div>
+      <div class="day" onclick="openTab('2024-10-02');" style="background-image:url(https://a.ltrbxd.com/resized/film-poster/8/4/3/4/1/5/843415-late-night-with-the-devil-0-2000-0-3000-crop.jpg?v=b6c384f7c5)">02/10/2024</div>
+      <div class="day">03/10/2024</div>
+      <div id="2024-09-30" class="container-tab" style="display:none;">
+        <!-- If you want the ability to close the container, add a close button -->
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+        <h2>There's Nothing Out There (1991)</h2>
+        <p>Lorem ipsum..</p>
+      </div>
+      <div id="2024-10-01" class="container-tab" style="display:none;">
+        <!-- If you want the ability to close the container, add a close button -->
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+        <h2>Alison's Party (1989)</h2>
+        <p>Lorem ipsum..</p>
+      </div>
+      <div id="2024-10-02" class="container-tab" style="display:none;">
+        <!-- If you want the ability to close the container, add a close button -->
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+        <h2>Late Night With The Devil (2024)</h2>
+        <p>Lorem ipsum..</p>
+      </div>
+      <div class="day">04/10/2024</div>
+      <div class="day">05/10/2024</div>
+      <div class="day">06/10/2024</div>
+      <div class="day">07/10/2024</div>
+      <div class="day" style="background-image:url(https://a.ltrbxd.com/resized/film-poster/4/2/4/3/4/8/424348-hereditary-0-2000-0-3000-crop.jpg?v=470e48b681)">08/10/2024</div>
+      <div class="day">09/10/2024</div>
+      <div class="day">10/10/2024</div>
+      <div class="day">
+        <div class="inner-day"
+          style="background-image:url(https://a.ltrbxd.com/resized/film-poster/1/7/3/7/8/17378-the-shout-0-1000-0-1500-crop.jpg?v=085bc849e5);">
+          The Shout</div>
+        <div class="inner-day"
+          style="background-image:url(https://a.ltrbxd.com/resized/sm/upload/pi/lf/zx/fe/pdPKlwAOX66Zqktp1amFooovAjT-0-1000-0-1500-crop.jpg?v=bb08ab1974);">
+          The Hitcher</div>
+        <div class="inner-day"
+          style="background-image:url(https://a.ltrbxd.com/resized/film-poster/3/9/2/2/6/39226-opera-0-1000-0-1500-crop.jpg?v=2c8f105685;">
+          Opera</div>
+      </div>
+      <div class="day">
+        <div class="inner-day"
+          style="background-image:url(https://a.ltrbxd.com/resized/film-poster/1/7/3/7/8/17378-the-shout-0-1000-0-1500-crop.jpg?v=085bc849e5);">
+          The Shout</div>
+        <div class="inner-day"
+          style="background-image:url(https://a.ltrbxd.com/resized/sm/upload/pi/lf/zx/fe/pdPKlwAOX66Zqktp1amFooovAjT-0-1000-0-1500-crop.jpg?v=bb08ab1974);">
+          The Hitcher</div>
+        <div class="inner-day"
+          style="background-image:url(https://a.ltrbxd.com/resized/film-poster/3/9/2/2/6/39226-opera-0-1000-0-1500-crop.jpg?v=2c8f105685;">
+          Opera</div>
+      </div>
+      <div class="day">13/10/2024</div>
+      <div class="day">14/10/2024</div>
+      <div class="day">15/10/2024</div>
+      <div class="day">16/10/2024</div>
+      <div class="day">17/10/2024</div>
+      <div class="day">18/10/2024</div>
+      <div class="day">19/10/2024</div>
+      <div class="day">20/10/2024</div>
+      <div class="day">21/10/2024</div>
+      <div class="day">22/10/2024</div>
+      <div class="day">23/10/2024</div>
+      <div class="day">24/10/2024</div>
+      <div class="day">25/10/2024</div>
+      <div class="day">26/10/2024</div>
+      <div class="day">27/10/2024</div>
+      <div class="day">28/10/2024</div>
+      <div class="day">29/10/2024</div>
+      <div class="day">30/10/2024</div>
+      <div class="day">31/10/2024</div>
+    </div>
+
+  </main>
+  <footer>
+    <p>Based on <a href="https://github.com/setetres/evenbettermotherfuckingwebsite">Even Better Motherfucking
+        Website</a>.</p>
+    <p>Calendar layout from <a href="https://www.joshwcomeau.com/css/interactive-guide-to-grid/">Interactive Guide to
+        grid</a>
+  </footer>
+</body>
