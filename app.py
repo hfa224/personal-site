@@ -114,6 +114,11 @@ def cultivation():
     """Renders cultivation page"""
     return render_template("cultivation.html")
 
+@app.route("/spooktober/")
+def spooktober():
+    """Renders spooktober page"""
+    return render_template("spooktober.html")
+
 
 @app.route("/digital_garden/")
 def digital_garden():
