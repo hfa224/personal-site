@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-		<meta charset="UTF-8">
-		<meta name="description" content="This is the personal site of Helen Ffion, with photos and other things I'm interested in">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="robots" content="noindex, nofollow">
-		<!-- Not set up yet -->
-		<!-- link rel="canonical" href="https://helenffion.co.uk" -->
-		<!-- link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" -->
-		<title>{% block title %}{% endblock %} - Personal site</title>
-		<link rel="stylesheet" href="https://unpkg.com/normalize.css">
-		<link rel="stylesheet" href="{{ url_for('static', filename='style/magick.css') }}">
-		<!-- add custom styling additions -->
-		<link rel="stylesheet" href="{{ url_for('static', filename='style/additions.css') }}">
-		<script type="text/javascript" src="{{ url_for('static', filename='scripts/counters.js') }}"></script>
-	</head>
-    <body>
-		
 
-		<!-- Page content -->
-		<main>
-			<header>
-				{% block header %}{% endblock %}
-				<nav>
-					<ul>
-						<li><a href="/">Home</a></li>
-						<li><a href="{{ url_for('about') }}">About</a></li>
-						<li><a href="{{ url_for('photos') }}">Photos</a></li>
-						<!--li><a href="{{ url_for('cultivation') }}">Cultivation</a></li-->
-						<li><a href="{{ url_for('digital_garden') }}">&#127793;</a></li>
-						<li><a href="https://helenffion.omg.lol/now">Now Page</a></li>
-					</ul>
-		  		</nav>
-			</header>
-			  {% for message in get_flashed_messages() %}
-				<div class="flash">{{ message }}</div>
-			  {% endfor %}
-			  {% block content %}{% endblock %}
-			<footer>
-				<hr> <!-- Line to seperate footer from content -->
-				<nav>
-					<ul>
-						<li>❄️ Uses <a href="https://css.winterveil.net/">magick.css</a> by winterviel</li>
-						<li><a href="{{ url_for('colophon') }}">Colophon</a></li>
-						<li><a href="{{ url_for('changelog') }}">Changelog</a></li>
-					</ul>
-		  		</nav>
-			</footer>
-		</main>
-    </body>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description"
+		content="This is the personal site of Helen Ffion, with photos and other things I'm interested in">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow">
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%221em%22 font-size=%2280%22>🍵</text></svg>">
+	<title>{% block title %}{% endblock %} - Personal site</title>
+	<link rel="stylesheet" href="https://unpkg.com/normalize.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style/magick.css') }}">
+	<!-- add custom styling additions -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='style/additions.css') }}">
+	<script type="text/javascript" src="{{ url_for('static', filename='scripts/counters.js') }}"></script>
+</head>
+
+<body>
+
+
+	<!-- Page content -->
+	<main>
+		<header>
+			{% block header %}{% endblock %}
+			<nav>
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="{{ url_for('serene-lake.about') }}">About</a></li>
+					<li><a href="{{ url_for('serene-lake.photos') }}">Photos</a></li>
+					<!--li><a href="{{ url_for('serene-lake.cultivation') }}">Cultivation</a></li-->
+					<li><a href="{{ url_for('serene-lake.digital_garden') }}">&#127793;</a></li>
+					<li><a href="https://helenffion.omg.lol/now">Now Page</a></li>
+				</ul>
+			</nav>
+		</header>
+		{% for message in get_flashed_messages() %}
+		<div class="flash">{{ message }}</div>
+		{% endfor %}
+		{% block content %}{% endblock %}
+		<footer>
+			<hr> <!-- Line to seperate footer from content -->
+			<nav>
+				<ul>
+					<li>❄️ Uses <a href="https://css.winterveil.net/">magick.css</a> by winterviel</li>
+					<li><a href="{{ url_for('serene-lake.colophon') }}">Colophon</a></li>
+					<li><a href="{{ url_for('serene-lake.changelog') }}">Changelog</a></li>
+				</ul>
+			</nav>
+		</footer>
+	</main>
+</body>
+
 </html>

@@ -1,0 +1,109 @@
+:root {
+    /* Theme colors */
+    --fg: #042A2B;
+    --bg: #CDEDF6;
+    --form-bg: #CDEDF6;
+    --form-fg: #042A2B;
+    --form-fg-placeholder: #042A2B;
+    --highlight: #5EB1BF;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fg: #CDEDF6;
+        --bg: #042A2B;
+        --form-bg: #042A2B;
+        --form-fg: #CDEDF6;
+        --form-fg-placeholder: #CDEDF6;
+        --highlight: #5EB1BF;
+    }
+}
+
+/*
+    1) Set the base font-size to 18px with a normal weight.
+    2) Set the text and background colors to match the theme.
+    3) Use the 'Roboto' font for the body text.
+    4) Add a large margin
+*/
+body {
+    font-size: 1.8rem;
+    /* 1 */
+    background-color: var(--bg);
+    /* 2 */
+    color: var(--fg);
+    /* 2 */
+    font-family: "Roboto Slab", serif;
+    /* 3 */
+    font-optical-sizing: auto;
+    /* 3 */
+    font-style: normal;
+    /* 3 */
+    line-height: 2.2rem;
+    /* 3 */
+    font-weight: 300;
+    /* 4 */
+    margin-top: 20%;
+    margin-bottom: 10%;
+    /* 4 */
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+/* mobile styling */
+
+/* Use smaller sizes on mobile devices. */
+/* place after the body styles so it correctly overrides */
+@media (max-width: 600px) {
+    html {
+        font-size: 56%;
+    }
+    body {
+        /* 4 */
+        margin-top: 30%;
+        margin-bottom: 10%;
+        /* 4 */
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+.yatra-one-regular {
+    font-family: "Yatra One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*
+    1) Set the font-family, color, and font-style for the headings.
+    2) Add a margin to the top and bottom of the headings.
+*/
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Yatra One", system-ui;
+    /* 1 */
+    color: var(--fg);
+    /* 1 */
+    font-style: normal;
+    /* 1 */
+    font-weight: 600;
+    /* 1 */
+    margin: 1.6rem 0 1.6rem 0;
+    /* 2 */
+}
+
+/* unvisited link */
+a:link {
+    color: var(--highlight);
+}
+
+/* visited link */
+a:visited {
+    color: var(--highlight);
+}
+
+/* mouse over link */
+a:hover {
+    text-decoration: wavy underline;
+}

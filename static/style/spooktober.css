@@ -33,6 +33,7 @@ a:hover {
   display: grid;
   grid-template-columns: 20% 60% auto;
   align-items: center;
+  justify-items: center;
   margin-top: -50px;
 }
 
@@ -56,6 +57,15 @@ a:hover {
 @media (max-width: 600px) {
   .calendar {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .header-info {
+    grid-template-columns: auto;
+    grid-template-rows: 100px 200px 100px;
+    margin-top: 0px;
+    justify-items: center;
+  }
+  html {
+    font-size: 56%;
   }
 }
 

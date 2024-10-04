@@ -1,47 +1,59 @@
 """Serves up the personal site"""
 
 import re
-from flask import Flask, render_template
+from flask import Flask, render_template, Blueprint
 
 app = Flask(__name__)
 
 app.config["FREEZER_RELATIVE_URLS"] = True
 
 
+bp = Blueprint("serene-lake", __name__, template_folder="templates")
+
+
 @app.route("/")
+def landing_page():
+    """Renders landing page"""
+    return render_template("landing-page.html")
+
+
+@bp.route("/")
 def home():
     """Renders home page"""
     return render_template("home.html")
 
 
-@app.route("/about/")
+@bp.route("/about/")
 def about():
     """Renders about page"""
     return render_template("about.html")
 
-@app.route("/cinema/")
+
+@bp.route("/cinema/")
 def cinema():
     """Renders cinema page"""
     return render_template("cinema.html")
 
-@app.route("/little_theatre_2024_09/")
+
+@bp.route("/little_theatre_2024_09/")
 def little_theatre():
     """Renders cinema page"""
     return render_template("cinema/little_theatre_2024_09.html")
 
-@app.route("/cinema_love/")
+
+@bp.route("/cinema_love/")
 def cinema_love():
     """Renders cinema page"""
     return render_template("cinema/cinema_love.html")
 
 
-@app.route("/photos/")
+@bp.route("/photos/")
 def photos():
     """Renders base photo page"""
     return render_template("photos.html")
 
 
-@app.route("/2022_10_22/")
+@bp.route("/2022_10_22/")
 def photos_2022_10():
     """Renders photo page for 2022_10_22"""
     return produce_photo_page(
@@ -49,7 +61,7 @@ def photos_2022_10():
     )
 
 
-@app.route("/2024_04_22/")
+@bp.route("/2024_04_22/")
 def photos_2024_04():
     """Renders photo page for 2024_04_22"""
     return produce_photo_page(
@@ -90,7 +102,7 @@ def photos_2024_04():
     )
 
 
-@app.route("/2024_07_21/")
+@bp.route("/2024_07_21/")
 def photos_2024_07():
     """Renders photo page for 2024_07_21"""
     return produce_photo_page(
@@ -99,20 +111,47 @@ def photos_2024_07():
         [2, 4, 5, 6, 7, 8, 11, 12, 13, 17, 18, 20, 21, 22, 23, 24, 25, 26],
     )
 
-@app.route("/2024_08_06/")
+
+@bp.route("/2024_08_06/")
 def photos_2024_08():
     """Renders photo page for 2024_08_06"""
     return produce_photo_page(
         "2024_08_06",
         "0000024500",
-        [2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 18, 19, 20, 22, 24, 25, 26, 27, 28, 29],
+        [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            18,
+            19,
+            20,
+            22,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+        ],
     )
 
 
-@app.route("/cultivation/")
+@bp.route("/cultivation/")
 def cultivation():
     """Renders cultivation page"""
     return render_template("cultivation.html")
+
 
 @app.route("/spooktober/")
 def spooktober():
@@ -120,32 +159,34 @@ def spooktober():
     return render_template("spooktober.html")
 
 
-@app.route("/digital_garden/")
+@bp.route("/digital_garden/")
 def digital_garden():
     """Renders digital garden page"""
     return render_template("digital_garden.html")
 
-@app.route("/colophon/")
+
+@bp.route("/colophon/")
 def colophon():
     """Renders colophon page"""
     return render_template("colophon.html")
 
-@app.route("/changelog/")
+
+@bp.route("/changelog/")
 def changelog():
     """Renders changelog page"""
     return render_template("changelog.html")
 
 
-@app.route("/newsletter/")
+@bp.route("/newsletter/")
 def newsletter():
     """Renders now page TODO: under construction/hiden"""
     return render_template("newsletter.html")
 
-@app.route("/counters/")
+
+@bp.route("/counters/")
 def counters():
     """Renders counters page"""
     return render_template("counters.html")
-
 
 
 def produce_photo_page(
