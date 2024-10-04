@@ -19,23 +19,6 @@
     }
 }
 
-/* mobile styling */
-
-/* Use smaller sizes on mobile devices. */
-@media (max-width: 600px) {
-    html {
-        font-size: 56%;
-    }
-    body {
-        /* 4 */
-        margin-top: 5%;
-        margin-bottom: 5%;
-        /* 4 */
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-}
-
 /*
     1) Set the base font-size to 18px with a normal weight.
     2) Set the text and background colors to match the theme.
@@ -64,6 +47,24 @@ body {
     /* 4 */
     margin-left: 30%;
     margin-right: 30%;
+}
+
+/* mobile styling */
+
+/* Use smaller sizes on mobile devices. */
+/* place after the body styles so it correctly overrides */
+@media (max-width: 600px) {
+    html {
+        font-size: 56%;
+    }
+    body {
+        /* 4 */
+        margin-top: 30%;
+        margin-bottom: 10%;
+        /* 4 */
+        margin-left: 10%;
+        margin-right: 10%;
+    }
 }
 
 .yatra-one-regular {
