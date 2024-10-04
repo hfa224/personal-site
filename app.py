@@ -228,5 +228,4 @@ def linkrepl(matchobj):
 
 
 if __name__ == "__main__":
-    app.register_blueprint(bp, url_prefix="/serene-lake")
     app.run(debug=True)
