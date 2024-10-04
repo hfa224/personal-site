@@ -33,6 +33,7 @@ a:hover {
   display: grid;
   grid-template-columns: 20% 60% auto;
   align-items: center;
+  justify-items: center;
   margin-top: -50px;
 }
 
