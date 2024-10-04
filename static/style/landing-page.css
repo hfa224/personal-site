@@ -19,6 +19,18 @@
     }
 }
 
+/* mobile styling */
+
+/* Use smaller sizes on mobile devices. */
+@media (max-width: 600px) {
+    html {
+        font-size: 56%;
+    }
+    body {
+        margin: 10%;
+    }
+}
+
 /*
     1) Set the base font-size to 18px with a normal weight.
     2) Set the text and background colors to match the theme.

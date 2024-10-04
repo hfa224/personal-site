@@ -57,6 +57,10 @@ a:hover {
   .calendar {
     grid-template-columns: repeat(1, 1fr);
   }
+  .header-info {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, 1fr);
+  }
 }
 
 .calendar {
