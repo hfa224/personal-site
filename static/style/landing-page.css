@@ -27,7 +27,12 @@
         font-size: 56%;
     }
     body {
-        margin: 5%;
+        /* 4 */
+        margin-top: 5%;
+        margin-bottom: 5%;
+        /* 4 */
+        margin-left: 5%;
+        margin-right: 5%;
     }
 }
 

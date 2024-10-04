@@ -60,6 +60,7 @@ a:hover {
   .header-info {
     grid-template-columns: auto;
     grid-template-rows: repeat(3, 1fr);
+    margin-top: 0px;
   }
   html {
     font-size: 56%;
