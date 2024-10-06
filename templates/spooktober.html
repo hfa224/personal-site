@@ -7,7 +7,8 @@
     content="This is the personal site of Helen Ffion, with photos and other things I'm interested in">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%221em%22 font-size=%2280%22>🎃</text></svg>">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%221em%22 font-size=%2280%22>🎃</text></svg>">
   <title>Spooktober Calendar</title>
   <link rel="stylesheet" href="https://unpkg.com/normalize.css">
   <link rel="stylesheet" href="{{ url_for('static', filename='style/spooktober.css') }}">
@@ -22,49 +23,95 @@
   <header>
     <div class="header-info">
       <div>
-        <img height="150px"
-            src="https://i.ibb.co/5cLTF9V/tumblr-2bc9628ce5a9289255fa5ff9e94eef05-bcf44a4a-250.png"
-            alt="https://www.tumblr.com/transparensies/search/halloween">
+        <img height="150px" src="{{ url_for('static', filename='images/spooktober/pumpkins.png') }}"
+          alt="https://www.tumblr.com/transparensies/">
       </div>
       <div>
         <h1 class="creepster-regular">Spooktober</h1>
       </div>
 
-      <div class="creepster-regular"> 4 / 31 </div>
+      <div class="creepster-regular">  7 / 31 </div>
     </div>
   </header>
   <main>
     <p>Hover over the days to see short reviews about the films.</p>
-    <p>(Look, don't come at me for starting on September 30th. The film was expiring on mubi that day, it's my Spooktober challenge and I'll cheat if I want to 💀)</p>
+    <p>(Look, don't come at me for starting on September 30th. The film was expiring on mubi that day, it's my
+      Spooktober challenge and I'll cheat if I want to 💀)</p>
     <div class="calendar">
       <div class="day" style="background-image:url(https://images.mubicdn.net/images/film/59757/cache-120611-1695720751/image-w1280.jpg);
-">30/09/2024<div id="overlay"><p>There's Nothing Out There (1991)</p>
-<p>★★★☆☆</p><p>Pulpy fun! Some really bad acting but the initial sequence in the video shop is great. Watched the companion Copycat documentary which makes a good case for Wes Craven cribbing from this for Scream...</p></div>
+">30/09/2024<div id="overlay">
+          <p>There's Nothing Out There (1991)</p>
+          <p>★★★☆☆</p>
+          <p>Pulpy fun! Some really bad acting but the initial sequence in the video shop is great. Watched the
+            companion Copycat documentary which makes a good case for Wes Craven cribbing from this for Scream...</p>
+        </div>
       </div>
       <div class="day"
         style="background-image:url(https://a.ltrbxd.com/resized/film-poster/1/1/1/5/9/4/111594-alison-s-birthday-0-2000-0-3000-crop.jpg?v=5233050fce);">
-        01/10/2024<div id="overlay"><p>Alison's Birthday (1989)</p>
-          <p>★★★★☆</p><p>Some very 70s australian folk horror. Sincere, which I liked, and Peter and Alison are genuinely likeable. Not a lot of scares but that ending really hits.</p></div>
+        01/10/2024<div id="overlay">
+          <p>Alison's Birthday (1989)</p>
+          <p>★★★★☆</p>
+          <p>Some very 70s australian folk horror. Sincere, which I liked, and Peter and Alison are genuinely likeable.
+            Not a lot of scares but that ending really hits.</p>
+        </div>
       </div>
       <div class="day multi">
-        <div class="inner-day" style="background-image:url(https://a.ltrbxd.com/resized/film-poster/8/4/3/4/1/5/843415-late-night-with-the-devil-0-2000-0-3000-crop.jpg?v=b6c384f7c5)">
-        02/10/2024<div id="inner-overlay"><p>Late Night with the Devil (2023)</p>
-          <p>★★★★☆</p><p>Great concept, three star execution, although a lot of stuff about this was really cool it fell a bit flat for me - 
-            would have loved to see the host revealed as truely into his satanic cult stuff and getting his comeuppance.</p></div></div>
-        <div class="inner-day" style="background-image:url(https://a.ltrbxd.com/resized/film-poster/5/1/3/5/8/51358-the-omen-0-1000-0-1500-crop.jpg?v=2f669d4209)">
-          02/10/2024<div id="inner-overlay"><p>The Omen (1976)</p>
-            <p>★★★★☆</p><p>I'd seen several of the iconic death scenes from this in Mark Gatiss's History of Horror already, but I still had a very good time. Gregory Peck
-              lends gravitas to this film and it's great (even if sometimes he feels like he's from a different film). Not that scary - more about the existential horror of an evil child / child murder.</p></div></div>
-          
+        <div class="inner-day"
+          style="background-image:url(https://a.ltrbxd.com/resized/film-poster/8/4/3/4/1/5/843415-late-night-with-the-devil-0-2000-0-3000-crop.jpg?v=b6c384f7c5)">
+          02/10/2024<div id="inner-overlay">
+            <p>Late Night with the Devil (2023)</p>
+            <p>★★★★☆</p>
+            <p>Great concept, three star execution, although a lot of stuff about this was really cool it fell a bit
+              flat for me -
+              would have loved to see the host revealed as truely into his satanic cult stuff and getting his
+              comeuppance.</p>
+          </div>
+        </div>
+        <div class="inner-day"
+          style="background-image:url(https://a.ltrbxd.com/resized/film-poster/5/1/3/5/8/51358-the-omen-0-1000-0-1500-crop.jpg?v=2f669d4209)">
+          02/10/2024<div id="inner-overlay">
+            <p>The Omen (1976)</p>
+            <p>★★★★☆</p>
+            <p>I'd seen several of the iconic death scenes from this in Mark Gatiss's History of Horror already, but I
+              still had a very good time. Gregory Peck
+              lends gravitas to this film and it's great (even if sometimes he feels like he's from a different film).
+              Not that scary - more about the existential horror of an evil child / child murder.</p>
+          </div>
+        </div>
+
       </div>
       <div class="day">03/10/2024</div>
-      <div class="day">04/10/2024</div>
-      <div class="day">05/10/2024</div>
-      <div class="day">06/10/2024</div>
+      <div class="day"
+        style="background-image:url(https://a.ltrbxd.com/resized/film-poster/7/6/1/0/4/6/761046-mad-god-0-2000-0-3000-crop.jpg?v=ccd8e25d6d)">
+        04/10/2024
+        <div id="overlay">
+          <p>Mad God (2021)</p>
+          <p>★★★★☆</p>
+          <p>Maybe I admire the vision and commitment more than I loved the film, but there's still a lot to like here -
+            so disgusting and bleak. </p>
+        </div>
+      </div>
+      <div class="day"
+        style="background-image:url(https://a.ltrbxd.com/resized/film-poster/7/6/3/3/0/9/763309-hellbender-0-2000-0-3000-crop.jpg?v=08a3378d69)">
+        05/10/2024<div id="overlay">
+          <p>Hellbender (2021)</p>
+          <p>★★★☆☆</p>
+          <p>Very indie, and very charming actually! Creepy rather than scary, and the music in the band scenes was pretty good.</p>
+        </div>
+      </div>
+      <div class="day"
+        style="background-image:url(https://a.ltrbxd.com/resized/film-poster/5/1/6/5/5/51655-avpr-aliens-vs-predator-requiem-0-2000-0-3000-crop.jpg?v=66f95f9f36)">
+        06/10/2024<div id="overlay">
+          <p>AvP: Requiem (2021)</p>
+          <p>★★☆☆☆</p>
+          <p>It's bad. Hard to see, suffers from some very annoying 00's character stereotypes. Still has some brutal moments though (even if you can't see them very well). "That's crazy, the government doesn't lie to people."</p>
+        </div>
+      </div>
       <div class="day">07/10/2024</div>
       <div class="day"
         style="background-image:url(https://a.ltrbxd.com/resized/film-poster/4/2/4/3/4/8/424348-hereditary-0-2000-0-3000-crop.jpg?v=470e48b681)">
-        08/10/2024<div id="overlay">Hereditary (2018)</div></div>
+        08/10/2024<div id="overlay">Hereditary (2018)</div>
+      </div>
       <div class="day">09/10/2024</div>
       <div class="day">10/10/2024</div>
       <div class="day multi">
@@ -101,7 +148,10 @@
       <div class="day">16/10/2024</div>
       <div class="day">17/10/2024</div>
       <div class="day">18/10/2024</div>
-      <div class="day"><p>19/10/2024</p><p>Spooky film night! Schedule TBA.</p></div>
+      <div class="day">
+        <p>19/10/2024</p>
+        <p>Spooky film night! Schedule TBA.</p>
+      </div>
       <div class="day">20/10/2024</div>
       <div class="day">21/10/2024</div>
       <div class="day">22/10/2024</div>
