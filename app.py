@@ -156,7 +156,7 @@ def cultivation():
 @app.route("/spooktober/")
 def spooktober():
     """Renders spooktober page"""
-    return render_template("spooktober.html")
+    return render_template("spooktober/calendar.html")
 
 
 @bp.route("/digital_garden/")
