@@ -1,0 +1,186 @@
+:root {
+  --bg: #444444;
+  --fg: #e2e8ce;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  min-height: 100%;
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  text-shadow: 0 1px 0 #ffffff;
+  max-width: 73%;
+  background-image: url("../images/spooktober/skeleton.png");
+  background-size: 20%;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+
+main, footer, header {
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+footer {
+  bottom: 0%;
+  position: fixed;
+}
+
+code {
+  background: #e2e8ce;
+}
+
+a {
+  border-bottom: 1px solid var(--fg);
+  color: var(--fg);
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 0;
+}
+
+.header-info {
+  display: grid;
+  grid-template-columns: 20% 60% auto;
+  align-items: center;
+  justify-items: center;
+  margin-top: -50px;
+}
+
+.creepster-regular {
+  font-family: "Creepster", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 70px;
+}
+
+.calendar {
+  display: grid;
+  grid-gap: 4px;
+  grid-template-columns: repeat(6, 1fr);
+  height: 400px;
+  /* [2] */
+}
+
+.day.up {
+  align-items: start;
+}
+
+.day.down {
+  align-items: end;
+}
+
+/* On mobile devices, reduce the margin around the header to save space. */
+@media (max-width: 600px) {
+  .calendar {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .header-info {
+    grid-template-columns: auto;
+    grid-template-rows: 100px 200px 100px;
+    margin-top: 0px;
+    justify-items: center;
+  }
+  html {
+    font-size: 56%;
+  }
+}
+
+.calendar {
+  width: 100%;
+  max-width: 100%;
+  padding: 4px;
+}
+
+.day {
+  display: grid;
+  position: relative; /* to be able to position the overlay div on top of theday div content */
+  grid-gap: 2px;
+  text-shadow: 0 1px 0 var(--fg);
+  padding: 10px;
+  font-weight: 700;
+}
+
+.day img {
+  height: 300px;
+}
+
+.day.multi {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 0px;
+}
+
+.inner-day {
+  display: grid;
+  /* position: relative; /* to be able to position the overlay div on top of theday div content */
+  aspect-ratio: auto;
+  border: 0px;
+  place-content: top;
+  color: #ffffff;
+  background-size: cover;
+  text-shadow: 0 1px 0 var(--fg);
+  padding: 0px;
+  background-position: center;
+}
+
+#overlay, #inner-overlay {
+  background: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  padding: 2px;
+  opacity: 0;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  -webkit-transition: opacity 0.25s ease;
+  -moz-transition: opacity 0.25s ease;
+  position: absolute;
+  width:100%;
+  height:100%;
+  border-radius: 4px;
+}
+
+/*.day:not(:hover) #overlay {
+  display: none;
+}
+
+.inner-day:not(:hover) #inner-overlay {
+  display: none;
+}*/
+
+.day:hover #overlay {
+  opacity:1;
+}
+
+.inner-day:hover #inner-overlay {
+  opacity:1;
+}
+
+/* no longer used */
+.container-tab {
+  padding: 20px;
+  display: grid;
+  grid-column: 1 / -1;
+  background: #acbfa4;
+  color: #ffffff;
+  text-shadow: 0 1px 0 var(--fg);
+  padding: 5px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}

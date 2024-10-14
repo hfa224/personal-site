@@ -158,6 +158,11 @@ def spooktober():
     """Renders spooktober page"""
     return render_template("spooktober/calendar.html")
 
+@app.route("/the_big_scream/")
+def the_big_scream():
+    """Renders the_big_scream page"""
+    return render_template("spooktober/the_big_scream.html")
+
 
 @bp.route("/digital_garden/")
 def digital_garden():

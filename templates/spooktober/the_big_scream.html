@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description"
+    content="This is the personal site of Helen Ffion, with photos and other things I'm interested in">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%221em%22 font-size=%2280%22>🎃</text></svg>">
+  <title>Spooktober Calendar</title>
+  <link rel="stylesheet" href="https://unpkg.com/normalize.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style/the_big_scream.css') }}">
+
+  <!-- https://grid.malven.co/ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1 class="creepster-regular" style="text-align:center">The Big Scream</h1>
+  </header>
+  <main>
+    <div class="calendar">
+      <div class="day up"><img src="{{ url_for('static', filename='images/spooktober/TheShout.jpg') }}"></div>
+      <div class="day down"><img src="{{ url_for('static', filename='images/spooktober/TheHitcher.jpg') }}"></div>
+      <div class="day up"><img src="{{ url_for('static', filename='images/spooktober/Opera.jpg') }}"></div>
+      <div class="day down"><img src="{{ url_for('static', filename='images/spooktober/Cure.jpg') }}"></div>
+      <div class="day up"><img src="{{ url_for('static', filename='images/spooktober/LastSummer.jpg') }}"></div>
+      <div class="day down"><img src="{{ url_for('static', filename='images/spooktober/WhenAStrangerCalls.jpg') }}"></div>
+    </div>
+  </main>
+  <footer>
+    <p>Based on <a href="https://github.com/setetres/evenbettermotherfuckingwebsite">Even Better Motherfucking
+        Website</a>.</p>
+    <p>Calendar layout from <a href="https://www.joshwcomeau.com/css/interactive-guide-to-grid/">Interactive Guide to
+        grid</a>
+  </footer>
+</body>
