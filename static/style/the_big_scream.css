@@ -16,7 +16,6 @@ body {
   font-size: 14px;
   line-height: 1.8;
   text-shadow: 0 1px 0 #ffffff;
-  max-width: 73%;
   background-image: url("../images/spooktober/skeleton.png");
   background-size: 20%;
   background-position: bottom right;
@@ -24,8 +23,15 @@ body {
 }
 
 main, footer, header {
-  margin-right: 20%;
-  margin-left: 20%;
+  margin-left: auto; /* 1 */
+  margin-right: 12%; /* 1 */
+  padding: 0 1rem; /* 2 */
+  width: 80%; /* 2 */
+  position: relative; /* 3 */
+}
+
+main {
+  max-width: 76rem; /* 2 */
 }
 
 footer {
@@ -67,6 +73,7 @@ a:hover {
   grid-gap: 4px;
   grid-template-columns: repeat(6, 1fr);
   height: 400px;
+  width: 100%;
   /* [2] */
 }
 
@@ -95,9 +102,11 @@ a:hover {
 }
 
 .calendar {
+  display: grid;
   width: 100%;
   max-width: 100%;
   padding: 4px;
+
 }
 
 .day {
@@ -110,7 +119,7 @@ a:hover {
 }
 
 .day img {
-  height: 300px;
+  height: 280px;
 }
 
 .day.multi {
@@ -124,12 +133,10 @@ a:hover {
   /* position: relative; /* to be able to position the overlay div on top of theday div content */
   aspect-ratio: auto;
   border: 0px;
-  place-content: top;
   color: #ffffff;
   background-size: cover;
   text-shadow: 0 1px 0 var(--fg);
   padding: 0px;
-  background-position: center;
 }
 
 #overlay, #inner-overlay {
