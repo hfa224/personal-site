@@ -1,35 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-		<meta charset="UTF-8">
-		<meta name="description" content="This is the personal site of Helen Ffion, with photos and other things I'm interested in">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="robots" content="noindex, nofollow">
-		<!-- Not set up yet -->  
-         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%221em%22 font-size=%2280%22>👋</text></svg>">
-		<title>Personal site</title>
-		<link rel="stylesheet" href="https://unpkg.com/normalize.css">
-		<link rel="stylesheet" href="{{ url_for('static', filename='style/landing-page.css') }}">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Yatra+One&display=swap" rel="stylesheet">
-	</head>
-    <body>
-		
 
-		<!-- Page content -->
-		<main>
-			<header>
-				<!--header here-->
-			</header>
-            <!-- main content here-->
-             <h1>helenffion.cafe</h1>
-			 <img style="width:300px" src="{{ url_for('static', filename='images/landing_page/ghibli.gif') }}">
-             <p>This is the landing page for my web domain</p>
-             <h2>Things</h2>
-             <a href="{{ url_for('spooktober') }}">Spooktober</a>
-			<footer>
-			</footer>
-		</main>
-    </body>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description"
+		content="This is the personal site of Helen Ffion, with photos and other things I'm interested in">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow">
+	<!-- Not set up yet -->
+	<link rel="icon"
+		href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%221em%22 font-size=%2280%22>👋</text></svg>">
+	<title>Personal site</title>
+	<link rel="stylesheet" href="https://unpkg.com/normalize.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style/landing-page.css') }}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Yatra+One&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+
+
+	<!-- Page content -->
+	<main>
+		<header>
+			<!--header here-->
+		</header>
+		<!-- main content here-->
+		<div style="display:grid;
+			 grid-template-columns: 300px auto;
+			 align-items: center;
+			 justify-items: center;">
+			<div style="display:grid;"><img style="width:300px"
+					src="{{ url_for('static', filename='images/landing_page/moss_badge.png') }}">
+			</div>
+			<div style="display:grid;">
+				<h1>helenffion.cafe</h1>
+			</div>
+			<div></div>
+			<div>
+				<p>This is the landing page for my web domain</p>
+				<h2>Things</h2>
+				<a href="{{ url_for('spooktober') }}">Spooktober</a>
+			</div>
+		</div>
+		<footer>
+		</footer>
+	</main>
+</body>
+
 </html>
