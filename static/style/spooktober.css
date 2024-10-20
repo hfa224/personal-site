@@ -124,7 +124,7 @@ a:hover {
   background-size: cover;
   text-shadow: 0 1px 0 var(--fg);
   padding: 0px;
-  background-position: center;
+  background-position: top;
 }
 
 #overlay, #inner-overlay {
