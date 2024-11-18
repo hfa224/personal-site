@@ -146,6 +146,15 @@ def photos_2024_08():
         ],
     )
 
+@bp.route("/2024_09_27/")
+def photos_2024_09():
+    """Renders photo page for 2024_09_27"""
+    return produce_photo_page(
+        "2024_09_27",
+        "0000057600",
+        [1, 2, 4, 5, 6, 7, 9, 10, 11, 14, 15, 16, 20, 21, 22, 23, 24, 26, 27, 28],
+    )
+
 
 @bp.route("/cultivation/")
 def cultivation():
@@ -228,4 +237,5 @@ def linkrepl(matchobj):
 
 
 if __name__ == "__main__":
+    app.register_blueprint(bp, url_prefix="/serene-lake")
     app.run(debug=True)
