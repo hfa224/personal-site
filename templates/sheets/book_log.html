@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <script type="text/javascript" src="{{ url_for('static', filename='scripts/counters.js') }}"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style/book-log.css') }}">
+
+    </head>
+
+<body id="top">
+    <main class="main">
+  
+      <h1 id="the-spaninternetspan-used-to-bestrongstrong-fun">Helen's Reading Log</h1>
+      <img src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/bluebottles/agatha-christie-books-moomins-read-moomin-comic-strip-08-moomin-begins-a-new-life.webp">
+      <p>This is a log of all the books I've been reading.</p>
+      <p>Key</p>
+      <ul>
+        <li>📌 Currently reading</li>
+        <li>📚 In the pile</li>
+        <li>🚫 Did not finish</li>
+        <li>🔗 Link - either to article or, if short story, perhaps to the story itself</li>
+      </ul>
+  
+      <table id="data-table">
+        <thead>
+          <tr>
+            <th class="title">Title</th>
+            <th class="title">Author</th>
+            <th class="type">Type</th>
+            <th class="review">Review</th>
+            <th class="year">Year</th>
+            <!-- th class="date-started">Date started</th>
+        <th class="date-finished">Date finished</th -->
+          </tr>
+        </thead>
+        <tbody>
+  
+        </tbody>
+      </table>
+      <script src="{{ url_for('static', filename='scripts/sheets.js') }}"></script>
+    </main>
+  
+    <footer>
+      Updated November 2024
+    </footer>
+  </body>
+  
+  </html>
