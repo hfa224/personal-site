@@ -1,109 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Solway:wght@400;700;300&family=Lexend:wght@400;700;300&display=swap');
+
 :root {
-    /* Theme colors */
-    --fg: #042A2B;
-    --bg: #CDEDF6;
-    --form-bg: #CDEDF6;
-    --form-fg: #042A2B;
-    --form-fg-placeholder: #042A2B;
-    --highlight: #5EB1BF;
+    --bg: var(--pink);
+    --fg: var(--red-orange);
+  
+    /* pink - orange scheme */
+    --pink: #ffcfef;
+    --red-orange: #f41c0c;
+
+    --image-max-size: 324px;
+
+    --font-family: 'Solway', 'Open Sans', 'Helvetica Neue', sans-serif;
+    --body-font-family: 'Lexend', 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --fg: #CDEDF6;
-        --bg: #042A2B;
-        --form-bg: #042A2B;
-        --form-fg: #CDEDF6;
-        --form-fg-placeholder: #CDEDF6;
-        --highlight: #5EB1BF;
-    }
-}
-
-/*
-    1) Set the base font-size to 18px with a normal weight.
-    2) Set the text and background colors to match the theme.
-    3) Use the 'Roboto' font for the body text.
-    4) Add a large margin
-*/
 body {
-    font-size: 1.8rem;
-    /* 1 */
-    background-color: var(--bg);
-    /* 2 */
-    color: var(--fg);
-    /* 2 */
-    font-family: "Roboto Slab", serif;
-    /* 3 */
-    font-optical-sizing: auto;
-    /* 3 */
-    font-style: normal;
-    /* 3 */
-    line-height: 2.2rem;
-    /* 3 */
-    font-weight: 300;
-    /* 4 */
-    margin-top: 10%;
-    margin-bottom: 10%;
-    /* 4 */
-    margin-left: 30%;
-    margin-right: 30%;
+  margin: 5% 15% 5% 15%;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--body-font-family);
+  font-size: 21px;
+  line-height: 1.8;
+  max-width: 73%;
+  counter-reset: sidenote-counter;
+  font-weight: 300
 }
-
-/* mobile styling */
-
-/* Use smaller sizes on mobile devices. */
-/* place after the body styles so it correctly overrides */
-@media (max-width: 600px) {
-    html {
-        font-size: 56%;
-    }
-    body {
-        /* 4 */
-        margin-top: 30%;
-        margin-bottom: 10%;
-        /* 4 */
-        margin-left: 10%;
-        margin-right: 10%;
-    }
+a {
+  color: var(--red-orange);
+  text-decoration: underline;
 }
-
-.yatra-one-regular {
-    font-family: "Yatra One", system-ui;
-    font-weight: 400;
-    font-style: normal;
-}
-
-/*
-    1) Set the font-family, color, and font-style for the headings.
-    2) Add a margin to the top and bottom of the headings.
-*/
-h1,
-h2,
-h3,
-h4 {
-    font-family: "Yatra One", system-ui;
-    /* 1 */
-    color: var(--fg);
-    /* 1 */
-    font-style: normal;
-    /* 1 */
-    font-weight: 600;
-    /* 1 */
-    margin: 1.6rem 0 1.6rem 0;
-    /* 2 */
-}
-
-/* unvisited link */
-a:link {
-    color: var(--highlight);
-}
-
-/* visited link */
-a:visited {
-    color: var(--highlight);
-}
-
-/* mouse over link */
 a:hover {
-    text-decoration: wavy underline;
+  border-bottom: 0;
+}
+
+blockquote {
+  border-left: 3px solid var(--red-orange);
+  margin: 10px;
+  padding-left: 10px;
+}
+
+figure {
+  margin:10% auto auto 10%;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-family);
+}
+
+ cite {
+      display: block;
+      font-style: italic;
+      text-align: right;
+      &:before {
+        content: "- ";
+      }
+    }
+
+.sidenote {
+    font-size: 80%;
+    position: relative;
+    transform: rotate(5deg);
+    text-align: top;
+}
+/* Wide viewport */
+@media (min-width: 1400px) {
+    .sidenote {
+        float: right;
+        clear: right;
+        margin-right: -35vw;
+        text-align: left;
+        background: var(--pink);
+
+        top: -3rem;
+        width: 20vw;
+        margin-top: 1rem;
+    }
+}
+
+.sidenote-number {
+    counter-increment: sidenote-counter;
+}
+/* Counter before the sidenote in the margin. */
+.sidenote::before {
+    content: counter(sidenote-counter)".";
+    position: relative;
+    vertical-align: baseline;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+/* Counter in the main body. */
+.sidenote-number::after {
+    content: counter(sidenote-counter);
+    vertical-align: super;
+    font-size: 0.7em;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.image-child {
+  position: absolute;
+}
+
+.image-child:hover {
+  transform: rotate(5deg);
+  &:after {
+    margin-bottom: 2vw;
+    content: "Photos";
+  }
+}
+
+.image-child.book:hover {
+  transform: rotate(8deg);
+  &:after {
+    margin-bottom: 2vw;
+    content: "Reading log";
+  }
+}
+
+.image-child.pumpkin:hover {
+  transform: rotate(-10eg);
+  &:after {
+    margin-bottom: 2vw;
+    content: "Spooktober";
+  }
+}
+
+
+@media (min-width: 1400px) {
+    /* Highlight the sidenote when mouse hovers on the sidenote number in body. */
+    .sidenote-number:hover .sidenote {
+        background-color: #fade85;
+    }
 }

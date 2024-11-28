@@ -23,11 +23,20 @@
 				<!--header here-->
 			</header>
             <!-- main content here-->
-             <h1>helenffion.cafe</h1>
-			 <img style="width:300px" src="{{ url_for('static', filename='images/landing_page/ghibli.gif') }}">
-             <p>This is the landing page for my web domain</p>
-             <h2>Things</h2>
-             <a href="{{ url_for('spooktober') }}">Spooktober</a>
+            <main>
+				<div style="position:relative;width:100%;height:40vw;
+				"><h1>helenffion.cafe 🫖</h1>
+					<div class="image-child" style="position: absolute;top: 100px;left: 250px;">
+						<a href="{{ url_for('serene-lake.photos') }}"><img src="{{ url_for('static', filename='images/stickers/STK-20240725-WA0002.webp') }}" style="transform: rotate(90deg);height:200px"></a>
+					</div>
+					<div class="image-child pumpkin" style="position: absolute;top: 300px;left: 500px;">
+						<a href="{{ url_for('spooktober') }}"><img src="{{ url_for('static', filename='images/spooktober/pumpkin-2.png') }}" style="height:200px"></a>
+					</div>
+					<div class="image-child book" style="position: absolute;top: 300px;left: 100px;">
+						<a href="{{ url_for('sheets') }}"><img src="{{ url_for('static', filename='images/book-1.png') }}" style="height:200px"></a>
+					</div>
+				</div>
+			</main>
 			<footer>
 			</footer>
 		</main>
