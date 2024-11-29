@@ -76,21 +76,6 @@ h1, h2, h3, h4 {
     }
 }
 
-/* On mobile devices, display image aside below image */
-@media (max-width: 600px) {
-  .image-child {
-    position: relative;
-  }
-  
-  .image-child.pumpkin {
-    position: relative;
-  }
-  
-  .image-child.book {
-    position: relative;
-  }
-}
-
 .sidenote-number {
     counter-increment: sidenote-counter;
 }
@@ -122,6 +107,21 @@ h1, h2, h3, h4 {
 
 .image-child.book {
   top: 300px;left: 100px;
+}
+
+/* On mobile devices, display image aside below image */
+@media (max-width: 600px) {
+  .image-child {
+    position: relative;
+  }
+  
+  .image-child.pumpkin {
+    position: relative;
+  }
+  
+  .image-child.book {
+    position: relative;
+  }
 }
 
 
