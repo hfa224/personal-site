@@ -24,16 +24,15 @@
 			</header>
             <!-- main content here-->
             <main>
-				<div style="position:relative;width:100%;height:40vw;
-				"><h1>helenffion.cafe</h1>
+				<div class="parent"><h1>helenffion.cafe</h1>
 					<div class="image-child">
-						<a href="{{ url_for('serene-lake.photos') }}"><img src="{{ url_for('static', filename='images/stickers/STK-20240725-WA0002.webp') }}" style="transform: rotate(90deg);height:200px"></a>
+						<a href="{{ url_for('serene-lake.photos') }}"><img src="{{ url_for('static', filename='images/stickers/STK-20240725-WA0002.webp') }}" style="transform: rotate(90deg);" class="size-image"></a>
 					</div>
 					<div class="image-child pumpkin" >
-						<a href="{{ url_for('spooktober') }}"><img src="{{ url_for('static', filename='images/spooktober/pumpkin-2.png') }}" style="height:200px"></a>
+						<a href="{{ url_for('spooktober') }}"><img src="{{ url_for('static', filename='images/spooktober/pumpkin-2.png') }}" class="size-image"></a>
 					</div>
 					<div class="image-child book">
-						<a href="{{ url_for('sheets') }}"><img src="{{ url_for('static', filename='images/book-1.png') }}" style="height:200px"></a>
+						<a href="{{ url_for('sheets') }}"><img src="{{ url_for('static', filename='images/book-1.png') }}" class="size-image"></a>
 					</div>
 				</div>
 			</main>

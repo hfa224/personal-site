@@ -55,46 +55,6 @@ h1, h2, h3, h4 {
       }
     }
 
-.sidenote {
-    font-size: 80%;
-    position: relative;
-    transform: rotate(5deg);
-    text-align: top;
-}
-/* Wide viewport */
-@media (min-width: 1400px) {
-    .sidenote {
-        float: right;
-        clear: right;
-        margin-right: -35vw;
-        text-align: left;
-        background: var(--pink);
-
-        top: -3rem;
-        width: 20vw;
-        margin-top: 1rem;
-    }
-}
-
-.sidenote-number {
-    counter-increment: sidenote-counter;
-}
-/* Counter before the sidenote in the margin. */
-.sidenote::before {
-    content: counter(sidenote-counter)".";
-    position: relative;
-    vertical-align: baseline;
-    font-size: 0.9em;
-    font-weight: bold;
-}
-/* Counter in the main body. */
-.sidenote-number::after {
-    content: counter(sidenote-counter);
-    vertical-align: super;
-    font-size: 0.7em;
-    font-weight: bold;
-    margin-right: 0.5rem;
-}
 
 /* On mobile devices, display image aside below image */
 @media (max-width: 600px) {
@@ -109,7 +69,21 @@ h1, h2, h3, h4 {
   .image-child.book {
     position: static;
   }
+  .size-image {
+    height:100px;
+  }
 }
+
+.parent {
+  position:relative;
+  width:100%;
+  height:40vw;
+}
+
+.size-image {
+  height:200px;
+}
+				
 
 .image-child {
   position: absolute;
@@ -117,7 +91,7 @@ h1, h2, h3, h4 {
 }
 
 .image-child.pumpkin {
-  top: 200px;left: 500px;
+  top: 200px;left: 550px;
 }
 
 .image-child.book {
@@ -127,7 +101,6 @@ h1, h2, h3, h4 {
 .image-child:hover {
   transform: rotate(5deg);
   &:after {
-    margin-bottom: 2vw;
     content: "Photos";
   }
 }
@@ -135,7 +108,6 @@ h1, h2, h3, h4 {
 .image-child.book:hover {
   transform: rotate(8deg);
   &:after {
-    margin-bottom: 2vw;
     content: "Reading log";
   }
 }
@@ -143,15 +115,6 @@ h1, h2, h3, h4 {
 .image-child.pumpkin:hover {
   transform: rotate(-10eg);
   &:after {
-    margin-bottom: 2vw;
     content: "Spooktober";
   }
-}
-
-
-@media (min-width: 1400px) {
-    /* Highlight the sidenote when mouse hovers on the sidenote number in body. */
-    .sidenote-number:hover .sidenote {
-        background-color: #fade85;
-    }
 }
