@@ -22,7 +22,7 @@ def home():
     """Renders home page"""
     return render_template("home.html")
 
-@app.route("/sheets")
+@app.route("/sheets/")
 def sheets():
     """Renders sheets page"""
     return render_template("sheets/book_log.html")
