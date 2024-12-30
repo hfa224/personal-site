@@ -90,6 +90,10 @@ h1, h2, h3, h4 {
   top: 100px;left: 250px;
 }
 
+.image-child.camera {
+  transform: rotate(20deg);
+}
+
 .image-child.pumpkin {
   top: 200px;left: 550px;
 }
@@ -98,9 +102,11 @@ h1, h2, h3, h4 {
   top: 300px;left: 100px;
 }
 
-.image-child:hover {
-  transform: rotate(5deg);
+.image-child.camera:hover {
+  transform: rotate(25deg);
   &:after {
+    position: absolute;
+    top: 150px;left: 0px;
     content: "Photos";
   }
 }
@@ -108,13 +114,17 @@ h1, h2, h3, h4 {
 .image-child.book:hover {
   transform: rotate(8deg);
   &:after {
+    position: absolute;
+    top: 140px; left: 0px;
     content: "Reading log";
   }
 }
 
 .image-child.pumpkin:hover {
-  transform: rotate(-10eg);
+  transform: rotate(-10deg);
   &:after {
+    position: absolute;
+    top: 180px;left: 0px;
     content: "Spooktober";
   }
 }
