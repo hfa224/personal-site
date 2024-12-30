@@ -101,6 +101,8 @@ h1, h2, h3, h4 {
 .image-child:hover {
   transform: rotate(5deg);
   &:after {
+    position: absolute;
+    top: 140px;left: 0px;
     content: "Photos";
   }
 }
@@ -108,6 +110,8 @@ h1, h2, h3, h4 {
 .image-child.book:hover {
   transform: rotate(8deg);
   &:after {
+    position: absolute;
+    top: 150px; left: 0px;
     content: "Reading log";
   }
 }
@@ -115,6 +119,8 @@ h1, h2, h3, h4 {
 .image-child.pumpkin:hover {
   transform: rotate(-10eg);
   &:after {
+    position: absolute;
+    top: 180px;left: 0px;
     content: "Spooktober";
   }
 }
