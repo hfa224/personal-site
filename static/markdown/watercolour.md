@@ -5,7 +5,7 @@
 ## Sky
 
 * Creamy on damp wash
-* Mix up a grey colour (umber and cobalt blue)
+* Mix up a grey colour (umber and <span class="colour cobalt-blue">cobalt blue</span>)
 * Two coats of damp with the big brush
 * Don't go back once it's dry
 
@@ -42,11 +42,11 @@ Landscape with pinks and orange
 
 #### Painting the sky
 
-* Raw sienna, rose, cobalt blue
+* <span class="colour raw-sienna">Raw sienna</span>, <span class="colour permanent-rose">rose</span>, <span class="colour cobalt-blue">cobalt blue</span>
 * Tempting to use yellow -> but when it mixes with cobalt blue it goes muddy so NO
 
 1. Dampen the sky
-2. Light raw sienna wash - immediately add rose
+2. Light <span class="colour raw-sienna">raw sienna</span> wash - immediately add <span class="colour permanent-rose">rose</span>
 3. Bigger shape higher up / smaller shapes by horizon
 
 #### Painting the heather
@@ -54,11 +54,12 @@ Landscape with pinks and orange
 Same colours -> Use ‘creamy’ colours and brush work -> ‘tapping’ on paper
 
 1. Dampen the heather section
-2. Little brush -> yellow on top edge
-3. Using a separate brush, rose underneath -> melts in -> goes orangey
-4. Keep going down, dabbing on rose
+2. Little brush -> <span class="colour cadmium-yellow">cadmium yellow </span> on top edge
+3. Using a separate brush, <span class="colour permanent-rose">rose</span> underneath -> melts in -> goes orangey
+4. Keep going down, dabbing on <span class="colour permanent-rose">rose</span>
 5. Drifts down onto path -> add some upright dabbing
-6. Add in shadow on bottom edge using sap green -> run into the rose (Layering -> light now, can add darker later)
+6. Add in shadow on bottom edge using 
+    <span class="colour sap-green">sap green</span> -> run into the <span class="colour permanent-rose">rose</span> (Layering -> light now, can add darker later)
 
 #### Next bit of heather
 

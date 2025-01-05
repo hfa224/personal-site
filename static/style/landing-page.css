@@ -1,16 +1,15 @@
-
 :root {
-    --bg: var(--pink);
-    --fg: var(--red-orange);
-  
-    /* pink - orange scheme */
-    --pink: #ffcfef;
-    --red-orange: #f41c0c;
+  --bg: var(--pink);
+  --fg: var(--red-orange);
 
-    --image-max-size: 324px;
+  /* pink - orange scheme */
+  --pink: #ffcfef;
+  --red-orange: #f41c0c;
 
-    --header-font-family: 'Solway', 'Open Sans', 'Helvetica Neue', sans-serif;
-    --body-font-family: 'Lexend', 'Open Sans', 'Helvetica Neue', sans-serif;
+  --image-max-size: 324px;
+
+  --header-font-family: 'Solway', 'Open Sans', 'Helvetica Neue', sans-serif;
+  --body-font-family: 'Lexend', 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
@@ -24,10 +23,12 @@ body {
   counter-reset: sidenote-counter;
   font-weight: 300
 }
+
 a {
   color: var(--red-orange);
   text-decoration: underline;
 }
+
 a:hover {
   border-bottom: 0;
 }
@@ -39,21 +40,25 @@ blockquote {
 }
 
 figure {
-  margin:10% auto auto 10%;
+  margin: 10% auto auto 10%;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--header-font-family);
 }
 
- cite {
-      display: block;
-      font-style: italic;
-      text-align: right;
-      &:before {
-        content: "- ";
-      }
-    }
+cite {
+  display: block;
+  font-style: italic;
+  text-align: right;
+
+  &:before {
+    content: "- ";
+  }
+}
 
 
 /* On mobile devices, display image aside below image */
@@ -61,33 +66,35 @@ h1, h2, h3, h4 {
   .image-child {
     position: static;
   }
-  
+
   .image-child.pumpkin {
     position: static;
   }
-  
+
   .image-child.book {
     position: static;
   }
+
   .size-image {
-    height:50px;
+    height: 50px;
   }
 }
 
 .parent {
-  position:relative;
-  width:100%;
-  height:40vw;
+  position: relative;
+  width: 100%;
+  height: 40vw;
 }
 
 .size-image {
-  height:200px;
+  height: 200px;
 }
-				
+
 
 .image-child {
   position: absolute;
-  top: 100px;left: 250px;
+  top: 100px;
+  left: 250px;
 }
 
 .image-child.camera {
@@ -95,36 +102,60 @@ h1, h2, h3, h4 {
 }
 
 .image-child.pumpkin {
-  top: 200px;left: 550px;
+  top: 200px;
+  left: 550px;
 }
 
 .image-child.book {
-  top: 300px;left: 100px;
+  top: 300px;
+  left: 100px;
+}
+
+.image-child.watercolour {
+  top: 100px;
+  left: -100px;
 }
 
 .image-child.camera:hover {
   transform: rotate(25deg);
+
   &:after {
     position: absolute;
-    top: 150px;left: 0px;
+    top: 150px;
+    left: 0px;
     content: "Photos";
   }
 }
 
 .image-child.book:hover {
   transform: rotate(8deg);
+
   &:after {
     position: absolute;
-    top: 140px; left: 0px;
+    top: 140px;
+    left: 0px;
     content: "Reading log";
   }
 }
 
 .image-child.pumpkin:hover {
   transform: rotate(-10deg);
+
   &:after {
     position: absolute;
-    top: 180px;left: 0px;
+    top: 180px;
+    left: 0px;
     content: "Spooktober";
+  }
+}
+
+.image-child.watercolour:hover {
+  transform: rotate(10deg);
+
+  &:after {
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    content: "Watercolour course notes";
   }
 }
