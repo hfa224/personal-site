@@ -2,6 +2,19 @@
 
 import re
 from flask import Flask, render_template, Blueprint
+from mistune import html
+
+MARKDOWN = """
+# This is Markdown
+
+* Hello World!
+"""
+
+def render_markdown(md_file_name):
+    """Converts markdown to html"""
+    f = open("static/markdown/" + md_file_name + ".md", "r", encoding="utf-8")
+    #print(f.read())
+    return html(f.read())
 
 app = Flask(__name__)
 
@@ -26,6 +39,11 @@ def home():
 def sheets():
     """Renders sheets page"""
     return render_template("sheets/book_log.html")
+
+@app.route("/watercolour_class/")
+def watercolour_class():
+    """Renders watercolour class page"""
+    return render_template("watercolour/base.html", content=render_markdown("watercolour"))
 
 
 @bp.route("/about/")
