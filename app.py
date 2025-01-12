@@ -12,9 +12,8 @@ MARKDOWN = """
 
 def render_markdown(md_file_name):
     """Converts markdown to html"""
-    f = open("static/markdown/" + md_file_name + ".md", "r", encoding="utf-8")
-    #print(f.read())
-    return html(f.read())
+    with open("static/markdown/" + md_file_name + ".md", "r", encoding="utf-8") as file:
+        return html(file.read())
 
 app = Flask(__name__)
 
