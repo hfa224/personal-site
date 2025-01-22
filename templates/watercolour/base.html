@@ -3,22 +3,13 @@
 <body>
 
     <head>
-		<link rel="stylesheet" href="{{ url_for('static', filename='style/watercolour.css') }}"></head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style/watercolour.css') }}">
+    </head>
 
     <header>
         <h1>🎨🖌️✍🏻👩🏻‍🎨 Watercolour class notes</h1>
-        <p>Notes from a watercolour class I took.</p>
+        <p>Notes from a watercolour class I took in summer 2024.</p>
     </header>
-
-
-    <h2>How will it work?</h2>
-    <p>I should just add quotes here. Maybe this should read from a markdown file.
-        <span class="sidenote-number">
-            <small class="sidenote">
-                This is a sidenote that's a little bit wonky.
-                <!--img style="width:100px" src="https://helenffion.cafe/static/images/stickers/STK-20240725-WA0002.webp"-->
-            </small>
-        </span>
     </p>Colours:
     <span class="colour permanent-rose">
         permanent rose
@@ -31,35 +22,10 @@
     <span class="colour cadmium-yellow">cadmium yellow </span>
 
     <section>
-        <figure>
-            <div style="position: relative;background-image: url(https://bear-images.sfo2.cdn.digitaloceanspaces.com/bluebottles/pxl_20241106_164133909.webp); width:400px;height:300px;background-size: contain"><div class="child-1"><span class="sidenote-number">
-              <small class="sidenote">
-                This is a sidenote that's a little bit wonky.
-              </small>
-            </span></div></div>
-            </figure>
-
+        {% autoescape false %}
+        {{ content }}
+        {% endautoescape %}
     </section>
-
-    <section>
-    {% autoescape false %}
-	{{ content }}
-    {% endautoescape %}
-    </section>
-
-    <blockquote>
-        <p>Each of my films has a little demon in the corner that you don't see, but it's there.</p>
-        <cite>Chronenberg on Chronenberg</cite>
-    </blockquote>
-    <blockquote>
-        <p>I have to show things because I'm showing things that people could not imagine. If I had done them
-            off-screen, they would not exist. If you're talking about shooting someone, or cutting throats, you could do
-            that off-screen and the audience would have some idea of what was going on. But if you imagine Max Renn in
-            Video- drome and the slit in his stomach... If I'd done that off-screen, what would the audience think was
-            going on? It simply wouldn't work. I'm presenting audiences with imagery and with possibilities that have to
-            be shown. There is no other way to do it. It's not done for shock value.</p>
-        <cite>Chronenberg on Chronenberg</cite>
-    </blockquote>
     <footer>
         <p></p>
     </footer>

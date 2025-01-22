@@ -16,6 +16,17 @@
 * Leave bits of white as detail
 * Or start light and then build up
 
+<img src="{{ url_for('static', filename='images/watercolour/week_1_1.jpg') }}">
+
+<div
+   style="position: relative;background-image: url('static/images/watercolour/week_1_1.jpg')"; height:400px;background-size: contain">
+   <div class="child-1"><span class="sidenote-number">
+         <small class="sidenote">
+               This is a sidenote that's a little bit wonky.
+         </small>
+      </span></div>
+</div>
+
 ### Notes
 
 Mistake I made was too much creamy paint on sky - no white bits left, created muddy mess.  

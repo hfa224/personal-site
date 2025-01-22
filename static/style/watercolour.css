@@ -1,21 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Solway&family=Caveat&family=Lexend:wght@300;400;700&display=swap');
 
 :root {
-    --tangerine: #F7A278;
-    --orange: #c94c10;
-    --champagne: #FDE4D8;
-    --dusty-champagne: #EFC6B8;
-    --charcoal: #626262;
-  --dark-grey:#333333;
-  --moonstone: #2AB7CA;
+  --dark-grey: #333333;
   --ghost-white: #F4F4F8;
-    --bg: var(--ghost-white);
-    --fg: var(--dark-grey);
+  --bg: var(--ghost-white);
+  --fg: var(--dark-grey);
 
-    --image-max-size: 324px;
-
-    --font-family: 'Solway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      --body-font-family: 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-family: 'Solway', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --body-font-family: 'Lexend', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
@@ -29,14 +21,13 @@ body {
   max-width: 80%;
   counter-reset: sidenote-counter;
 }
-code {
-  background: var(--dusty-champagne)
-}
+
 a {
   border-bottom: 1px solid #444444;
   color: #444444;
   text-decoration: none;
 }
+
 a:hover {
   border-bottom: 0;
 }
@@ -78,51 +69,33 @@ a:hover {
   background: linear-gradient(to right, #FDDA0D, #ffffff);
 }
 
-blockquote {
-  border-left: 3px solid var(--dark-grey);
-  margin: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-weight: 200;
-  background: #f0d8cc;
-}
-
-figure {
-  margin:10% auto auto 10%;
-}
-
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-family);
 }
 
- cite {
-      display: block;
-      font-style: italic;
-      text-align: right;
-      &:before {
-        content: "- ";
-      }
-    }
-
 .sidenote {
-    font-size: 80%;
-    position: relative;
-    transform: rotate(5deg);
-    text-align: top;
+  font-size: 80%;
+  position: relative;
+  transform: rotate(5deg);
+  text-align: top;
 }
-/* Wide viewport */
-@media (min-width: 1400px) {
-    .sidenote {
-        float: right;
-        clear: right;
-        margin-right: -23vw;
-        text-align: left;
-        
 
-        top: -3rem;
-        width: 20vw;
-        margin-top: 1rem;
-    }
+/* Wide viewport */
+@media (min-width: 500px) {
+  .sidenote {
+    float: right;
+    clear: right;
+    margin-right: -300px;
+    text-align: left;
+
+
+    top: -3rem;
+    width: 20vw;
+    margin-top: 1rem;
+  }
 }
 
 .child-1 {
@@ -132,28 +105,31 @@ h1, h2, h3, h4 {
 }
 
 .sidenote-number {
-    counter-increment: sidenote-counter;
+  counter-increment: sidenote-counter;
 }
+
 /* Counter before the sidenote in the margin. */
 .sidenote::before {
-    content: counter(sidenote-counter)".";
-    position: relative;
-    vertical-align: baseline;
-    font-size: 0.9em;
-    font-weight: bold;
+  content: counter(sidenote-counter)".";
+  position: relative;
+  vertical-align: baseline;
+  font-size: 0.9em;
+  font-weight: bold;
 }
+
 /* Counter in the main body. */
 .sidenote-number::after {
-    content: counter(sidenote-counter);
-    vertical-align: super;
-    font-size: 0.7em;
-    font-weight: bold;
-    margin-right: 0.5rem;
+  content: counter(sidenote-counter);
+  vertical-align: super;
+  font-size: 0.7em;
+  font-weight: bold;
+  margin-right: 0.5rem;
 }
 
 @media (min-width: 1400px) {
-    /* Highlight the sidenote when mouse hovers on the sidenote number in body. */
-    .sidenote-number:hover .sidenote {
-        background-color: #fade85;
-    }
+
+  /* Highlight the sidenote when mouse hovers on the sidenote number in body. */
+  .sidenote-number:hover .sidenote {
+    background-color: #fade85;
+  }
 }
