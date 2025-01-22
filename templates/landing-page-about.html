@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8">
+		<meta name="description" content="This is the personal site of Helen Ffion, with photos and other things I'm interested in">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="robots" content="noindex, nofollow">
+		<!-- Not set up yet -->  
+         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%221em%22 font-size=%2280%22>👋</text></svg>">
+		<title>Personal site</title>
+		<link rel="stylesheet" href="https://unpkg.com/normalize.css">
+		<link rel="stylesheet" href="{{ url_for('static', filename='style/landing-page.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Solway:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+	</head>
+    <body>
+		
+
+		<!-- Page content -->
+		<main>
+			<header>
+				
+			<h1>helenffion.cafe <a href="{{ url_for('landing_page') }}"><img
+				src="{{ url_for('static', filename='images/stickers/Green_Tea.png') }}"
+				style="transform: translate(0px, 10px);"></a></h1>
+			</header>
+            <!-- main content here-->
+            <main>
+				<div class="parent">
+					<p>Fun page for messing about.</p>
+					<h3>Credits</h3>
+					<small>Book image from artworks by <a href="https://www.jessallen.co.uk/artworks/categories/13-2024/">Jess Allen</a></small><br>
+					<small>Green tea sprite by ConcernedApe via the <a href="https://stardewvalleywiki.com/Green_Tea">Stardew Valley wiki</a></small><br>
+					<small>Pumpkin png by <a href="https://www.tumblr.com/transparensies/681305248762068992/pumpkins-jack-o-lanterns-tip-jar?source=share">transparencies on tumblr</a></small><br>
+				</div>
+			</main>
+			<footer>
+			</footer>
+		</main>
+    </body>
+</html>

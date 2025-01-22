@@ -1,43 +1,73 @@
 <!DOCTYPE html>
 <html>
-    <head>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description"
+		content="This is the personal site of Helen Ffion, with photos and other things I'm interested in">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow">
+	<!-- Not set up yet -->
+	<link rel="icon"
+		href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%221em%22 font-size=%2280%22>👋</text></svg>">
+	<title>Personal site</title>
+	<link rel="stylesheet" href="https://unpkg.com/normalize.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style/landing-page.css') }}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Solway:wght@300;400;500;700;800&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+
+
+	<head>
 		<meta charset="UTF-8">
-		<meta name="description" content="This is the personal site of Helen Ffion, with photos and other things I'm interested in">
+		<meta name="description" content="This is the personal site for messing about">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="robots" content="noindex, nofollow">
-		<!-- Not set up yet -->  
-         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%221em%22 font-size=%2280%22>👋</text></svg>">
+		<!-- Not set up yet -->
+		<link rel="icon"
+			href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%221em%22 font-size=%2280%22>👋</text></svg>">
 		<title>Personal site</title>
 		<link rel="stylesheet" href="https://unpkg.com/normalize.css">
 		<link rel="stylesheet" href="{{ url_for('static', filename='style/landing-page.css') }}">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Solway:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Solway:wght@300;400;500;700;800&display=swap"
+			rel="stylesheet">
 	</head>
-    <body>
-		
 
-		<!-- Page content -->
+	<body>
+		<header>
+			<h1>helenffion.cafe <a href="{{ url_for('landing_page_about') }}"><img
+						src="{{ url_for('static', filename='images/stickers/Green_Tea.png') }}"
+						style="transform: translate(0px, 10px);"></a></h1>
+		</header>
+		<!-- main content here-->
 		<main>
-			<header>
-				<!--header here-->
-			</header>
-            <!-- main content here-->
-            <main>
-				<div class="parent"><h1>helenffion.cafe</h1>
-					<div class="image-child camera">
-						<a href="{{ url_for('serene-lake.photos') }}"><img src="{{ url_for('static', filename='images/stickers/STK-20240725-WA0002.webp') }}" style="transform: rotate(90deg);" class="size-image"></a>
-					</div>
-					<div class="image-child pumpkin" >
-						<a href="{{ url_for('spooktober') }}"><img src="{{ url_for('static', filename='images/spooktober/pumpkin-2.png') }}" class="size-image"></a>
-					</div>
-					<div class="image-child book">
-						<a href="{{ url_for('sheets') }}"><img src="{{ url_for('static', filename='images/book-1.png') }}" class="size-image"></a>
-					</div>
+			<div class="parent">
+				<div class="image-child camera">
+					<a href="{{ url_for('serene-lake.photos') }}"><img
+							src="{{ url_for('static', filename='images/stickers/STK-20240725-WA0002.webp') }}"
+							style="transform: rotate(90deg);" class="size-image"></a>
 				</div>
-			</main>
-			<footer>
-			</footer>
+				<div class="image-child pumpkin">
+					<a href="{{ url_for('spooktober') }}"><img
+							src="{{ url_for('static', filename='images/spooktober/pumpkin-2.png') }}"
+							class="size-image"></a>
+				</div>
+				<div class="image-child book">
+					<a href="{{ url_for('sheets') }}"><img src="{{ url_for('static', filename='images/book-1.png') }}"
+							class="size-image"></a>
+				</div>
+			</div>
 		</main>
-    </body>
+		<footer>
+		</footer>
+	</body>
+
 </html>

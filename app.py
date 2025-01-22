@@ -16,6 +16,11 @@ def landing_page():
     """Renders landing page"""
     return render_template("landing-page.html")
 
+@app.route("/about")
+def landing_page_about():
+    """Renders landing page"""
+    return render_template("landing-page-about.html")
+
 
 @bp.route("/")
 def home():
