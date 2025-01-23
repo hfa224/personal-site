@@ -43,7 +43,7 @@ h4 {
 /* On mobile devices, display image aside below image */
 @media (max-width: 600px) {
   .parent {
-    display: flex;
+    display: block;
   }
 
   h1 {
@@ -51,7 +51,7 @@ h4 {
   }
 
   .image-child {
-    position: block;
+    display: block;
   }
 
   .image-child.pumpkin {
