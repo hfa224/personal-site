@@ -33,33 +33,12 @@ a:hover {
   border-bottom: 0;
 }
 
-blockquote {
-  border-left: 3px solid var(--red-orange);
-  margin: 10px;
-  padding-left: 10px;
-}
-
-figure {
-  margin: 10% auto auto 10%;
-}
-
 h1,
 h2,
 h3,
 h4 {
   font-family: var(--header-font-family);
 }
-
-cite {
-  display: block;
-  font-style: italic;
-  text-align: right;
-
-  &:before {
-    content: "- ";
-  }
-}
-
 
 /* On mobile devices, display image aside below image */
 @media (max-width: 600px) {
@@ -68,20 +47,19 @@ cite {
   }
 
   h1 {
-
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .image-child {
-    position: static;
+    position: block;
   }
 
   .image-child.pumpkin {
-    position: static;
+    position: block;
   }
 
   .image-child.book {
-    position: static;
+    position: block;
   }
 
   .size-image {
