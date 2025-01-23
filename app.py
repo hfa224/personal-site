@@ -16,7 +16,7 @@ def landing_page():
     """Renders landing page"""
     return render_template("landing-page.html")
 
-@app.route("/about")
+@app.route("/about/")
 def landing_page_about():
     """Renders landing page"""
     return render_template("landing-page-about.html")
