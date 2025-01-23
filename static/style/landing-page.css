@@ -77,7 +77,7 @@ h1, h2, h3, h4 {
 .parent {
   position:relative;
   width:100%;
-  height:40vw;
+  height:30vw;
 }
 
 .size-image {
@@ -87,7 +87,7 @@ h1, h2, h3, h4 {
 
 .image-child {
   position: absolute;
-  top: 100px;left: 250px;
+  top: 0px;left: -20px;
 }
 
 .image-child.camera {
@@ -95,11 +95,11 @@ h1, h2, h3, h4 {
 }
 
 .image-child.pumpkin {
-  top: 200px;left: 550px;
+  top: 50px;left: 350px;
 }
 
 .image-child.book {
-  top: 300px;left: 100px;
+  top: 150px;left: 100px;
 }
 
 .image-child.camera:hover {
