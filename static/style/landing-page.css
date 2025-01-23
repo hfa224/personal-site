@@ -50,16 +50,11 @@ h4 {
     font-size: 18px;
   }
 
-  .image-child {
-    display: block;
-  }
+
 
   .image-child.pumpkin {
     position: block;
-  }
-
-  .image-child.book {
-    position: block;
+    left:100px;
   }
 
   .size-image {
