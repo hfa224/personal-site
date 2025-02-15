@@ -58,11 +58,6 @@ h4 {
   .image-child, .pumpkin, .camera, .book {
     display: flex;
   }
-
-  /* .about-icon {
-    height: 20px;
-    transform: translate(0px, 0px);
-  } */
 }
 
 .about {
