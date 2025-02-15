@@ -43,15 +43,12 @@ h4 {
 @media (max-width: 600px) {
   body {
     margin: 5% 5% 5% 5%;
+    max-width: 90%;
   }
 
   .parent {
     display: flex;
     flex-direction: column;
-  }
-
-  h1 {
-    font-size: 18px;
   }
 
   .parent img {
@@ -64,6 +61,7 @@ h4 {
 
   .about-icon {
     height: 20px;
+    transform: translate(0px, 0px);
   }
 }
 
