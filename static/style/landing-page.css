@@ -55,7 +55,7 @@ h4 {
     height: 50px;
   }
 
-  .image-child {
+  .image-child, .pumpkin, .camera, .book {
     display: flex;
   }
 
