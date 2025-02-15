@@ -56,13 +56,13 @@ h4 {
   }
 
   .image-child {
-    display: block;
+    display: flex;
   }
 
-  .about-icon {
+  /* .about-icon {
     height: 20px;
     transform: translate(0px, 0px);
-  }
+  } */
 }
 
 .about {
@@ -71,7 +71,7 @@ h4 {
 }
 
 .about-icon {
-  transform: translate(0px, 10px);
+  transform: translate(10px, 45px);
 }
 
 /* the parent div that holds all the image links */

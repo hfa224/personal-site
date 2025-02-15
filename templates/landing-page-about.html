@@ -26,10 +26,10 @@
 	<!-- Page content -->
 	<main>
 		<header>
-
-			<h1>helenffion.cafe <a href="{{ url_for('landing_page') }}"><img
-						src="{{ url_for('static', filename='images/stickers/Green_Tea.png') }}" title="Back to home"
-						style="transform: translate(0px, 10px);"></a></h1>
+			<div style="display: flex; flex-direction: row;">
+				<div><h1>helenffion.cafe</h1></div><div> <a href="{{ url_for('landing_page') }}" title="About"><img class="about-icon"
+							src="{{ url_for('static', filename='images/stickers/Green_Tea.png') }}"></a></div>
+				</div>
 		</header>
 		<!-- main content here-->
 		<main>
