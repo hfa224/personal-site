@@ -21,29 +21,10 @@
 </head>
 
 <body>
-
-
-	<head>
-		<meta charset="UTF-8">
-		<meta name="description" content="This is the personal site for messing about">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="robots" content="noindex, nofollow">
-		<!-- Not set up yet -->
-		<link rel="icon"
-			href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%221em%22 font-size=%2280%22>👋</text></svg>">
-		<title>Personal site</title>
-		<link rel="stylesheet" href="https://unpkg.com/normalize.css">
-		<link rel="stylesheet" href="{{ url_for('static', filename='style/landing-page.css') }}">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link
-			href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Solway:wght@300;400;500;700;800&display=swap"
-			rel="stylesheet">
-	</head>
-
 	<body>
 		<header>
 			<h1>helenffion.cafe <a href="{{ url_for('landing_page_about') }}" title="About"><img
+						class="about-icon"
 						src="{{ url_for('static', filename='images/stickers/Green_Tea.png') }}"
 						style="transform: translate(0px, 10px);"></a></h1>
 		</header>
