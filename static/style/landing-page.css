@@ -20,7 +20,6 @@ body {
   font-size: 21px;
   line-height: 1.8;
   max-width: 73%;
-  counter-reset: sidenote-counter;
   font-weight: 300
 }
 
@@ -40,44 +39,50 @@ h4 {
   font-family: var(--header-font-family);
 }
 
-/* On mobile devices, display image aside below image */
+/* On mobile devices, display images in a verticle line */
 @media (max-width: 600px) {
+  body {
+    margin: 5% 5% 5% 5%;
+    max-width: 90%;
+  }
+
   .parent {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 
-  h1 {
-    font-size: 18px;
-  }
-
-  .image-child {
-    display: block;
-  }
-
-  .image-child.pumpkin {
-    position: block;
-  }
-
-  .image-child.book {
-    position: block;
-  }
-
-  .size-image {
+  .parent img {
     height: 50px;
+  }
+
+  .image-child, .pumpkin, .camera, .book {
+    display: flex;
+    position: relative;
   }
 }
 
+.about {
+  width: 100%;
+  height: 30vw;
+}
+
+.about-icon {
+  transform: translate(10px, 45px);
+}
+
+/* the parent div that holds all the image links */
 .parent {
   position: relative;
   width: 100%;
   height: 30vw;
 }
 
-.size-image {
+/* set hieght for images inside parent */
+.parent img {
   height: 200px;
 }
 
-
+/* set the positions and rotations of the child images */
 .image-child {
   position: absolute;
   top: 0px;
@@ -98,6 +103,7 @@ h4 {
   left: 100px;
 }
 
+/* set the hover transistions for the child images */
 .image-child.camera:hover {
   transform: rotate(25deg);
 
