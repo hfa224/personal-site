@@ -28,6 +28,11 @@ def landing_page():
     """Renders landing page"""
     return render_template("landing-page.html")
 
+@app.route("/about/")
+def landing_page_about():
+    """Renders landing page"""
+    return render_template("landing-page-about.html")
+
 
 @bp.route("/")
 def home():
@@ -175,6 +180,19 @@ def photos_2024_09():
         "2024_09_27",
         "0000057600",
         [1, 2, 4, 5, 6, 7, 9, 10, 11, 14, 15, 16, 20, 21, 22, 23, 24, 26, 27, 28],
+    )
+
+
+@bp.route("/2024_12_01/")
+def photos_2024_12():
+    """Renders photo page for 2024_12_01"""
+    return produce_photo_page(
+        "2024_12_01",
+        "0000034800",
+        [1, 2, 4, 5, 6, 7, 11, 13,
+         14, 15, 16, 17, 18, 19,
+         20, 21, 22, 23, 24, 25,
+         26, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38],
     )
 
 

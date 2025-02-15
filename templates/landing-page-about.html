@@ -22,35 +22,29 @@
 
 <body>
 
-	<body>
+
+	<!-- Page content -->
+	<main>
 		<header>
 			<div style="display: flex; flex-direction: row;">
-			<div><h1>helenffion.cafe</h1></div><div> <a href="{{ url_for('landing_page_about') }}" title="About"><img class="about-icon"
-						src="{{ url_for('static', filename='images/stickers/Green_Tea.png') }}"></a></div>
-			</div>
+				<div><h1>helenffion.cafe</h1></div><div> <a href="{{ url_for('landing_page') }}" title="About"><img class="about-icon"
+							src="{{ url_for('static', filename='images/stickers/Green_Tea.png') }}"></a></div>
+				</div>
 		</header>
 		<!-- main content here-->
 		<main>
-			<div class="parent">
-				<div class="image-child camera">
-					<a href="{{ url_for('serene-lake.photos') }}"><img
-							src="{{ url_for('static', filename='images/stickers/STK-20240725-WA0002.webp') }}"
-							style="transform: rotate(90deg);" class="size-image"></a>
-				</div>
-				<div class="image-child pumpkin">
-					<a href="{{ url_for('spooktober') }}"><img
-							src="{{ url_for('static', filename='images/spooktober/pumpkin-2.png') }}"
-							></a>
-				</div>
-				<div class="image-child book">
-					<a href="{{ url_for('sheets') }}"><img src="{{ url_for('static', filename='images/book-1.png') }}"
-							></a>
-				</div>
-				<div class="image-child watercolour">
-					<a href="{{ url_for('watercolour_class') }}"><img
-							src="{{ url_for('static', filename='images/stickers/watercolour.webp') }}"
-							></a>
-				</div>
+			<div class="about">
+				<p>Fun page for messing about.</p>
+				<a href="https://lovesick.cafe/grrrl"><img 
+						src="{{ url_for('static', filename='images/other_sites/madebya-purple3.png') }}"></a>
+				<h3>Credits</h3>
+				<small>Book image from artworks by <a
+						href="https://www.jessallen.co.uk/artworks/categories/13-2024/">Jess Allen</a></small><br>
+				<small>Green tea sprite by ConcernedApe via the <a
+						href="https://stardewvalleywiki.com/Green_Tea">Stardew Valley wiki</a></small><br>
+				<small>Pumpkin png by <a
+						href="https://www.tumblr.com/transparensies/681305248762068992/pumpkins-jack-o-lanterns-tip-jar?source=share">transparencies
+						on tumblr</a></small><br>
 			</div>
 		</main>
 		<footer>
