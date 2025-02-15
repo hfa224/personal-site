@@ -57,6 +57,7 @@ h4 {
 
   .image-child, .pumpkin, .camera, .book {
     display: flex;
+    position: relative;
   }
 }
 
