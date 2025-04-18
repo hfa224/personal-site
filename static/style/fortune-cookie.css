@@ -1,0 +1,69 @@
+
+
+.cookie {
+  position: relative;
+  left: 600px;
+  top: 0px;
+  width: 200px;
+}
+
+.cookie img {
+  height:100px;
+}
+
+.cookie img:hover:first-child {
+  transform: rotate(8deg);
+}
+
+.cookie img:last-of-type {
+  transform: rotate(45deg);
+}
+
+ 
+div.before:hover {
+    &::after {
+    content: "Click me";
+  }
+}
+
+.before img:last-of-type {
+    display: none;
+}
+
+.before .fortune {
+  display: none;
+}
+
+.fortune {
+  height:30px; 
+  width: 400px;
+  background-color: #efefe8;
+  /* create the blue corner */
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 100px 400px;
+  background-image: conic-gradient(
+    blue 90deg,
+    #efefe8 90deg 180deg,
+    #efefe8 180deg 270deg,
+    #efefe8 270deg
+  );
+  /* text positioning */
+  padding-top: 10px;
+  text-align: center;
+  /* position the div relative to cookie container*/
+  position: absolute;
+  top: 100px;
+  left: -400px;
+  transform: rotate(-25deg);
+  font-family: arial;
+  filter: drop-shadow(4px 4px 5px #999999);
+}
+
+.fortune:hover {
+    cursor: pointer;
+}
+
+.after img:first-child {
+    display: none
+}

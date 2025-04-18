@@ -13,20 +13,22 @@
 	<title>Personal site</title>
 	<link rel="stylesheet" href="https://unpkg.com/normalize.css">
 	<link rel="stylesheet" href="{{ url_for('static', filename='style/landing-page.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style/fortune-cookie.css') }}">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
 		href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Solway:wght@300;400;500;700;800&display=swap"
 		rel="stylesheet">
+		<script type="text/javascript" src="{{ url_for('static', filename='scripts/fortune-cookie.js') }}"></script>
 </head>
 
 <body>
 
 	<body>
 		<header>
+			<div><small><a href="{{ url_for('landing_page') }}" title="Home">Home</a></small></div>
 			<div style="display: flex; flex-direction: row;">
-			<div><h1>helenffion.cafe</h1></div><div> <a href="{{ url_for('landing_page_about') }}" title="About"><img class="about-icon"
-						src="{{ url_for('static', filename='images/stickers/Green_Tea.png') }}"></a></div>
+			<h1>helenffion.cafe</h1> <h3><a href="{{ url_for('landing_page_about') }}" title="About">?</a></h3>
 			</div>
 		</header>
 		<!-- main content here-->
@@ -46,6 +48,12 @@
 					<a href="{{ url_for('sheets') }}"><img src="{{ url_for('static', filename='images/book-1.png') }}"
 							class="size-image"></a>
 				</div>
+				<div class="cookie before">
+					<img src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/bluebottles/8aa0feb7-1b0b-4261-a5fc-7a9f2ae0b16d.webp" 
+						 onclick="toggleCookie()">
+					<img src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/bluebottles/5c382215-059e-4598-9068-6446f60932c2.webp">
+					  <div class="fortune" onclick="toggleCookie()">☻ Great things are around the corner! ☻</div>
+					  </div>
 			</div>
 		</main>
 		<footer>
