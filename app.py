@@ -33,28 +33,28 @@ def sheets():
     return render_template("sheets/book_log.html")
 
 
-@bp.route("/about/")
-def about():
-    """Renders about page"""
-    return render_template("about.html")
+# @bp.route("/about/")
+# def about():
+#     """Renders about page"""
+#     return render_template("about.html")
 
 
-@bp.route("/cinema/")
-def cinema():
-    """Renders cinema page"""
-    return render_template("cinema.html")
+# @bp.route("/cinema/")
+# def cinema():
+#     """Renders cinema page"""
+#     return render_template("cinema.html")
 
 
-@bp.route("/little_theatre_2024_09/")
-def little_theatre():
-    """Renders cinema page"""
-    return render_template("cinema/little_theatre_2024_09.html")
+# @bp.route("/little_theatre_2024_09/")
+# def little_theatre():
+#     """Renders cinema page"""
+#     return render_template("cinema/little_theatre_2024_09.html")
 
 
-@bp.route("/cinema_love/")
-def cinema_love():
-    """Renders cinema page"""
-    return render_template("cinema/cinema_love.html")
+# @bp.route("/cinema_love/")
+# def cinema_love():
+#     """Renders cinema page"""
+#     return render_template("cinema/cinema_love.html")
 
 
 @bp.route("/photos/")
@@ -179,10 +179,10 @@ def photos_2024_12():
     )
 
 
-@bp.route("/cultivation/")
-def cultivation():
-    """Renders cultivation page"""
-    return render_template("cultivation.html")
+# @bp.route("/cultivation/")
+# def cultivation():
+#     """Renders cultivation page"""
+#     return render_template("cultivation.html")
 
 
 @app.route("/spooktober/")
@@ -209,16 +209,21 @@ def changelog():
     return render_template("changelog.html")
 
 
-@bp.route("/newsletter/")
-def newsletter():
-    """Renders now page TODO: under construction/hiden"""
-    return render_template("newsletter.html")
+# @bp.route("/newsletter/")
+# def newsletter():
+#     """Renders now page TODO: under construction/hiden"""
+#     return render_template("newsletter.html")
 
 
-@bp.route("/counters/")
-def counters():
-    """Renders counters page"""
-    return render_template("counters.html")
+# @bp.route("/counters/")
+# def counters():
+#     """Renders counters page"""
+#     return render_template("counters.html")
+
+@app.route("/jjjhagdo/")
+def jjhagdo():
+    """Renders jjj hag do page page"""
+    return render_template("jjjhagdo/index.html")
 
 
 def produce_photo_page(
