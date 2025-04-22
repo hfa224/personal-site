@@ -37,10 +37,17 @@
     text-decoration: none;
   }
   
-  header img {
+  header img, marquee img {
     border-radius: 100%;
     height: 200px;
     width: 200px;
+    object-fit: cover;
+  }
+
+  marquee img {
+    border-radius: 100%;
+    height: 150px;
+    width: 150px;
     object-fit: cover;
   }
   
@@ -100,7 +107,7 @@
     padding-bottom: 10px;
     grid-column: 1 / 2;
     grid-row: span 2;
-    font-size: 50px;
+    font-size: 80px;
   }
   
   schedule .emoji img {
