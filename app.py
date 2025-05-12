@@ -7,8 +7,6 @@ app = Flask(__name__)
 
 app.config["FREEZER_RELATIVE_URLS"] = True
 
-bp = Blueprint("serene-lake", __name__, template_folder="templates")
-
 @app.route("/")
 def landing_page():
     """Renders landing page"""
@@ -19,19 +17,34 @@ def landing_page_about():
     """Renders about page"""
     return render_template("landing-page-about.html")
 
+@app.route("/changelog/")
+def landing_page_changelog():
+    """Renders changelog page"""
+    return render_template("changelog.html")
+
+@app.route("/colophon/")
+def landing_page_colophon():
+    """Renders colophon page"""
+    return render_template("colophon.html")
+
 
 @app.route("/sheets/")
 def sheets():
     """Renders sheets page"""
     return render_template("sheets/book_log.html")
 
-@bp.route("/photos/")
+@app.route("/photos/")
 def photos():
     """Renders base photo page"""
     return render_template("photos.html")
 
+@app.route("/counters/")
+def counters():
+    """Renders counters page"""
+    return render_template("archive/counters.html")
 
-@bp.route("/2022_10_22/")
+
+@app.route("/2022_10_22/")
 def photos_2022_10_22():
     """Renders photo page for 2022_10_22"""
     return produce_photo_page(
@@ -39,7 +52,7 @@ def photos_2022_10_22():
     )
 
 
-@bp.route("/2024_04_22/")
+@app.route("/2024_04_22/")
 def photos_2024_04_22():
     """Renders photo page for 2024_04_22"""
     return produce_photo_page(
@@ -80,7 +93,7 @@ def photos_2024_04_22():
     )
 
 
-@bp.route("/2024_07_21/")
+@app.route("/2024_07_21/")
 def photos_2024_07_21():
     """Renders photo page for 2024_07_21"""
     return produce_photo_page(
@@ -90,7 +103,7 @@ def photos_2024_07_21():
     )
 
 
-@bp.route("/2024_08_06/")
+@app.route("/2024_08_06/")
 def photos_2024_08_06():
     """Renders photo page for 2024_08_06"""
     return produce_photo_page(
@@ -124,7 +137,7 @@ def photos_2024_08_06():
         ],
     )
 
-@bp.route("/2024_09_27/")
+@app.route("/2024_09_27/")
 def photos_2024_09_27():
     """Renders photo page for 2024_09_27"""
     return produce_photo_page(
@@ -134,7 +147,7 @@ def photos_2024_09_27():
     )
 
 
-@bp.route("/2024_12_01/")
+@app.route("/2024_12_01/")
 def photos_2024_12_01():
     """Renders photo page for 2024_12_01"""
     return produce_photo_page(
@@ -151,17 +164,6 @@ def photos_2024_12_01():
 def spooktober():
     """Renders spooktober page"""
     return render_template("spooktober/calendar.html")
-
-@bp.route("/colophon/")
-def colophon():
-    """Renders colophon page"""
-    return render_template("archive/colophon.html")
-
-
-@bp.route("/changelog/")
-def changelog():
-    """Renders changelog page"""
-    return render_template("archive/changelog.html")
 
 @app.route("/jjjhagdo/")
 def jjhagdo():
@@ -207,56 +209,6 @@ def linkrepl(matchobj):
         + "</a>"
     )
 
-# @bp.route("/")
-# def home():
-#     """Renders home page"""
-#     return render_template("home.html")
-
-# @bp.route("/about/")
-# def about():
-#     """Renders about page"""
-#     return render_template("about.html")
-
-
-# @bp.route("/cinema/")
-# def cinema():
-#     """Renders cinema page"""
-#     return render_template("cinema.html")
-
-
-# @bp.route("/little_theatre_2024_09/")
-# def little_theatre():
-#     """Renders cinema page"""
-#     return render_template("cinema/little_theatre_2024_09.html")
-
-
-# @bp.route("/cinema_love/")
-# def cinema_love():
-#     """Renders cinema page"""
-#     return render_template("cinema/cinema_love.html")
-
-# @bp.route("/newsletter/")
-# def newsletter():
-#     """Renders now page TODO: under construction/hiden"""
-#     return render_template("newsletter.html")
-
-
-# @bp.route("/counters/")
-# def counters():
-#     """Renders counters page"""
-#     return render_template("counters.html")
-
-# @bp.route("/cultivation/")
-# def cultivation():
-#     """Renders cultivation page"""
-#     return render_template("cultivation.html")
-
-# @bp.route("/digital_garden/")
-# def digital_garden():
-#     """Renders digital garden page"""
-#     return render_template("digital_garden.html")
-
 
 if __name__ == "__main__":
-    app.register_blueprint(bp, url_prefix="/serene-lake")
     app.run(debug=True)

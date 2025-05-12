@@ -6,8 +6,8 @@
 
 {% block navigation %}
 <div><small><a href="{{ url_for('landing_page') }}" title="Home">Home</a> > <a
-	href="{{ url_for('serene-lake.photos') }}" title="Photos">Photos</a> > <a
-	href="{{ url_for('serene-lake.photos_'+ photos_folder_name ) }}" title="Date">{{photos_folder_name}}</a></small></div>
+	href="{{ url_for('photos') }}" title="Photos">Photos</a> > <a
+	href="{{ url_for('photos_'+ photos_folder_name ) }}" title="Date">{{photos_folder_name}}</a></small></div>
 {% endblock %}
 
 {% block content %}
