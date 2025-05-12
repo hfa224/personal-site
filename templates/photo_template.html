@@ -11,15 +11,17 @@
 {% endblock %}
 
 {% block content %}
+<div style="display: flex;
+flex-flow: row wrap;" id="flex-box-container"> 
 	{% for n in indexes_of_displayed_photos %}
 	{% if (n < 10) %}
 		{% set n_str =  '0' + (n | string()) %}
 	{% else  %}
 		{% set n_str = n | string() %}
 	{% endif %}
-	<section>
+	<section class="flex-photo">
 		<figure>
-			<img src="{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}"></img>
+			<img class="vert-img" src="{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}"></img>
 			<figcaption>
 				{% if descriptions|length > 0 %}
 					{{ descriptions[n-1] |safe }}
@@ -28,4 +30,5 @@
 		</figure>
 	</section>
 	{% endfor %}
+</div>
 {% endblock %}

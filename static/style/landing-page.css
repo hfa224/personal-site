@@ -166,10 +166,19 @@ img {
 }
 
 /* Images in figures should not have their own margins */
-figure img {
+.flex-photo img {
   max-width: 70%;
   margin: 0;
   padding: 0;
+}
+
+.flex-photo {
+  height: 265px;
+  min-width: 350px;
+  margin: 5px;
+  padding:10px; 
+  position:relative;
+  flex: 1;
 }
 
 /*
