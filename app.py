@@ -7,9 +7,7 @@ app = Flask(__name__)
 
 app.config["FREEZER_RELATIVE_URLS"] = True
 
-
 bp = Blueprint("serene-lake", __name__, template_folder="templates")
-
 
 @app.route("/")
 def landing_page():
@@ -18,18 +16,14 @@ def landing_page():
 
 @app.route("/about/")
 def landing_page_about():
-    """Renders landing page"""
+    """Renders about page"""
     return render_template("landing-page-about.html")
-
-
 
 
 @app.route("/sheets/")
 def sheets():
     """Renders sheets page"""
     return render_template("sheets/book_log.html")
-
-
 
 @bp.route("/photos/")
 def photos():
@@ -38,7 +32,7 @@ def photos():
 
 
 @bp.route("/2022_10_22/")
-def photos_2022_10():
+def photos_2022_10_22():
     """Renders photo page for 2022_10_22"""
     return produce_photo_page(
         "2022_10_22", "0000051500", [1, 2, 5, 7, 8, 9, 10, 11, 12, 15, 17, 18, 19, 20]
@@ -46,7 +40,7 @@ def photos_2022_10():
 
 
 @bp.route("/2024_04_22/")
-def photos_2024_04():
+def photos_2024_04_22():
     """Renders photo page for 2024_04_22"""
     return produce_photo_page(
         "2024_04_22",
@@ -87,7 +81,7 @@ def photos_2024_04():
 
 
 @bp.route("/2024_07_21/")
-def photos_2024_07():
+def photos_2024_07_21():
     """Renders photo page for 2024_07_21"""
     return produce_photo_page(
         "2024_07_21",
@@ -97,7 +91,7 @@ def photos_2024_07():
 
 
 @bp.route("/2024_08_06/")
-def photos_2024_08():
+def photos_2024_08_06():
     """Renders photo page for 2024_08_06"""
     return produce_photo_page(
         "2024_08_06",
@@ -131,7 +125,7 @@ def photos_2024_08():
     )
 
 @bp.route("/2024_09_27/")
-def photos_2024_09():
+def photos_2024_09_27():
     """Renders photo page for 2024_09_27"""
     return produce_photo_page(
         "2024_09_27",
@@ -141,7 +135,7 @@ def photos_2024_09():
 
 
 @bp.route("/2024_12_01/")
-def photos_2024_12():
+def photos_2024_12_01():
     """Renders photo page for 2024_12_01"""
     return produce_photo_page(
         "2024_12_01",
@@ -158,20 +152,16 @@ def spooktober():
     """Renders spooktober page"""
     return render_template("spooktober/calendar.html")
 
-
-
-
-
 @bp.route("/colophon/")
 def colophon():
     """Renders colophon page"""
-    return render_template("colophon.html")
+    return render_template("archive/colophon.html")
 
 
 @bp.route("/changelog/")
 def changelog():
     """Renders changelog page"""
-    return render_template("changelog.html")
+    return render_template("archive/changelog.html")
 
 @app.route("/jjjhagdo/")
 def jjhagdo():
@@ -190,6 +180,7 @@ def produce_photo_page(
         lines = [put_links_in_descriptions(line.rstrip("\n")) for line in f]
     return render_template(
         "photo_template.html",
+        photos_folder_name=photos_folder_name,
         root_img_name=root_img_name,
         indexes_of_displayed_photos=indexes_of_displayed_photos,
         descriptions=lines,

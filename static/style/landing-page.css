@@ -145,3 +145,51 @@ h4 {
     content: "Spooktober";
   }
 }
+
+
+/* override magick css styling of figcaption - I want the text to be smaller */
+figcaption {
+  margin: 0.8rem 0;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+/*
+    1) Set the maximum width of the image to 100% so they don't overflow the main column.
+    2) Set the height in respect to the width to prevent the image from stretching.
+    3) Add some margin to standalone images.
+*/
+img {
+  max-width: 100%; /* 1 */
+  height: auto; /* 2 */
+  margin: 0.8rem 0; /* 3 */
+}
+
+/* Images in figures should not have their own margins */
+figure img {
+  max-width: 70%;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  1) Set margins and padding for figures.
+  2) Center align any text inside figures.
+*/
+figure {
+    margin: 2rem 0; /* 1 */
+    padding: 0; /* 1 */
+    text-align: center; /* 2 */
+}
+
+/* Center align any element that is part of a figure */
+figure * {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* We don't want to center prealigned text or code in figures */
+figure code,
+figure pre {
+    text-align: left;
+}
