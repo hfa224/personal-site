@@ -1,24 +1,25 @@
-{% extends 'base.html' %}
+{% extends 'landing-page-template.html' %}
 
-{% block header %}
-  <h1>{% block title %}Photos{% endblock %}</h1>
+{% block navigation %}
+<div><small><a href="{{ url_for('landing_page') }}" title="Home">Home</a> > <a
+	href="{{ url_for('photos') }}" title="Photos">Photos</a></small></div>
 {% endblock %}
+
 
 {% block content %}
 	<section>
-		<img src="{{ url_for('static', filename='images/stickers/STK-20240725-WA0002.webp') }}" style="float:left; height:200px" alt="cube cinema ticket stubs">
+		<img src="{{ url_for('static', filename='images/stickers/STK-20240725-WA0002.webp') }}" style="float:left; height:200px" alt="Camera">
 		This is where I store all the film photos I've developed. I got into film photography when my friend gave me her old camera in 2023 (see left!). It's a very basic camera, just a point-and-click.
-		I usually use Kodak gold film - I prefer shooting in colour.
 	</section>
 	<section>
 		<nav>
 			<ul>
-				<li><a href="{{ url_for('serene-lake.photos_2024_12') }}">Bristol and IoW, B&W, December 2024</a></li>
-				<li><a href="{{ url_for('serene-lake.photos_2024_09') }}">Bristol, B&W, September 2024</a></li>
-				<li><a href="{{ url_for('serene-lake.photos_2024_08') }}">Bristol, colour, August 2024</a></li>
-				<li><a href="{{ url_for('serene-lake.photos_2024_07') }}">Bristol, colour, July 2024</a></li>
-				<li><a href="{{ url_for('serene-lake.photos_2024_04') }}">Weymouth and Bristol, B&W, April 2024</a></li>
-				<li><a href="{{ url_for('serene-lake.photos_2022_10') }}">Berlin and Prague, Colour, October 2022</a></li>
+				<li><a href="{{ url_for('photos_2024_12_01') }}">Bristol and IoW, B&W, December 2024</a></li>
+				<li><a href="{{ url_for('photos_2024_09_27') }}">Bristol, B&W, September 2024</a></li>
+				<li><a href="{{ url_for('photos_2024_08_06') }}">Bristol, colour, August 2024</a></li>
+				<li><a href="{{ url_for('photos_2024_07_21') }}">Bristol, colour, July 2024</a></li>
+				<li><a href="{{ url_for('photos_2024_04_22') }}">Weymouth and Bristol, B&W, April 2024</a></li>
+				<li><a href="{{ url_for('photos_2022_10_22') }}">Berlin and Prague, Colour, October 2022</a></li>
 			</ul>
 		  </nav>
 		</section>

@@ -1,4 +1,9 @@
-{% extends 'base.html' %}
+{% extends 'landing-page-template.html' %}
+
+{% block style %}
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/counters.js') }}"></script>
+{% endblock %}
+
 
 {% block header %}
 <h1>{% block title %}Counters{% endblock %}</h1>

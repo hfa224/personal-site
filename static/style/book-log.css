@@ -1,5 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Eczar&family=Lexend:wght@100..900&display=swap");
 
+
+
+:root {
+  --bg: var(--pink);
+  --fg: var(--red-orange);
+
+  /* pink - orange scheme */
+  --light-blue: #f7fff7;
+  --red-orange: #98ce00;
+  --font: #1e352f;
+
+  --image-max-size: 324px;
+
+  --header-font-family: 'Solway', 'Open Sans', 'Helvetica Neue', sans-serif;
+  --body-font-family: 'Lexend', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 body {
   background-color: #f7fff7;
   font-family: "Lexend", Helvetica, Arial, sans-serif;

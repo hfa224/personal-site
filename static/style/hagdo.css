@@ -62,12 +62,12 @@
     color: var(--link-hover);
   }
   
-  @media (max-width: 600px) {
+  @media (max-width: 1000px) {
     main {
-      width:90%;
+        width:95%;
       }
-    .emoji {
-      font-size: 20px;
+    schedule .emoji {
+        font-size: 30px;
       }
     
     }
@@ -110,6 +110,6 @@
     font-size: 80px;
   }
   
-  schedule .emoji img {
+  /* schedule .emoji img {
     height: 50px;
-  }
+  } */

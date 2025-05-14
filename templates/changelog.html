@@ -1,10 +1,23 @@
-{% extends 'base.html' %}
+{% extends 'landing-page-template.html' %}
 
 {% block header %}
   <h1>{% block title %}About{% endblock %}</h1>
 {% endblock %}
 
+{% block navigation %}
+<div><small><a href="{{ url_for('landing_page') }}" title="Home">Home</a> > <a
+			href="{{ url_for('landing_page_about') }}" title="About">About</a>> <a
+			href="{{ url_for('landing_page_changelog') }}" title="Change log">Change log</a></small></div>
+{% endblock %}
+
+
 {% block content %}
+
+	<section>
+		<h3>12/05/2024</h3>
+		<p>Big site redesign! I will add a screenshot of the old site at some point...
+		</p>
+	</section>
 	<section>
 		<h3>08/08/2024</h3>
 		<p>Added this changelog page, colophone page, updated footer with links, downloaded local version of magick.css version 1.6 as unpkg uses version 1.5. Also added August 2024 photo page.
