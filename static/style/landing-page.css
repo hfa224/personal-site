@@ -48,7 +48,7 @@ h4 {
   font-family: var(--header-font-family);
 }
 
-/* On mobile devices, display images in a verticle line */
+/* On mobile devices, display images in a vertical line */
 @media (max-width: 600px) {
   body {
     margin: 5% 5% 5% 5%;
@@ -60,13 +60,13 @@ h4 {
     flex-direction: column;
   }
 
-  .parent img {
-    height: 50px;
+  .image-child img {
+    height: 100px;
   }
 
   .image-child, .pumpkin, .camera, .book {
     display: flex;
-    position: relative;
+    position: static;
   }
 }
 
@@ -86,16 +86,15 @@ h4 {
   height: 30vw;
 }
 
-/* set hieght for images inside parent */
-.parent img {
-  height: 200px;
-}
-
 /* set the positions and rotations of the child images */
 .image-child {
   position: absolute;
-  top: 0px;
-  left: -20px;
+  top: -50px;
+  left: 100px;
+}
+
+.image-child img {
+  height: 180px;
 }
 
 .image-child.camera {
@@ -103,13 +102,18 @@ h4 {
 }
 
 .image-child.pumpkin {
-  top: 50px;
-  left: 350px;
+  top: 100px;
+  left: -100px;
 }
 
 .image-child.book {
   top: 150px;
-  left: 100px;
+  left: 150px;
+}
+
+.image-child.watercolour {
+  top: 50px;
+  left: 400px;
 }
 
 /* set the hover transistions for the child images */
@@ -143,5 +147,16 @@ h4 {
     top: 180px;
     left: 0px;
     content: "Spooktober";
+  }
+}
+
+.image-child.watercolour:hover {
+  transform: rotate(10deg);
+
+  &:after {
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    content: "Watercolour course notes";
   }
 }
