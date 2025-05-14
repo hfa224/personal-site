@@ -13,13 +13,11 @@
 	<title>Personal site</title>
 	<link rel="stylesheet" href="https://unpkg.com/normalize.css">
 	<link rel="stylesheet" href="{{ url_for('static', filename='style/landing-page.css') }}">
-	<link rel="stylesheet" href="{{ url_for('static', filename='style/fortune-cookie.css') }}">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
 		href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Solway:wght@300;400;500;700;800&display=swap"
 		rel="stylesheet">
-		<script type="text/javascript" src="{{ url_for('static', filename='scripts/fortune-cookie.js') }}"></script>
 
 		{% block style %}{% endblock %}
 </head>
@@ -30,7 +28,9 @@
 		<header>
 			{% block navigation %}{% endblock %}
 			<div style="display: flex; flex-direction: row;">
-			<h1>helenffion.cafe</h1> <h3><a href="{{ url_for('landing_page_about') }}" title="About">?</a></h3>
+			{% block header_title %}
+<h1>helenffion.cafe</h1> <h3><a href="{{ url_for('landing_page_about') }}" title="About">?</a></h3>
+{% endblock %}
 			</div>
 		</header>
 		<!-- main content here-->
@@ -38,6 +38,7 @@
 			{% block content %}{% endblock %}
 		</main>
 		<footer>
+			{% block footer %}This is a footer{% endblock %}
 		</footer>
 	</body>
 

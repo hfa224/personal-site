@@ -4,6 +4,10 @@
   <h1>{% block title %}Photos{% endblock %}</h1>
 {% endblock %}
 
+{% block style %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='style/photo_grid.css') }}">
+{% endblock %}
+
 {% block navigation %}
 <div><small><a href="{{ url_for('landing_page') }}" title="Home">Home</a> > <a
 	href="{{ url_for('photos') }}" title="Photos">Photos</a> > <a
@@ -11,24 +15,30 @@
 {% endblock %}
 
 {% block content %}
-<div style="display: flex;
-flex-flow: row wrap;" id="flex-box-container"> 
+
+<script src="{{ url_for('static', filename='scripts/photos.js') }}"></script>
+<div class="photo-grid" id="photo-parent"> 
 	{% for n in indexes_of_displayed_photos %}
 	{% if (n < 10) %}
 		{% set n_str =  '0' + (n | string()) %}
 	{% else  %}
 		{% set n_str = n | string() %}
 	{% endif %}
-	<section class="flex-photo">
-		<figure>
-			<img class="vert-img" src="{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}"></img>
-			<figcaption>
-				{% if descriptions|length > 0 %}
-					{{ descriptions[n-1] |safe }}
-				{% endif %}
-			</figcaption>
-		</figure>
-	</section>
+
+	{% if descriptions|length > 0 %}
+		<script> createDynamicPictureGrid("{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}", '{{ descriptions[n-1] }}') </script>
+	{% else  %}
+		<script> createDynamicPictureGrid("{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}") </script>
+	{% endif %}
+
+
+	<!--<script> createDynamicPictureGrid("{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}") </script>
+	 <div class="photo">
+			<img src="{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}"></img> 
+			<span>
+
+			</span>
+	</div> -->
 	{% endfor %}
 </div>
 {% endblock %}

@@ -1,0 +1,41 @@
+
+body {
+  margin: 5% ;
+  max-width: 80%;
+}
+
+.photo-grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: masonry;
+  justify-content: space-between;
+  grid-auto-flow: dense;
+}
+
+/* On mobile devices, only have one column */
+@media (max-width: 600px) {
+  .calendar {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .header-info {
+    grid-template-columns: auto;
+    grid-template-rows: 100px 200px 100px;
+    margin-top: 0px;
+    justify-items: center;
+  }
+  html {
+    font-size: 56%;
+  }
+}
+
+
+.photo {
+  display: grid;
+  max-height: 200;
+}
+
+.photo-vert {
+  display: grid;
+  max-height: 300;
+}

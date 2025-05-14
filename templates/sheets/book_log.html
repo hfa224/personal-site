@@ -1,13 +1,20 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="{{ url_for('static', filename='style/book-log.css') }}">
+{% extends 'landing-page-template.html' %}
 
-    </head>
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/book-log.css') }}">
+{% endblock %}
 
-<body id="top">
+{% block navigation %}
+<div><small><a href="{{ url_for('landing_page') }}" title="Home">Home</a></small> >
+<small><a href="{{ url_for('sheets') }}" title="Reading log">Reading log</a></small></div>
+{% endblock %}
+
+{% block header_title %}
+<h1>Helen's Reading Log</h1>
+{% endblock %}
+
+{% block content %}
     <main class="main">
-  
-      <h1>Helen's Reading Log</h1>
       <img src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/bluebottles/agatha-christie-books-moomins-read-moomin-comic-strip-08-moomin-begins-a-new-life.webp">
       <p>This is a log of all the books I've been reading.</p>
       <p>Key</p>
@@ -36,10 +43,6 @@
       </table>
       <script src="{{ url_for('static', filename='scripts/sheets.js') }}"></script>
     </main>
-  
-    <footer>
-      Updated November 2024
-    </footer>
-  </body>
-  
-  </html>
+{% endblock %}
+
+{% block footer %}Updated May 2025{% endblock %}
