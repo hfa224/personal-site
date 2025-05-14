@@ -7,9 +7,8 @@ body {
 .photo-grid {
   display: grid;
   grid-gap: 20px;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: masonry;
-  justify-content: space-between;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-around;
   grid-auto-flow: dense;
 }
 
@@ -32,10 +31,13 @@ body {
 
 .photo {
   display: grid;
-  max-height: 200;
+  justify-self: center;
+  align-self: center;
 }
 
 .photo-vert {
   display: grid;
-  max-height: 300;
+  grid-row: span 2;
+  justify-self: center;
+  align-self: center;
 }

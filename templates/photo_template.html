@@ -26,7 +26,7 @@
 	{% endif %}
 
 	{% if descriptions|length > 0 %}
-		<script> createDynamicPictureGrid("{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}", '{{ descriptions[n-1] }}') </script>
+		<script> createDynamicPictureGrid("{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}", '{{ descriptions[n-1] | safe }}') </script>
 	{% else  %}
 		<script> createDynamicPictureGrid("{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}") </script>
 	{% endif %}
