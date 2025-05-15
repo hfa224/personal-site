@@ -62,19 +62,6 @@
     color: var(--link-hover);
   }
   
-  @media (max-width: 600px) {
-    main {
-      width:90%;
-      }
-    schedule .emoji {
-      font-size: 10px;
-      }
-    
-      schedule .post-left {
-        grid-template-columns: 20% auto;
-      }
-    }
-  
   schedule {
     display: grid;
     grid-template-columns: 100%; /* one column, takes up all space*/
@@ -112,4 +99,17 @@
     grid-row: span 2;
     font-size: 80px;
   }
+
+  @media (max-width: 600px) {
+    main {
+      width:90%;
+      }
+    schedule .emoji {
+      font-size: 10px;
+      }
+    
+      schedule .post-left {
+        grid-template-columns: 20% auto;
+      }
+    }
   
