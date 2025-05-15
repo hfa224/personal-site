@@ -66,8 +66,8 @@
     main {
       width:90%;
       }
-    .emoji {
-      font-size: 20px;
+    schedule .emoji {
+      font-size: 10px;
       }
     
     }
@@ -110,6 +110,3 @@
     font-size: 80px;
   }
   
-  schedule .emoji img {
-    height: 50px;
-  }
