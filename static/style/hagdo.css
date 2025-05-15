@@ -89,6 +89,7 @@
     grid-column: 2 / 2;
     line-height: 1.5em;
     margin-bottom: 40px;
+    padding-right: 5px;
   }
   
   schedule .emoji {
@@ -105,7 +106,7 @@
       width:90%;
       }
     schedule .emoji {
-      font-size: 10px;
+      font-size: 40px;
       }
     
       schedule .post-left {
