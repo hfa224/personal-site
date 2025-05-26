@@ -1,16 +1,4 @@
 
-body {
-  margin: 5% ;
-  max-width: 80%;
-}
-
-.photo-grid {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(4, 1fr);
-  justify-content: space-around;
-  grid-auto-flow: dense;
-}
 
 .flex-container {
 	display: flex;
@@ -22,44 +10,24 @@ body {
 
 /* On mobile devices, only have one column */
 @media (max-width: 600px) {
-  .calendar {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .header-info {
-    grid-template-columns: auto;
-    grid-template-rows: 100px 200px 100px;
-    margin-top: 0px;
-    justify-items: center;
-  }
-  html {
-    font-size: 56%;
-  }
+ .photo-flex {
+	height: 250px;
+	position: relative;
 }
 
-
-.photo {
-  display: grid;
-  justify-self: center;
-  align-self: center;
-  grid-column: span 2;
+.photo-flex-vert {
+	height: 250px;
+	position: relative;
 }
 
-.photo-vert {
-  display: grid;
-  grid-row: span 2;
-  justify-self: center;
-  align-self: center;
 }
 
 .photo-flex {
-  	width: 430px;
 	height: 300px;
 	position: relative;
 }
 
 .photo-flex-vert {
-  	width: 200px;
 	height: 300px;
-	max-width: 700px;
 	position: relative;
 }
