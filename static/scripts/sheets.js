@@ -29,6 +29,7 @@ async function fetchGoogleSheetData() {
     // 6 - Year
     // 7 - Date started
     // 8 - Date finished
+    // 9 - isbn
 
     var statusMap = {
       Reading: "📌",
@@ -44,7 +45,7 @@ async function fetchGoogleSheetData() {
       // Loop through each cell in the row and create a table cell for each
       rows[i].forEach((cell, j) => {
         var cellContents = cell;
-        if (j == 0 || j == 4 || j == 7 || j == 8) {
+        if (j == 0 || j == 4 || j == 7 || j == 8 || j==9) {
           // skip
         } else if (j == 1) {
           // create the title

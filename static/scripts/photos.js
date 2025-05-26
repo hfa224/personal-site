@@ -35,9 +35,11 @@ function addToGrid(dimensions, imgUrl, description) {
   img.src = imgUrl;
 
   if (dimensions.height > dimensions.width) {
-    gridCell.setAttribute("class", "photo-vert");
+    gridCell.setAttribute("class", "grid-cell");
+    img.setAttribute("class", "photo-flex-vert");
   } else {
-    gridCell.setAttribute("class", "photo");
+    gridCell.setAttribute("class", "grid-cell");
+    img.setAttribute("class", "photo-flex");
   }
   figure.appendChild(img)
 
