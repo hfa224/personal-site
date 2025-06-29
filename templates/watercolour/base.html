@@ -1,0 +1,34 @@
+<html>
+
+<body>
+
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style/watercolour.css') }}">
+    </head>
+
+    <header>
+        <h1>🎨🖌️✍🏻👩🏻‍🎨 Watercolour class notes</h1>
+        <p>Notes from a watercolour class I took in summer 2024.</p>
+    </header>
+    </p>Colours:
+    <span class="colour permanent-rose">
+        permanent rose
+    </span><span class="colour ultramarine-blue">ultramarine blue,</span>
+    <span class="colour cobalt-blue">cobalt blue,</span>
+    <span class="colour raw-sienna">raw sienna,</span>
+    <span class="colour burnt-sienna">burnt sienna,</span>
+    <span class="colour cadmium-red">cadmium red,</span>
+    <span class="colour sap-green">sap green,</span>
+    <span class="colour cadmium-yellow">cadmium yellow </span>
+
+    <section>
+        {% autoescape false %}
+        {{ content }}
+        {% endautoescape %}
+    </section>
+    <footer>
+        <p></p>
+    </footer>
+</body>
+
+</html>
