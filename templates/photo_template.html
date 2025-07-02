@@ -1,44 +1,44 @@
 {% extends 'landing-page-template.html' %}
 
 {% block header %}
-  <h1>{% block title %}Photos{% endblock %}</h1>
+<h1>{% block title %}Photos{% endblock %}</h1>
 {% endblock %}
 
 {% block style %}
-	<link rel="stylesheet" href="{{ url_for('static', filename='style/photo_grid.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='style/photo_grid.css') }}">
 {% endblock %}
 
 {% block navigation %}
-<div><small><a href="{{ url_for('landing_page') }}" title="Home">Home</a> > <a
-	href="{{ url_for('photos') }}" title="Photos">Photos</a> > <a
-	href="{{ url_for('photos_'+ photos_folder_name ) }}" title="Date">{{photos_folder_name}}</a></small></div>
+<a id="top"></a>
+<div><small><a href="{{ url_for('landing_page') }}" title="Home">Home</a> > <a href="{{ url_for('photos') }}"
+			title="Photos">Photos</a> > <a href="{{ url_for('photos_'+ photos_folder_name ) }}"
+			title="Date">{{photos_folder_name}}</a></small></div>
 {% endblock %}
 
 {% block content %}
-
 <script src="{{ url_for('static', filename='scripts/photos.js') }}"></script>
-<div class="flex-container" id="photo-parent"> 
+<div class="flex-container" id="photo-parent">
 	{% for n in indexes_of_displayed_photos %}
-	{% if (n < 10) %}
-		{% set n_str =  '0' + (n | string()) %}
-	{% else  %}
-		{% set n_str = n | string() %}
-	{% endif %}
-
-	{% if descriptions|length > 0 %}
+	{% if (n < 10) %} {% set n_str='0' + (n | string()) %} {% else %} {% set n_str=n | string() %} {% endif %} {% if
+		descriptions|length> 0 %}
 		<script> createDynamicPictureGrid("{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}", '{{ descriptions[n-1] | safe }}') </script>
-	{% else  %}
+		{% else %}
 		<script> createDynamicPictureGrid("{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}") </script>
-	{% endif %}
+		{% endif %}
 
 
-	<!--<script> createDynamicPictureGrid("{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}") </script>
+		<!--<script> createDynamicPictureGrid("{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}") </script>
 	 <div class="photo">
 			<img src="{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}"></img> 
 			<span>
 
 			</span>
 	</div> -->
-	{% endfor %}
+		{% endfor %}
 </div>
+{% endblock %}
+
+{% block footer %}
+<!--content here-->
+<a href="#top">Back to top</a>
 {% endblock %}
