@@ -6,13 +6,17 @@
 
 {% block navigation %}
 <div><small><a href="{{ url_for('landing_page') }}" title="Home">Home</a> > <a
-			href="{{ url_for('landing_page_about') }}" title="About">About</a>> <a
+			href="{{ url_for('landing_page_about') }}" title="About">About</a> > <a
 			href="{{ url_for('landing_page_changelog') }}" title="Change log">Change log</a></small></div>
 {% endblock %}
 
 
 {% block content %}
-
+	<section>
+		<h3>02/07/2024</h3>
+		<p>Redesign to have more pages using the same template, with consistent breadcrumb style navigation at the top.
+		</p>
+	</section>
 	<section>
 		<h3>12/05/2024</h3>
 		<p>Big site redesign! I will add a screenshot of the old site at some point...
