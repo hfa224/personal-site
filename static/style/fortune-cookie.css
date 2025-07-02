@@ -2,7 +2,7 @@
 
 .cookie {
   position: relative;
-  left: 600px;
+  left: 400px;
   top: 0px;
   width: 200px;
 }
@@ -66,4 +66,14 @@ div.before:hover {
 
 .after img:first-child {
     display: none
+}
+
+/* On mobile devices, display images in a vertical line */
+@media (max-width: 600px) {
+
+   .cookie,
+   .fortune{
+    display: flex;
+    position: static;
+  }
 }

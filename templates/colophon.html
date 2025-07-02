@@ -1,12 +1,18 @@
-{% extends 'base.html' %}
+{% extends 'landing-page-template.html' %}
 
 {% block header %}
   <h1>{% block title %}Colophon{% endblock %}</h1>
 {% endblock %}
 
+{% block navigation %}
+<div><small><a href="{{ url_for('landing_page') }}" title="Home">Home</a> > <a
+			href="{{ url_for('landing_page_about') }}" title="About">About</a> > <a
+			href="{{ url_for('landing_page_colophon') }}" title="Colophon">Colophon</a></small></div>
+{% endblock %}
+
 {% block content %}
 	<section>
 		<h3>About this site</h3>
-		<p>Written in python using Flask with Jinja. Styled with magick.css. Static files generated with flask-freeze.</p>
+		<p>Written in python using Flask with Jinja. Static files generated with flask-freeze.</p>
 	</section>
 {% endblock %}

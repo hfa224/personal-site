@@ -83,7 +83,7 @@ h4 {
 .parent {
   position: relative;
   width: 100%;
-  height: 30vw;
+  height: 350px; // calculated from height of children
 }
 
 /* set hieght for images inside parent */
@@ -144,4 +144,64 @@ h4 {
     left: 0px;
     content: "Spooktober";
   }
+}
+
+
+/* override magick css styling of figcaption - I want the text to be smaller */
+figcaption {
+  margin: 0 0;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/*
+    1) Set the maximum width of the image to 100% so they don't overflow the main column.
+    2) Set the height in respect to the width to prevent the image from stretching.
+    3) Add some margin to standalone images.
+*/
+img {
+  max-width: 100%; /* 1 */
+  height: auto; /* 2 */
+  margin: 0.8rem 0; /* 3 */
+}
+
+/* Images in figures should not have their own margins */
+.flex-photo img {
+  max-width: auto;
+  max-height:50%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-photo {
+  display: block;
+  overflow: auto;
+  max-width: 350px;
+  min-width: 350px;
+  margin: 5px;
+  padding:10px; 
+  position:relative;
+  flex: 1;
+}
+
+/*
+  1) Set margins and padding for figures.
+  2) Center align any text inside figures.
+*/
+figure {
+    margin: 2rem 0; /* 1 */
+    padding: 0; /* 1 */
+    text-align: center; /* 2 */
+}
+
+/* Center align any element that is part of a figure */
+figure * {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* We don't want to center prealigned text or code in figures */
+figure code,
+figure pre {
+    text-align: left;
 }

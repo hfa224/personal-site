@@ -1,0 +1,33 @@
+
+
+.flex-container {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+/* On mobile devices, only have one column */
+@media (max-width: 600px) {
+ .photo-flex {
+	height: 250px;
+	position: relative;
+}
+
+.photo-flex-vert {
+	height: 250px;
+	position: relative;
+}
+
+}
+
+.photo-flex {
+	height: 300px;
+	position: relative;
+}
+
+.photo-flex-vert {
+	height: 300px;
+	position: relative;
+}
