@@ -62,16 +62,6 @@
     color: var(--link-hover);
   }
   
-  @media (max-width: 1000px) {
-    main {
-        width:95%;
-      }
-    schedule .emoji {
-        font-size: 30px;
-      }
-    
-    }
-  
   schedule {
     display: grid;
     grid-template-columns: 100%; /* one column, takes up all space*/
@@ -99,6 +89,7 @@
     grid-column: 2 / 2;
     line-height: 1.5em;
     margin-bottom: 40px;
+    padding-right: 5px;
   }
   
   schedule .emoji {
@@ -109,7 +100,17 @@
     grid-row: span 2;
     font-size: 80px;
   }
+
+  @media (max-width: 600px) {
+    main {
+      width:90%;
+      }
+    schedule .emoji {
+      font-size: 40px;
+      }
+    
+      schedule .post-left {
+        grid-template-columns: 20% auto;
+      }
+    }
   
-  /* schedule .emoji img {
-    height: 50px;
-  } */

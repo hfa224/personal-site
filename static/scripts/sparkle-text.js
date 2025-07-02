@@ -202,5 +202,3 @@ class SparklyText extends HTMLElement {
 }
 
 SparklyText.register();
-
-export { SparklyText };
