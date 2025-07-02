@@ -20,6 +20,8 @@ body {
   font-style: normal;
   color: var(--font);
   font-size: 18px;
+  margin: 0 auto;
+  padding: 0 1em;
 }
 
 h1,
