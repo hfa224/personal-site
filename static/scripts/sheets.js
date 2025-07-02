@@ -45,7 +45,7 @@ async function fetchGoogleSheetData() {
       // Loop through each cell in the row and create a table cell for each
       rows[i].forEach((cell, j) => {
         var cellContents = cell;
-        if (j == 0 || j == 4 || j == 7 || j == 8 || j==9) {
+        if (j == 0 || j == 4 || j == 7 || j == 8 || j == 9) {
           // skip
         } else if (j == 1) {
           // create the title
@@ -62,6 +62,7 @@ async function fetchGoogleSheetData() {
             cellContents = linkElement;
           }
           const cellElement = document.createElement("td");
+          cellElement.setAttribute("class", "title");
           cellElement.append(cellContents);
           row.appendChild(cellElement);
         } else if (j == 5 && cell != undefined && cell !== "") {
@@ -74,11 +75,19 @@ async function fetchGoogleSheetData() {
           detailsElement.appendChild(p);
           cellContents = detailsElement;
           const cellElement = document.createElement("td");
+          cellElement.setAttribute("class", "review");
           cellElement.append(cellContents);
           row.appendChild(cellElement);
         } else {
           // just add the table
           const cellElement = document.createElement("td");
+          if (j == 2) {
+            cellElement.setAttribute("class", "author");
+          } else if (j == 3) {
+            cellElement.setAttribute("class", "type");
+          } else if (j == 6) {
+            cellElement.setAttribute("class", "year");
+          }
           cellElement.textContent = cellContents;
           row.appendChild(cellElement);
         }
