@@ -27,11 +27,15 @@ def landing_page_colophon():
     """Renders colophon page"""
     return render_template("colophon.html")
 
-
 @app.route("/sheets/")
 def sheets():
     """Renders sheets page"""
     return render_template("sheets/book_log.html")
+
+@app.route("/film_postcards/")
+def film_postcards():
+    """Renders film postcard collection page"""
+    return render_template("film_postcards.html")
 
 @app.route("/photos/")
 def photos():
