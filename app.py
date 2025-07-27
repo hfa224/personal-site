@@ -1,46 +1,57 @@
 """Serves up the personal site"""
 
-import re
 from flask import Flask, render_template
+
+from photos import put_links_in_descriptions
+from postcards import get_postcards
 
 app = Flask(__name__)
 
 app.config["FREEZER_RELATIVE_URLS"] = True
+
 
 @app.route("/")
 def landing_page():
     """Renders landing page"""
     return render_template("landing-page.html")
 
+
 @app.route("/about/")
 def landing_page_about():
     """Renders about page"""
     return render_template("landing-page-about.html")
+
 
 @app.route("/changelog/")
 def landing_page_changelog():
     """Renders changelog page"""
     return render_template("changelog.html")
 
+
 @app.route("/colophon/")
 def landing_page_colophon():
     """Renders colophon page"""
     return render_template("colophon.html")
+
 
 @app.route("/sheets/")
 def sheets():
     """Renders sheets page"""
     return render_template("sheets/book_log.html")
 
+
 @app.route("/film_postcards/")
 def film_postcards():
     """Renders film postcard collection page"""
-    return render_template("film_postcards.html")
+    postcard_info_list = get_postcards()
+    return render_template("film_postcards.html", postcard_info_list=postcard_info_list)
+
 
 @app.route("/photos/")
 def photos():
     """Renders base photo page"""
     return render_template("photos.html")
+
 
 @app.route("/counters/")
 def counters():
@@ -141,6 +152,7 @@ def photos_2024_08_06():
         ],
     )
 
+
 @app.route("/2024_09_27/")
 def photos_2024_09_27():
     """Renders photo page for 2024_09_27"""
@@ -157,10 +169,39 @@ def photos_2024_12_01():
     return produce_photo_page(
         "2024_12_01",
         "0000034800",
-        [1, 2, 4, 5, 6, 7, 11, 13,
-         14, 15, 16, 17, 18, 19,
-         20, 21, 22, 23, 24, 25,
-         26, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38],
+        [
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            11,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+        ],
     )
 
 
@@ -168,6 +209,7 @@ def photos_2024_12_01():
 def spooktober():
     """Renders spooktober page"""
     return render_template("spooktober/calendar.html")
+
 
 @app.route("/jjjhagdo/")
 def jjhagdo():
@@ -190,27 +232,6 @@ def produce_photo_page(
         root_img_name=root_img_name,
         indexes_of_displayed_photos=indexes_of_displayed_photos,
         descriptions=lines,
-    )
-
-
-def put_links_in_descriptions(desc):
-    """Finds links in the format [link text] in description and replaces with wikipedia link"""
-    link_regex = re.compile(
-        r"\[([\w\s,]+)\]"
-    )  # match anything in the description in format [words words]
-    return link_regex.sub(linkrepl, desc)
-
-
-def linkrepl(matchobj):
-    """replace link in [link text] format with wikipedia hyperlink to 'link_text'"""
-    stripped_string = matchobj.group(0).replace("[", "").replace("]", "")
-    match_string = stripped_string.replace(" ", "_")
-    return (
-        '<a href="https://en.wikipedia.org/wiki/'
-        + match_string
-        + '">'
-        + stripped_string
-        + "</a>"
     )
 
 

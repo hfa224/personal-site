@@ -19,7 +19,6 @@ body {
   font-family: var(--body-font-family);
   font-size: 21px;
   line-height: 1.8;
-  max-width: 73%;
   font-weight: 300
 }
 
@@ -48,8 +47,6 @@ h4 {
   font-family: var(--header-font-family);
 }
 
-
-
 .about {
   width: 100%;
 }
@@ -62,10 +59,10 @@ h4 {
 .parent {
   position: relative;
   width: 100%;
-  height: 350px; // calculated from height of children
+  height: 350px; /* calculated from height of children */
 }
 
-/* set hieght for images inside parent */
+/* set height for images inside parent */
 .parent img {
   height: 200px;
 }
@@ -87,9 +84,13 @@ hr {
   transform: rotate(20deg);
 }
 
-.image-child.pumpkin {
-  top: 50px;
-  left: 350px;
+.image-child.postcard {
+  top: 30px;
+  left: 650px;
+}
+
+.image-child.postcard img {
+  height: 100px;
 }
 
 .image-child.book {
@@ -120,14 +121,14 @@ hr {
   }
 }
 
-.image-child.pumpkin:hover {
+.image-child.postcard:hover {
   transform: rotate(-10deg);
 
   &:after {
     position: absolute;
-    top: 180px;
+    top: 120px;
     left: 0px;
-    content: "Spooktober";
+    content: "Postcards";
   }
 }
 
@@ -137,64 +138,6 @@ figcaption {
   margin: 0 0;
   font-size: 1rem;
   line-height: 1;
-}
-
-/*
-    1) Set the maximum width of the image to 100% so they don't overflow the main column.
-    2) Set the height in respect to the width to prevent the image from stretching.
-    3) Add some margin to standalone images.
-*/
-img {
-  max-width: 100%;
-  /* 1 */
-  height: auto;
-  /* 2 */
-  margin: 0.8rem 0;
-  /* 3 */
-}
-
-/* Images in figures should not have their own margins */
-.flex-photo img {
-  max-width: auto;
-  max-height: 50%;
-  margin: 0;
-  padding: 0;
-}
-
-.flex-photo {
-  display: block;
-  overflow: auto;
-  max-width: 350px;
-  min-width: 350px;
-  margin: 5px;
-  padding: 10px;
-  position: relative;
-  flex: 1;
-}
-
-/*
-  1) Set margins and padding for figures.
-  2) Center align any text inside figures.
-*/
-figure {
-  margin: 2rem 0;
-  /* 1 */
-  padding: 0;
-  /* 1 */
-  text-align: center;
-  /* 2 */
-}
-
-/* Center align any element that is part of a figure */
-figure * {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* We don't want to center prealigned text or code in figures */
-figure code,
-figure pre {
-  text-align: left;
 }
 
 /* On mobile devices, display images in a verticle line */
@@ -214,7 +157,7 @@ figure pre {
   }
 
   .image-child,
-  .image-child.pumpkin,
+  .image-child.postcard,
   .image-child.camera,
    .image-child.book,
    .image-child.cookie{

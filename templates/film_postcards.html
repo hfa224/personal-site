@@ -5,82 +5,37 @@
 {% endblock %}
 
 {% block header %}
-  <h1>{% block title %}Colophon{% endblock %}</h1>
+<h1>{% block title %}Colophon{% endblock %}</h1>
 {% endblock %}
 
 {% block navigation %}
 <div><small><a href="{{ url_for('landing_page') }}" title="Home">Home</a> > <a
 			href="{{ url_for('landing_page_about') }}" title="About">About</a> > <a
-			href="{{ url_for('landing_page_colophon') }}" title="Colophon">Colophon</a></small></div>
+			href="{{ url_for('film_postcards') }}" title="Film postcards">Film postcards</a></small></div>
 {% endblock %}
 
+{% macro postcard_section(class, front_url='', back_url='') -%}
+<section class="{{class}}">
+	<div class="front">
+		<img src="{{ url_for('static', filename='film_postcards/'+ front_url) }}">
+	</div>
+	<div class="back">
+		<img src="{{ url_for('static', filename='film_postcards/'+ back_url) }}">
+	</div>
+</section>
+{%- endmacro %}
+
 {% block content %}
+<section class="intro">
+	Here is my collection of film postcards.
+</section>
 <div class="flex-container">
-	<section class="card">
-		<div class="front">
-			<img src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/bluebottles/1747474785967-f89e1979-d917-4d81-aa02-4d30d24852f7.webp">
-		</div>
-		<div class="back">
-			<img src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/bluebottles/1747474793380-ba55dd03-9c58-4419-9e71-deeb2b2fa75f.webp">
-		</div>
-	</section>
-
-	<section class="card">
-		<div class="front">
-			<img src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/bluebottles/1747474811139-bcade91a-58a5-4b62-b768-a74268936628.webp">
-
-		</div>
-		<div class="back">
-			<img src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/bluebottles/1747474815901-c92062a1-0b63-4c33-890d-f7cee88b8793.webp">
-			<div id="overlay">
-				<p><b>Days of Heaven</b> (1978)</p>
-				<p>I saw this on re-release at the Cube cinema. I can't remember where I picked up this card.</p>
-				<a id="hide" href="#hide">Hide</a> | <a href="#">Expand</a>
-			</div>
-		</div>
-	</section>
-	<section class="card">
-		<div class="front">
-			<img src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/bluebottles/1747474757477-a7ef416f-7f05-40b6-90cf-09957c701f31.webp">
-
-		</div>
-		<div class="back">
-			<!--div class="bodybox"-->
-			<img src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/bluebottles/1747474772582-f4ded0cb-c56e-47d5-82a6-00964337d935.webp">
-			<div id="overlay">
-				<p><b>The Falling</b> (2014)</p>
-				<p>I did go and see this and I remember not liking it very much. A pre-fame Florence Pugh though.</p>
-			</div>
-			<!--/div-->
-		</div>
-	</section>
-
-	<section class="vertical-card">
-		<div class="front">
-			<img src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/bluebottles/1747474900250-57680577-f874-4220-bc35-f52873edb78d.webp">
-
-		</div>
-		<div class="back">
-			<!--div class="bodybox"-->
-			<img src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/bluebottles/1747474908592-c823e6c8-820e-4368-9fa0-c1063df5ee2f.webp">
-			<!--/div-->
-			<div id="overlay">
-				<p><b>Medusa Deluxe</b> (2022)</p>
-				<p>I watched this at home on mubi.</p>
-			</div>
-		</div>
-	</section>
-
-	<section class="card">
-		<div class="front">
-			<img src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/bluebottles/1747474879582-70ce7fc6-4561-4caf-9979-e2e4cc204363.webp">
-
-		</div>
-		<div class="back">
-			<!--div class="bodybox"-->
-			<img src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/bluebottles/1747474886520-3ebac32f-4566-482e-9a70-81824f509155.webp">
-			<!--/div-->
-		</div>
-	</section>
+	{% for postcard_info in postcard_info_list %}
+	{% if postcard_info['orientation'] == 'h' %}
+	{{postcard_section('card', postcard_info['front_url'], postcard_info['back_url'])}}
+	{% else %}
+	{{postcard_section('vertical-card', postcard_info['front_url'], postcard_info['back_url'])}}
+	{% endif %}
+	{% endfor %}
 </div>
 {% endblock %}
