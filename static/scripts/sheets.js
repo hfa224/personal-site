@@ -2,7 +2,7 @@
 const spreadsheetId = "1tf07nkBNALTm4FzdZuj7U8TjJAHhd0Vqfdrql871Rr8";
 
 // Replace with your API Key
-const apiKey = "AIzaSyCOyCg5u_dyqHFJa6uQ0nodqRQ3rcFBsWE";
+const apiKey = "AIzaSyChKod4X-iB9laGOWxGJ3UvZWWK56slY0Q";
 
 // Construct the URL for Google Sheets API v4
 const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/all_books?key=${apiKey}`;
