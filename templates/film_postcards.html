@@ -1,0 +1,41 @@
+{% extends 'landing-page-template.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/film-postcards.css') }}">
+{% endblock %}
+
+{% block header %}
+<h1>{% block title %}Colophon{% endblock %}</h1>
+{% endblock %}
+
+{% block navigation %}
+<div><small><a href="{{ url_for('landing_page') }}" title="Home">Home</a> > <a
+			href="{{ url_for('landing_page_about') }}" title="About">About</a> > <a
+			href="{{ url_for('film_postcards') }}" title="Film postcards">Film postcards</a></small></div>
+{% endblock %}
+
+{% macro postcard_section(class, front_url='', back_url='') -%}
+<section class="{{class}}">
+	<div class="front">
+		<img src="{{ url_for('static', filename='film_postcards/'+ front_url) }}">
+	</div>
+	<div class="back">
+		<img src="{{ url_for('static', filename='film_postcards/'+ back_url) }}">
+	</div>
+</section>
+{%- endmacro %}
+
+{% block content %}
+<section class="intro">
+	Here is my collection of film postcards.
+</section>
+<div class="flex-container">
+	{% for postcard_info in postcard_info_list %}
+	{% if postcard_info['orientation'] == 'h' %}
+	{{postcard_section('card', postcard_info['front_url'], postcard_info['back_url'])}}
+	{% else %}
+	{{postcard_section('vertical-card', postcard_info['front_url'], postcard_info['back_url'])}}
+	{% endif %}
+	{% endfor %}
+</div>
+{% endblock %}
