@@ -8,17 +8,28 @@
 	justify-content: space-around;
 }
 
-/* On mobile devices, only have one column */
-@media (max-width: 600px) {
- .photo-flex {
-	height: 250px;
-	position: relative;
+.photo-container {
+	width:100%;
+	display: flex;
+  justify-content: center;
 }
 
-.photo-flex-vert {
-	height: 250px;
-	position: relative;
+.photo-container img {
+	height:700px;
 }
+
+/* On mobile devices, only have one column */
+@media (max-width: 600px) {
+.photo-container img {
+	width: 550px; 
+	display: flex;
+  justify-content: center;
+}
+.photo-container img {
+	width:100%;
+}
+
+
 
 }
 
