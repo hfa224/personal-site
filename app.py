@@ -1,26 +1,31 @@
 """Serves up the personal site"""
 
 import re
+import os
 from flask import Flask, render_template
 
 app = Flask(__name__)
 
 app.config["FREEZER_RELATIVE_URLS"] = True
 
+
 @app.route("/")
 def landing_page():
     """Renders landing page"""
     return render_template("landing-page.html")
+
 
 @app.route("/about/")
 def landing_page_about():
     """Renders about page"""
     return render_template("landing-page-about.html")
 
+
 @app.route("/changelog/")
 def landing_page_changelog():
     """Renders changelog page"""
     return render_template("changelog.html")
+
 
 @app.route("/colophon/")
 def landing_page_colophon():
@@ -33,10 +38,12 @@ def sheets():
     """Renders sheets page"""
     return render_template("sheets/book_log.html")
 
+
 @app.route("/photos/")
 def photos():
     """Renders base photo page"""
     return render_template("photos.html")
+
 
 @app.route("/counters/")
 def counters():
@@ -44,138 +51,97 @@ def counters():
     return render_template("archive/counters.html")
 
 
+@app.route("/2025_07_03/")
+def photos_2025_07_03():
+    """Renders photo page for 2025_07_03"""
+    return produce_photo_page("2025_07_03")
+
+
+@app.route("/2025_02_08/")
+def photos_2025_02_08():
+    """Renders photo page for 2025_02_08"""
+    return produce_photo_page("2025_02_08")
+
+
+@app.route("/2025_06_25/")
+def photos_2025_06_25():
+    """Renders photo page for 2025_06_25"""
+    return produce_photo_page("2025_06_25")
+
+
+@app.route("/2025_06_25_2/")
+def photos_2025_06_25_2():
+    """Renders photo page for 2025_06_25_2"""
+    return produce_photo_page("2025_06_25_2")
+
+
+@app.route("/2025_07_22/")
+def photos_2025_07_22():
+    """Renders photo page for 2025_07_22"""
+    return produce_photo_page("2025_07_22")
+
+
+@app.route("/2025_09_06/")
+def photos_2025_09_06():
+    """Renders photo page for 2025_09_06"""
+    return produce_photo_page("2025_09_06")
+
+
+@app.route("/2026_01_01/")
+def photos_2026_01_01():
+    """Renders photo page for 2026_01_01"""
+    return produce_photo_page("2026_01_01")
+
+
+@app.route("/2026_03_09/")
+def photos_2026_03_09():
+    """Renders photo page for 2026_03_09"""
+    return produce_photo_page("2026_03_09")
+
+
 @app.route("/2022_10_22/")
 def photos_2022_10_22():
     """Renders photo page for 2022_10_22"""
-    return produce_photo_page(
-        "2022_10_22", "0000051500", [1, 2, 5, 7, 8, 9, 10, 11, 12, 15, 17, 18, 19, 20]
-    )
+    return produce_photo_page("2022_10_22")
 
 
 @app.route("/2024_04_22/")
 def photos_2024_04_22():
     """Renders photo page for 2024_04_22"""
-    return produce_photo_page(
-        "2024_04_22",
-        "0000050400",
-        [
-            1,
-            2,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12,
-            13,
-            14,
-            15,
-            16,
-            17,
-            18,
-            19,
-            20,
-            25,
-            26,
-            27,
-            28,
-            29,
-            30,
-            31,
-            32,
-            33,
-            34,
-            35,
-            36,
-        ],
-    )
+    return produce_photo_page("2024_04_22")
 
 
 @app.route("/2024_07_21/")
 def photos_2024_07_21():
     """Renders photo page for 2024_07_21"""
-    return produce_photo_page(
-        "2024_07_21",
-        "0000093500",
-        [2, 4, 5, 6, 7, 8, 11, 12, 13, 17, 18, 20, 21, 22, 23, 24, 25, 26],
-    )
+    return produce_photo_page("2024_07_21")
 
 
 @app.route("/2024_08_06/")
 def photos_2024_08_06():
     """Renders photo page for 2024_08_06"""
-    return produce_photo_page(
-        "2024_08_06",
-        "0000024500",
-        [
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            11,
-            12,
-            13,
-            14,
-            15,
-            16,
-            18,
-            19,
-            20,
-            22,
-            24,
-            25,
-            26,
-            27,
-            28,
-            29,
-        ],
-    )
+    return produce_photo_page("2024_08_06")
+
 
 @app.route("/2024_09_27/")
 def photos_2024_09_27():
     """Renders photo page for 2024_09_27"""
-    return produce_photo_page(
-        "2024_09_27",
-        "0000057600",
-        [1, 2, 4, 5, 6, 7, 9, 10, 11, 14, 15, 16, 20, 21, 22, 23, 24, 26, 27, 28],
-    )
+    return produce_photo_page("2024_09_27")
 
 
 @app.route("/2024_12_01/")
 def photos_2024_12_01():
     """Renders photo page for 2024_12_01"""
-    return produce_photo_page(
-        "2024_12_01",
-        "0000034800",
-        [1, 2, 4, 5, 6, 7, 11, 13,
-         14, 15, 16, 17, 18, 19,
-         20, 21, 22, 23, 24, 25,
-         26, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38],
-    )
+    return produce_photo_page("2024_12_01")
 
 
-@app.route("/spooktober/")
-def spooktober():
-    """Renders spooktober page"""
-    return render_template("spooktober/calendar.html")
-
-@app.route("/jjjhagdo/")
-def jjhagdo():
-    """Renders jjj hag do page page"""
-    return render_template("jjjhagdo/index.html")
-
-
-def produce_photo_page(
-    photos_folder_name, photo_file_prefix, indexes_of_displayed_photos
-):
+def produce_photo_page(photos_folder_name):
     """Renders the photo template page for the photos in the given photos_folder_name"""
-    root_img_name = "images/" + photos_folder_name + "/" + photo_file_prefix
+    photo_folder_name = "images/" + photos_folder_name
+    image_list = []
+    for file in os.listdir(os.path.join("static", photo_folder_name)):
+        if "txt" not in file:
+            image_list.append(photo_folder_name + "/" + file)
     with open(
         "static/images/" + photos_folder_name + "/descriptions.txt", encoding="utf-8"
     ) as f:
@@ -183,8 +149,7 @@ def produce_photo_page(
     return render_template(
         "photo_template.html",
         photos_folder_name=photos_folder_name,
-        root_img_name=root_img_name,
-        indexes_of_displayed_photos=indexes_of_displayed_photos,
+        image_list=image_list,
         descriptions=lines,
     )
 
