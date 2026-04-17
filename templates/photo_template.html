@@ -21,13 +21,16 @@
 </div>
 <div class="flex-container" id="photo-parent">
 	{% for file_path in image_list %}
-	
-		<div  class="photo-container">
-		<img src="{{ url_for('static', filename=file_path) }}"></div>
 		{% if descriptions|length > 0 %}
+		<div style="width:100%; height:700px;display: flex;
+  justify-content: center;">
+		<img style=" max-width: 100%;" src="{{ url_for('static', filename=file_path) }}"></div>
 		<p>{{ descriptions[loop.index] | safe }}</p>
 		{% else %}
-		<p></p>
+		<div style="width:100%; height:700px;display: flex;
+  justify-content: center;">
+		<img style=" max-width: 100%;" src="{{ url_for('static', filename=file_path) }}"></div>
+		<p>{{loop.index}}</p>
 		{% endif %}
 
 		{% endfor %}
