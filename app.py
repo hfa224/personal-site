@@ -62,21 +62,21 @@ def photos_2025_02_08():
 def photos_2025_06_25():
     """Renders photo page for 2025_06_25"""
     return produce_photo_page(
-        "2025_06_25", "0000052000", range(1, 41)
+        "2025_06_25", "0000052000", range(1, 39)
     )
 
 @app.route("/2025_06_25_2/")
 def photos_2025_06_25_2():
     """Renders photo page for 2025_06_25_2"""
     return produce_photo_page(
-        "2025_06_25_2", "0000052300", range(1, 41)
+        "2025_06_25_2", "0000052300", range(1, 40)
     )
 
 @app.route("/2025_07_22/")
 def photos_2025_07_22():
     """Renders photo page for 2025_07_22"""
     return produce_photo_page(
-        "2025_07_22", "0000067600", range(1, 41)
+        "2025_07_22", "0000067600", list(range(1, 29)) + [39, 40]
     )
 
 @app.route("/2025_09_06/")
@@ -90,7 +90,7 @@ def photos_2025_09_06():
 def photos_2026_01_01():
     """Renders photo page for 2026_01_01"""
     return produce_photo_page(
-        "2026_01_01", "0000", range(1, 40)
+        "2026_01_01", "0000", range(8, 37)
 )
 
 @app.route("/2026_03_09/")
