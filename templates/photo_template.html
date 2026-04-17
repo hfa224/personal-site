@@ -19,7 +19,6 @@
 <div>
 	{{descriptions[0]}}
 </div>
-<script src="{{ url_for('static', filename='scripts/photos.js') }}"></script>
 <div class="flex-container" id="photo-parent">
 	{% for file_path in image_list %}
 		{% if descriptions|length > 0 %}
