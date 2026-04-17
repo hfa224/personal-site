@@ -86,13 +86,6 @@ def photos_2025_09_06():
         "2025_09_06", "0000082800", range(1, 41)
     )
 
-@app.route("/2026_01_01/")
-def photos_2026_01_01():
-    """Renders photo page for 2026_01_01"""
-    return produce_photo_page(
-        "2026_01_01", "0000", range(8, 37)
-)
-
 @app.route("/2026_03_09/")
 def photos_2026_03_09():
     """Renders photo page for 2026_03_09"""
