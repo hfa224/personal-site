@@ -1,6 +1,7 @@
 """Serves up the personal site"""
 
-import re, os
+import re
+import os
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -145,18 +146,6 @@ def photos_2024_12_01():
     return produce_photo_page(
         "2024_12_01"
     )
-
-
-@app.route("/spooktober/")
-def spooktober():
-    """Renders spooktober page"""
-    return render_template("spooktober/calendar.html")
-
-@app.route("/jjjhagdo/")
-def jjhagdo():
-    """Renders jjj hag do page page"""
-    return render_template("jjjhagdo/index.html")
-
 
 def produce_photo_page(
     photos_folder_name
