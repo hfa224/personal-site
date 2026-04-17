@@ -43,6 +43,62 @@ def counters():
     """Renders counters page"""
     return render_template("archive/counters.html")
 
+@app.route("/2025_07_03/")
+def photos_2025_07_03():
+    """Renders photo page for 2025_07_03"""
+    return produce_photo_page(
+        "2025_07_03", "0000087500", range(1, 36)
+    )
+
+@app.route("/2025_02_08/")
+def photos_2025_02_08():
+    """Renders photo page for 2025_02_08"""
+    return produce_photo_page(
+        "2025_02_08", "0000087500", [ 24, 33, 34, 35, 36, 37, 38, 39]
+        
+    )
+
+@app.route("/2025_06_25/")
+def photos_2025_06_25():
+    """Renders photo page for 2025_06_25"""
+    return produce_photo_page(
+        "2025_06_25", "0000052000", range(1, 41)
+    )
+
+@app.route("/2025_06_25_2/")
+def photos_2025_06_25_2():
+    """Renders photo page for 2025_06_25_2"""
+    return produce_photo_page(
+        "2025_06_25_2", "0000052300", range(1, 41)
+    )
+
+@app.route("/2025_07_22/")
+def photos_2025_07_22():
+    """Renders photo page for 2025_07_22"""
+    return produce_photo_page(
+        "2025_07_22", "0000067600", range(1, 41)
+    )
+
+@app.route("/2025_09_06/")
+def photos_2025_09_06():
+    """Renders photo page for 2025_09_06"""
+    return produce_photo_page(
+        "2025_09_06", "0000082800", range(1, 41)
+    )
+
+@app.route("/2026_01_01/")
+def photos_2026_01_01():
+    """Renders photo page for 2026_01_01"""
+    return produce_photo_page(
+        "2026_01_01", "0000", range(1, 40)
+)
+
+@app.route("/2026_03_09/")
+def photos_2026_03_09():
+    """Renders photo page for 2026_03_09"""
+    return produce_photo_page(
+        "2026_03_09", "0000", [1, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44]
+    )
 
 @app.route("/2022_10_22/")
 def photos_2022_10_22():
