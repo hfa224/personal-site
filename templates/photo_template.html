@@ -21,28 +21,19 @@
 </div>
 <script src="{{ url_for('static', filename='scripts/photos.js') }}"></script>
 <div class="flex-container" id="photo-parent">
-	{% for n in indexes_of_displayed_photos %}
-	{% if (n < 10) %} {% set n_str='0' + (n | string()) %} {% else %} {% set n_str=n | string() %} {% endif %} {% if
-		descriptions|length> 0 %}
+	{% for file_path in image_list %}
+		{% if descriptions|length > 0 %}
 		<div style="width:100%; height:700px;display: flex;
   justify-content: center;">
-		<img style=" max-width: 100%;" src="{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}"></div>
-		<!--script> createDynamicPictureGrid("{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}", '{{ descriptions[n] | safe }}') </script-->
+		<img style=" max-width: 100%;" src="{{ url_for('static', filename=file_path) }}"></div>
+		<p>{{ descriptions[loop.index] | safe }}</p>
 		{% else %}
 		<div style="width:100%; height:700px;display: flex;
   justify-content: center;">
-		<img style=" max-width: 100%;" src="{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}"></div>
-		<!--script> createDynamicPictureGrid("{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}") </script-->
+		<img style=" max-width: 100%;" src="{{ url_for('static', filename=file_path) }}"></div>
+		<p>{{loop.index}}</p>
 		{% endif %}
 
-
-		<!--<script> createDynamicPictureGrid("{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}") </script>
-	 <div class="photo">
-			<img src="{{ url_for('static', filename=root_img_name + n_str + '.jpg') }}"></img> 
-			<span>
-
-			</span>
-	</div> -->
 		{% endfor %}
 </div>
 {% endblock %}
