@@ -16,21 +16,24 @@
 {% endblock %}
 
 {% block content %}
-<div>
+<div class="description">
 	{{descriptions[0]}}
 </div>
 <div class="flex-container" id="photo-parent">
 	{% for file_path in image_list %}
-	
-		<div  class="photo-container">
-		<img src="{{ url_for('static', filename=file_path) }}"></div>
-		{% if descriptions|length > 0 %}
-		<p>{{ descriptions[loop.index] | safe }}</p>
-		{% else %}
-		<p></p>
-		{% endif %}
-
-		{% endfor %}
+	<div class="photo-and-caption">
+		<div class="photo-container">
+			<img class="cover" src="{{ url_for('static', filename=file_path) }}">
+		</div>
+		<div class="caption">
+			{% if descriptions|length > 0 %}
+			<p>{{ descriptions[loop.index] | safe }}</p>
+			{% else %}
+			<p></p>
+			{% endif %}
+		</div>
+	</div>
+	{% endfor %}
 </div>
 {% endblock %}
 

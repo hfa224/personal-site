@@ -50,7 +50,6 @@ def counters():
     """Renders counters page"""
     return render_template("archive/counters.html")
 
-
 @app.route("/2025_07_03/")
 def photos_2025_07_03():
     """Renders photo page for 2025_07_03"""

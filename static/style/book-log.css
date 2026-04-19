@@ -7,7 +7,7 @@
 
   /* green scheme */
   --light-blue: #f7fff7;
-  --lime-green: #98ce00;
+  --lime-green: #bbd44b;
   --font: #1e352f;
 
   --header-font-family: 'Solway', 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -16,22 +16,11 @@
 
 body {
   background-color: var(--bg);
-  font-family: "Lexend", Helvetica, Arial, sans-serif;
-  font-style: normal;
   color: var(--font);
-  font-size: 15px;
-  margin: 0 auto;
-  padding: 0 1em;
 }
 
-h1,
-h2,
-h3 {
-  font-family: "Eczar", mono;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 140%;
-  color: var(--highlight);
+a {
+  color: var(--highlight)
 }
 
 table {
@@ -86,16 +75,16 @@ td a {
   text-decoration: none;
 }
 
-a,
+td a,
 header a {
   color: var(--highlight)
 }
 
-a:before {
+td a:before {
   text-decoration: 🔗;
 }
 
-a:hover {
+td a:hover {
   text-decoration: underline;
 }
 
