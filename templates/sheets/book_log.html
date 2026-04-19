@@ -6,7 +6,8 @@
 
 {% block navigation %}
 <div><small><a href="{{ url_for('landing_page') }}" title="Home">Home</a></small> >
-<small><a href="{{ url_for('sheets') }}" title="Reading log">Reading log</a></small></div>
+  <small><a href="{{ url_for('sheets') }}" title="Reading log">Reading log</a></small>
+</div>
 {% endblock %}
 
 {% block header_title %}
@@ -14,35 +15,36 @@
 {% endblock %}
 
 {% block content %}
-    <main class="main">
-      <img src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/bluebottles/agatha-christie-books-moomins-read-moomin-comic-strip-08-moomin-begins-a-new-life.webp">
-      <p>This is a log of all the books I've been reading.</p>
-      <p>Key</p>
-      <ul>
-        <li>📌 Currently reading</li>
-        <li>📚 In the pile</li>
-        <li>🚫 Did not finish</li>
-        <li>🔗 Link - either to article or, if short story, perhaps to the story itself</li>
-      </ul>
-  
-      <table id="data-table">
-        <thead>
-          <tr>
-            <th class="title">Title</th>
-            <th class="title">Author</th>
-            <th class="type">Type</th>
-            <th class="review">Review</th>
-            <th class="year">Year</th>
-            <!-- th class="date-started">Date started</th>
+<main class="main">
+  <img style="width:100%;"
+    src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/bluebottles/agatha-christie-books-moomins-read-moomin-comic-strip-08-moomin-begins-a-new-life.webp">
+  <p>This is a log of all the books I've been reading.</p>
+  <p>Key</p>
+  <ul>
+    <li>📌 Currently reading</li>
+    <li>📚 In the pile</li>
+    <li>🚫 Did not finish</li>
+    <li>🔗 Link - either to article or, if short story, perhaps to the story itself</li>
+  </ul>
+
+  <table id="data-table">
+    <thead>
+      <tr>
+        <th class="title">Title</th>
+        <th class="title">Author</th>
+        <th class="type">Type</th>
+        <th class="review">Review</th>
+        <th class="year">Year</th>
+        <!-- th class="date-started">Date started</th>
         <th class="date-finished">Date finished</th -->
-          </tr>
-        </thead>
-        <tbody>
-  
-        </tbody>
-      </table>
-      <script src="{{ url_for('static', filename='scripts/sheets.js') }}"></script>
-    </main>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+  <script src="{{ url_for('static', filename='scripts/sheets.js') }}"></script>
+</main>
 {% endblock %}
 
 {% block footer %}<a href="#top">↑ Back to top</a>{% endblock %}

@@ -37,19 +37,19 @@
 		<!-- main content here-->
 		<div class="flex-parent">
 			<nav>
-				<div class="nav-link">
-					<div class="image-child camera">
-						<a href="{{ url_for('photos') }}"><img
-								src="{{ url_for('static', filename='images/stickers/camera.png') }}"></a>
-					</div><a href="{{ url_for('photos') }}">Photos</a>
+				<div class="image-child camera">
+					<a href="{{ url_for('photos') }}"><img
+							src="{{ url_for('static', filename='images/stickers/camera.png') }}"></a>
+					<a href="{{ url_for('photos') }}">Photos</a>
+				</div>
 
-					<div class="image-child book">
-						<a href="{{ url_for('sheets') }}"><img
-								src="{{ url_for('static', filename='images/book-1.png') }}"></a>
-					</div><a href="{{ url_for('sheets') }}">Reading</a>
+				<div class="image-child book">
+					<a href="{{ url_for('sheets') }}"><img
+							src="{{ url_for('static', filename='images/book-1.png') }}"></a>
+					<a href="{{ url_for('sheets') }}">Reading</a>
 				</div>
 			</nav>
-			<main style="width:80%">
+			<main>
 				{% block content %}{% endblock %}
 			</main>
 		</div>
