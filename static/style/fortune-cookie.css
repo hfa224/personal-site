@@ -51,7 +51,7 @@ div.before:hover {
   /* position the div relative to cookie container*/
   position: absolute;
   top: 0px;
-  left: 400px;
+  left: 0px;
   transform: rotate(-25deg);
   font-family: arial;
   filter: drop-shadow(4px 4px 5px #999999);
