@@ -11,22 +11,14 @@
 {% endblock %}
 
 {% block content %}
-<div class="parent">
-	<div class="image-child camera">
-		<a href="{{ url_for('photos') }}"><img
-				src="{{ url_for('static', filename='images/stickers/STK-20240725-WA0002.webp') }}"
-				style="transform: rotate(90deg);" class="size-image"></a>
-	</div>
-	<div class="image-child book">
-		<a href="{{ url_for('sheets') }}"><img src="{{ url_for('static', filename='images/book-1.png') }}"
-				class="size-image"></a>
-	</div>
-	<div class="cookie before">
-		<img src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/bluebottles/8aa0feb7-1b0b-4261-a5fc-7a9f2ae0b16d.webp"
-			onclick="toggleCookie()">
-		<img
-			src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/bluebottles/5c382215-059e-4598-9068-6446f60932c2.webp">
-		<div class="fortune" onclick="toggleCookie()">☻ Great things are around the corner! ☻</div>
-	</div>
+Hello, welcome to my website. This is a personal website I use for storing my reading log and photography efforts. I 
+also use it to experiment with html, css and javascript. I have a lot of nostalgia for the early 2000s web I grew up using, and this website is also inspired by those hand-rolled personal sites, coded and designed by one person with access to w3schools.com and a dream.
+
+<div class="cookie before">
+	<img src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/bluebottles/8aa0feb7-1b0b-4261-a5fc-7a9f2ae0b16d.webp"
+		onclick="toggleCookie()">
+	<img
+		src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/bluebottles/5c382215-059e-4598-9068-6446f60932c2.webp">
+	<div class="fortune" onclick="toggleCookie()">☻ Great things are around the corner! ☻ [x]</div>
 </div>
 {% endblock %}

@@ -2,9 +2,6 @@
 
 .cookie {
   position: relative;
-  left: 400px;
-  top: 0px;
-  width: 200px;
 }
 
 .cookie img {
@@ -53,8 +50,8 @@ div.before:hover {
   text-align: center;
   /* position the div relative to cookie container*/
   position: absolute;
-  top: 100px;
-  left: -400px;
+  top: 0px;
+  left: 0px;
   transform: rotate(-25deg);
   font-family: arial;
   filter: drop-shadow(4px 4px 5px #999999);

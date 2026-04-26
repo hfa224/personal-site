@@ -17,7 +17,7 @@ body {
   background: var(--bg);
   color: var(--fg);
   font-family: var(--body-font-family);
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.8;
   max-width: 73%;
   font-weight: 300
@@ -48,8 +48,6 @@ h4 {
   font-family: var(--header-font-family);
 }
 
-
-
 .about {
   width: 100%;
 }
@@ -58,16 +56,27 @@ h4 {
   transform: translate(10px, 45px);
 }
 
-/* the parent div that holds all the image links */
-.parent {
-  position: relative;
-  width: 100%;
-  height: 350px; /* calculated from height of children */
+.flex-parent {
+  display: flex;
+  flex-direction: row;
 }
 
-/* set hieght for images inside parent */
-.parent img {
-  height: 200px;
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 800;
+  font-family: Solway;
+}
+
+/* set height for images inside parent */
+nav img {
+  width: 100px;
 }
 
 hr {
@@ -76,149 +85,50 @@ hr {
   margin: 1%;
 }
 
-/* set the positions and rotations of the child images */
+main {
+  width: 90%;
+}
+
 .image-child {
-  position: absolute;
-  top: 0px;
-  left: -20px;
-}
-
-.image-child.camera {
-  transform: rotate(20deg);
-}
-
-.image-child.pumpkin {
-  top: 50px;
-  left: 350px;
-}
-
-.image-child.book {
-  top: 150px;
-  left: 100px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* set the hover transistions for the child images */
-.image-child.camera:hover {
+.image-child.camera img:hover {
   transform: rotate(25deg);
-
-  &:after {
-    position: absolute;
-    top: 150px;
-    left: 0px;
-    content: "Photos";
-  }
 }
 
-.image-child.book:hover {
+.image-child.book img:hover {
   transform: rotate(8deg);
-
-  &:after {
-    position: absolute;
-    top: 140px;
-    left: 0px;
-    content: "Reading log";
-  }
-}
-
-.image-child.pumpkin:hover {
-  transform: rotate(-10deg);
-
-  &:after {
-    position: absolute;
-    top: 180px;
-    left: 0px;
-    content: "Spooktober";
-  }
-}
-
-
-/* override magick css styling of figcaption - I want the text to be smaller */
-figcaption {
-  margin: 0 0;
-  font-size: 1rem;
-  line-height: 1;
-}
-
-/*
-    1) Set the maximum width of the image to 100% so they don't overflow the main column.
-    2) Set the height in respect to the width to prevent the image from stretching.
-    3) Add some margin to standalone images.
-*/
-img {
-  max-width: 100%;
-  /* 1 */
-  height: auto;
-  /* 2 */
-  margin: 0.8rem 0;
-  /* 3 */
-}
-
-/* Images in figures should not have their own margins */
-.flex-photo img {
-  max-width: auto;
-  max-height: 50%;
-  margin: 0;
-  padding: 0;
-}
-
-.flex-photo {
-  display: block;
-  overflow: auto;
-  max-width: 350px;
-  min-width: 350px;
-  margin: 5px;
-  padding: 10px;
-  position: relative;
-  flex: 1;
-}
-
-/*
-  1) Set margins and padding for figures.
-  2) Center align any text inside figures.
-*/
-figure {
-  margin: 2rem 0;
-  /* 1 */
-  padding: 0;
-  /* 1 */
-  text-align: center;
-  /* 2 */
-}
-
-/* Center align any element that is part of a figure */
-figure * {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* We don't want to center prealigned text or code in figures */
-figure code,
-figure pre {
-  text-align: left;
 }
 
 /* On mobile devices, display images in a verticle line */
 @media (max-width: 600px) {
   body {
-    margin: 5% 5% 5% 5%;
-    max-width: 90%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .parent {
+  .flex-parent {
+    width: 100%;
     display: flex;
     flex-direction: column;
   }
 
-  .parent img {
-    height: 200px;
+  nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
   }
 
-  .image-child,
-  .image-child.pumpkin,
-  .image-child.camera,
-   .image-child.book,
-   .image-child.cookie{
-    display: flex;
-    position: static;
+  nav img {
+    height: 50px;
+  }
+
+  main {
+    width: 100%;
   }
 }

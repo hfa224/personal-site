@@ -19,7 +19,7 @@
 		href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Solway:wght@300;400;500;700;800&display=swap"
 		rel="stylesheet">
 
-		{% block style %}{% endblock %}
+	{% block style %}{% endblock %}
 </head>
 
 <body>
@@ -28,15 +28,31 @@
 		<header>
 			{% block navigation %}{% endblock %}
 			<div style="display: flex; flex-direction: row;">
-			{% block header_title %}
-<h1>helenffion.cafe</h1> <h3><a href="{{ url_for('landing_page_about') }}" title="About">?</a></h3>
-{% endblock %}
+				{% block header_title %}
+				<h1>helenffion.cafe</h1>
+				<h3><a href="{{ url_for('landing_page_about') }}" title="About">?</a></h3>
+				{% endblock %}
 			</div>
 		</header>
 		<!-- main content here-->
-		<main>
-			{% block content %}{% endblock %}
-		</main>
+		<div class="flex-parent">
+			<nav>
+				<div class="image-child camera">
+					<a href="{{ url_for('photos') }}"><img
+							src="{{ url_for('static', filename='images/stickers/camera.png') }}"></a>
+					<a href="{{ url_for('photos') }}">Photos</a>
+				</div>
+
+				<div class="image-child book">
+					<a href="{{ url_for('sheets') }}"><img
+							src="{{ url_for('static', filename='images/book-1.png') }}"></a>
+					<a href="{{ url_for('sheets') }}">Reading</a>
+				</div>
+			</nav>
+			<main>
+				{% block content %}{% endblock %}
+			</main>
+		</div>
 		<footer>
 			{% block footer %}{% endblock %}
 		</footer>

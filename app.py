@@ -50,7 +50,6 @@ def counters():
     """Renders counters page"""
     return render_template("archive/counters.html")
 
-
 @app.route("/2025_07_03/")
 def photos_2025_07_03():
     """Renders photo page for 2025_07_03"""
@@ -142,6 +141,8 @@ def produce_photo_page(photos_folder_name):
     for file in os.listdir(os.path.join("static", photo_folder_name)):
         if "txt" not in file:
             image_list.append(photo_folder_name + "/" + file)
+    # sort list
+    image_list.sort()
     with open(
         "static/images/" + photos_folder_name + "/descriptions.txt", encoding="utf-8"
     ) as f:
