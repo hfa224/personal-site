@@ -141,6 +141,8 @@ def produce_photo_page(photos_folder_name):
     for file in os.listdir(os.path.join("static", photo_folder_name)):
         if "txt" not in file:
             image_list.append(photo_folder_name + "/" + file)
+    # sort list
+    image_list.sort()
     with open(
         "static/images/" + photos_folder_name + "/descriptions.txt", encoding="utf-8"
     ) as f:
