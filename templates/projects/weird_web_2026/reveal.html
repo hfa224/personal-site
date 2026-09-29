@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description"
+		content="This is the personal site of Helen Ffion, with photos and other things I'm interested in">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow">
+	<title>Weird Web October 2026</title>
+	<link rel="stylesheet" href="https://unpkg.com/normalize.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style/weird-web.css') }}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@300;400;700&display=swap"
+		rel="stylesheet">
+
+        
+        
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/speak.js') }}"></script>
+
+        
+<script type="text/javascript">    function demo(id) {
+      console.log(id)
+      var element = document.querySelector('#' +id)
+      console.log(element)
+      speak(element);
+    }</script>
+
+	{% block style %}{% endblock %}
+</head>
+<body>
+
+<header>
+  <h1><w>Weird</w> Web October</h1>
+  <p>I want to participate in <a href="https://weirdweboctober.website/">Weird Web October</a> this year.</p>
+  <hr>
+</header>
+<main>
+  <img style="width:100px"
+							src="{{ url_for('static', filename='images/weird_web/therese.png') }}">
+              <img style="width:100px"
+							src="{{ url_for('static', filename='images/weird_web/carol.png') }}">
+
+
+              <p>“Maybe it’s the times. If one wanted to,
+one could make out a case for racial suicide. Man trying to catch up with his
+own destructive machines.”</p>
+
+Therese said nothing.<br>
+<div id="reply" style="height:100px;display:none;">
+It reminded her of a thousand conversations with
+Richard, Richard mingling war and big business and Congressional witchhunts and finally certain people he knew into one grand enemy, whose only
+collective label was hate. Now Carol, too. It shook Therese in the profoundest
+part of her where no words were, no easy words like death or dying or killing.
+Those words were somehow future, and this was present. An inarticulate
+anxiety, a desire to know, know anything, for certain, had jammed itself in her
+throat so for a moment she felt she could hardly breathe. Do you think, do you
+think, it began. Do you think both of us will die violently someday, be
+suddenly shut off? But even that question wasn’t definite enough. Perhaps it
+was a statement after all: I don’t want to die yet without knowing you. Do you
+feel the same way, Carol? She could have uttered the last question, but she
+could not have said all that went before it.
+  </div>
+    
+    <input id="reply-button" type="button" value="Reveal..." onclick="demo('reply');" />
+
+
+</main>
+<footer>
+
+</footer>
+</body>

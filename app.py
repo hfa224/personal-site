@@ -44,6 +44,15 @@ def photos():
     """Renders base photo page"""
     return render_template("photos.html")
 
+@app.route("/projects/")
+def projects():
+    """Renders weird web page"""
+    return render_template("projects/weird_web.html")
+
+@app.route("/projects/reveal")
+def reveal():
+    """Renders weird web page"""
+    return render_template("projects/weird_web_2026/reveal.html")
 
 @app.route("/counters/")
 def counters():
