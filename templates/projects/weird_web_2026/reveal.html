@@ -20,7 +20,13 @@
         
         
 <script type="text/javascript" src="{{ url_for('static', filename='scripts/speak.js') }}"></script>
-
+<style>
+	.dialog {
+		display: none;
+		color:darkslategrey;
+		font: serif;
+	}
+	</style>
         
 <script type="text/javascript">    function demo(id) {
       console.log(id)
@@ -34,17 +40,74 @@
 <body>
 
 <header>
-  <h1><w>Weird</w> Web October</h1>
-  <p>I want to participate in <a href="https://weirdweboctober.website/">Weird Web October</a> this year.</p>
+  <p>I'm currently reading Carol, by Patricia Highsmith.
+	One of my favourite things about Highsmith's writing is how she articulates her character's 
+	inner thoughts so well. The strange leaps and thoughts everyone's mind makes, unsettling.</p>
+
+	<p>"[Highsmith's] characters are irrational," wrote Graham Greene, "and they leap to life in their very lack of reason; suddenly we realize how unbelievably rational most fictional characters are as they lead their lives from A to Z, like commuters always taking the same train."</p>
   <hr>
 </header>
 <main>
-  <img style="width:100px"
-							src="{{ url_for('static', filename='images/weird_web/therese.png') }}">
-              <img style="width:100px"
-							src="{{ url_for('static', filename='images/weird_web/carol.png') }}">
 
 
+
+<p>C: “And what do you do in your spare time?”</p><input id="reply-button" type="button" value="Reveal..." onclick="demo('thought1');" />
+
+<p id="thought1" class="dialog">
+The lamp on the table made her eyes silvery, full of liquid light. Even the pearl at her earlobe looked alive, like a drop of water that a touch might destroy. 
+</p>
+
+<p>T: “I—”</p><input id="reply-button" type="button" value="Reveal..." onclick="demo('thought2');" />
+
+<p id="thought2" class="dialog">
+Should she tell her she usually worked on her stage models? Sketched and painted sometimes, carved things like cats’ heads and tiny figures to go in her ballet sets, but that she liked best to take long walks practically anywhere, liked best simply to dream? Therese felt she did not have to tell her. She felt the woman’s eyes could not look at anything without understanding completely. 
+</p>
+
+<p>Therese took some more of her drink, liking it,</p><input id="reply-button" type="button" value="Reveal..." onclick="demo('thought3');" />
+<p id="thought3" class="dialog">
+though it was like the woman to swallow, she thought, terrifying, and strong. 
+</p>
+
+<p>
+The woman nodded to the waiter, and two more drinks arrived. 
+</p>
+
+<p>
+C: “I like this.” 
+</p>
+
+<p>
+“What?” Therese asked. 
+</p>
+
+<p>
+“I like it that someone sent me a card, someone I didn’t know. It’s the way things should be at Christmas. And this year I like it especially.”
+</p>
+
+<p>
+ “I’m glad.” Therese smiled, <input id="reply-button" type="button" value="Reveal..." onclick="demo('thought4');" />
+</p>
+
+<p id="thought4" class="dialog">
+wondering if she were serious. 
+</p>
+
+<p>
+“You’re a very pretty girl,” she said.
+</p>
+<p>
+ “And very sensitive, too, aren’t you?” 
+</p>
+<input id="reply-button" type="button" value="Reveal..." onclick="demo('thought5');" />
+<p id="thought5" class="dialog">
+She might have been speaking of a doll, Therese thought, so casually had she told her she was pretty. 
+</p>
+
+<p>
+“I think you are magnificent,” Therese said with the courage of the second drink, not caring how it might sound, because she knew the woman knew anyway. 
+</p>
+
+<section style="display: none;">
               <p>“Maybe it’s the times. If one wanted to,
 one could make out a case for racial suicide. Man trying to catch up with his
 own destructive machines.”</p>
@@ -65,9 +128,8 @@ feel the same way, Carol? She could have uttered the last question, but she
 could not have said all that went before it.
   </div>
     
-    <input id="reply-button" type="button" value="Reveal..." onclick="demo('reply');" />
 
-
+</section>
 </main>
 <footer>
 
