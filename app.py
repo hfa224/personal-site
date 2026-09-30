@@ -49,7 +49,7 @@ def projects():
     """Renders weird web page"""
     return render_template("projects/weird_web.html")
 
-@app.route("/reveal")
+@app.route("/reveal/")
 def reveal():
     """Renders weird web page"""
     return render_template("projects/weird_web_2026/reveal.html")
