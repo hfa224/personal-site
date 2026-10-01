@@ -3,8 +3,12 @@
 
 
 {% block style %}
+<title>Reveal (weird web october)</title>
+<meta name="description"
+	content="An extract of text with thoughts hidden, a web page for the prompt Reveal">
 <script type="text/javascript" src="{{ url_for('static', filename='scripts/speak.js') }}"></script>
-<link rel="octo:octothorpes" href="Reveal" >
+<link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://helenffion.cafe/projects/reveal">
+<link rel="octo:octothorpes" href="Reveal">
 
 <style>
 	.dialog {
