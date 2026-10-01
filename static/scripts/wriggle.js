@@ -1,5 +1,10 @@
 function wiggleWitIt() {
      wiggles = document.getElementsByTagName("w");
+
+     console.log("wrigling");
+     console.log(wiggles);
+    console.log(wiggles[0]);
+    console.log(wiggles.length);
   
     [...wiggles].forEach((wiggle) => {
       wiggle.innerHTML = wiggle
@@ -12,4 +17,8 @@ function wiggleWitIt() {
     });
 };
 
-document.addEventListener("DOMContentLoaded", wiggleWitIt());
+
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("dom loaded")
+  wiggleWitIt()
+});
