@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&family=Playfair:wght@300;400;700&display=swap");
 
 :root {
   --dark-grey: #333333;
@@ -17,14 +17,41 @@
 }
 
 body {
-  margin: 5% 15% 5% 15%;
   background: var(--bg);
+  height: 100%;
+}
+
+main, header {
   color: var(--fg);
   font-family: var(--body-font-family);
   font-size: var(--font-size);
   font-weight: var(--font-weight);
   line-height: var(--line-height);
   max-width: var(--body-max-width);
+}
+
+main {
+  margin: 0% 15% 0% 15%;
+}
+
+header {
+  margin: 5% 15% 0% 15%;
+}
+
+
+footer {
+  width: 96%;
+  background: var(--bg);
+  border-top: solid darkgrey 1px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 2%;
+  color: var(--fg);
+  font-family: var(--body-font-family);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
 }
 
 w span {
