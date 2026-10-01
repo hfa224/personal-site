@@ -1,0 +1,60 @@
+{% extends './projects/weird_web_2026/weird_web_template.html' %}
+
+{% block style %}
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/wriggle.js') }}"></script>
+<link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://helenffion.cafe/projects">
+<link rel="octo:octothorpes" href="weirdweboctober">
+
+{% endblock %}
+
+{% block header %}
+<h1>
+  <w>Weird</w> Web October
+</h1>
+<p>I want to participate in <a href="https://weirdweboctober.website/">Weird Web October</a> this year.</p>
+<hr>
+{% endblock %}
+
+{% block content %}
+<section>
+  <h3>Prompts</h3>
+  <ol>
+    <li><a href="{{ url_for('reveal') }}">Reveal</a></li>
+    <details>
+      <summary>
+        Notes
+      </summary>
+      <p>Javascript from <a href="https://nuel.github.io/speak/demo">speak.js</a>.</p>
+      <p>I'm currently reading Carol, by Patricia Highsmith. One of my favourite things about Highsmith's writing is how
+        she articulates her character's inner thoughts so well. Here's a quote about her writing I like:</p>
+
+        <p>"[Highsmith's] characters are irrational,and they leap to life in their very lack of
+        reason; suddenly we realize how unbelievably rational most fictional characters are as they lead their lives
+        from A to Z, like commuters always taking the same train." - Graham Greene</p>
+    </details>
+  </ol>
+  <hr>
+</section>
+<section>
+  <h3>Resources and inspiration</h3>
+  <ul>
+    <li><a href="https://litter.leaflet.pub/3lzzdaq6hq22a">linklog #003 -
+        silly websites now!</a></li>
+
+    <li><a href="https://litter.leaflet.pub/3lzzdaq6hq22a">sweetfish.site weird web october</a></li>
+
+    <li><a href="https://ribo.zone/weirdweb/">ribo.zone weird web october</a></li>
+    <li><a href="https://amalinalai.github.io/htmlenergy/">lina's html energy page</a></li>
+  </ul>
+</section>
+<section>
+  <h3>Misc ideas</h3>
+  <ul>
+    <li><a href="https://twinpeaks.fandom.com/wiki/Blue_Rose">Blue rose case</a></li>
+    <li><a
+        href="https://www.reddit.com/r/PhilosophyMemes/comments/iqk156/best_illustration_of_baudrillards_theory/">Simulacria</a>
+    <li>
+  </ul>
+</section>
+
+{% endblock %}
