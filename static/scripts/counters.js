@@ -7,7 +7,7 @@
 var targetDate2 = new Date(2024, 3, 25) // 25/04/2024 started sertraline
 var targetDate3 = new Date(2023, 5, 29) // 29/05/2023 fred asked me out
 var targetDate4 = new Date(2023, 10, 10) // 10/10/2023 passed my driving test
-var targetDate5 = new Date(2024, 3, 27) // 27/04/2024 (ish) last cigarette
+var targetDate5 = new Date(2024, 3, 30) // 27/04/2024 (ish) last cigarette
 
 function update(targetDate, id) {
     var now = new Date();
@@ -26,16 +26,16 @@ function update(targetDate, id) {
     var minutes = Math.floor(duration / (1000 * 60)) - (hours*60) - (days*60*24);
     var seconds = Math.floor(duration / (1000)) - (hours*60*60) - (days*60*24*60) - (minutes*60);
 
-    var durationString = "" + days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds."
+    var durationString = "" + days + " days ago."
 
     document.getElementById(id).textContent=durationString;
 
 }
 
 function updateCounters() {
-    update(targetDate2, "targetDate2");
+    /*update(targetDate2, "targetDate2");
     update(targetDate3, "targetDate3");
-    update(targetDate4, "targetDate4");
+    update(targetDate4, "targetDate4");*/
     update(targetDate5, "targetDate5");
 }
 

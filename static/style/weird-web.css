@@ -27,21 +27,17 @@ main, header {
   font-size: var(--font-size);
   font-weight: var(--font-weight);
   line-height: var(--line-height);
+}
+
+main, footer {
+  margin: 0% 15% 0% 15%;
   max-width: var(--body-max-width);
 }
 
-main {
-  margin: 0% 15% 0% 15%;
-}
-
 header {
-  margin: 5% 15% 0% 15%;
-}
-
-footer {
   width: 96%;
   background: var(--bg);
-  border-top: solid darkgrey 1px;
+  border-bottom: solid darkgrey 1px;
   display: flex;
   justify-content: space-between;
   flex-direction: row;

@@ -1,0 +1,41 @@
+	:root {
+	    --bg: black;
+	    --fg: ghostwhite;
+	}
+
+	.lighter {
+	    background: url("../../../static/images/weird_web/lighter-not-lit.png") no-repeat bottom right;
+	    background-size: 200px;
+	    width: 220px;
+	    height: 300px;
+	    border: none;
+	}
+
+	.lighter:active {
+	    background: url("../../../static/images/weird_web/lighter-lit.png") no-repeat bottom right;
+	    background-size: 210px;
+	    width: 220px;
+	    height: 300px;
+	    border: none;
+	}
+
+	.container {
+	    width: 100%;
+	    margin: 20px;
+	    display: flex;
+	    justify-content: space-between;
+	    flex-direction: row;
+	}
+
+
+	/* On mobile devices, display images in a verticle line */
+	@media (max-width: 600px) {
+
+	    .container {
+	        width: 100%;
+	        margin: 20px;
+	        display: flex;
+	        justify-content: space-between;
+	        flex-direction: column;
+	    }
+	}

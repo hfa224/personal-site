@@ -1,11 +1,13 @@
 {% extends './projects/weird_web_2026/weird_web_template.html' %}
 
 
-
-{% block style %}
+{% block meta %}
 <title>Reveal (weird web october)</title>
 <meta name="description"
 	content="An extract of text with thoughts hidden, a web page for the prompt Reveal">
+    {% endblock %}
+
+{% block style %}
 <script type="text/javascript" src="{{ url_for('static', filename='scripts/speak.js') }}"></script>
 <link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://helenffion.cafe/projects/reveal">
 <link rel="octo:octothorpes" href="Reveal">
@@ -40,6 +42,17 @@
 		console.log(element)
 		speak(element);
 	}</script>
+
+{% endblock %}
+
+{% block header %}
+<div></div>
+<div>
+	<a href="{{ url_for('projects') }}">Weird Web October</a>
+</div>
+<div>
+	<a href="{{ url_for('spark') }}"> Spark -&gt;</a>
+</div>
 
 {% endblock %}
 
@@ -125,13 +138,3 @@
 
 {% endblock %}
 
-{% block footer %}
-<div></div>
-<div>
-	<a href="{{ url_for('projects') }}">Weird Web October</a>
-</div>
-<div>
-	...
-</div>
-
-{% endblock %}

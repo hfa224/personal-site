@@ -1,0 +1,66 @@
+{% extends './projects/weird_web_2026/weird_web_template.html' %}
+
+
+
+{% block meta %}
+<title>Spark (weird web october)</title>
+<meta name="description" content="An extract of text with thoughts hidden, a web page for the prompt Reveal">
+{% endblock %}
+
+{% block style %}
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/counters.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/spark.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='style/spark.css') }}">
+<link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://helenffion.cafe/projects/spark">
+<link rel="octo:octothorpes" href="Spark">
+
+<style>
+
+</style>
+
+<script>
+
+
+
+</script>
+
+
+{% endblock %}
+
+{% block header %}
+<div>
+	<a href="{{ url_for('reveal') }}">&lt;- Reveal</a>
+</div>
+<div>
+	<a href="{{ url_for('projects') }}">Weird Web October</a>
+</div>
+<div>
+	...
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+
+	<div class="child">
+		<input class="lighter" id="lighter-button" type="button" value="" onclick="onIncrementOnClick()" />
+	</div>
+	<div class="child">
+		<div id="text-content">
+			<p id="message1" style="display:none">This doesn't capture the sound it makes, a cross between opening a can
+				and striking a match.
+			</p>
+
+			<p id="message2" style="display:none">I last smoked roughly <span id="targetDate5"> </span>
+			</p>
+
+			<p id="message3" style="display:none"> Sometimes I miss it</p>
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}
