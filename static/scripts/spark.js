@@ -5,6 +5,16 @@ function addButtonListeners() {
     const button = document.getElementById('lighter-button');
     const content = document.getElementById('text-content');
 
+        // Show when the mouse button goes down
+    button.addEventListener('touchstart', () => {
+        content.style.display = 'block';
+    });
+
+    // Hide when the mouse button is released
+    button.addEventListener('touchend', () => {
+        content.style.display = 'none';
+    });
+
     // Show when the mouse button goes down
     button.addEventListener('mousedown', () => {
         content.style.display = 'block';
