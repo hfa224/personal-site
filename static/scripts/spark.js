@@ -25,8 +25,10 @@ var count = 0;
 
 function onIncrementOnClick() {
     count = count + 1;
-    const content = document.getElementById('message' + count);
-    content.style.display = 'block';
+    if (count < 4) {
+        const content = document.getElementById('message' + count);
+        content.style.display = 'block';
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function () {

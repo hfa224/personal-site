@@ -61,17 +61,14 @@
 {% block content %}
 
 <div style="
-	width: 60%;
+	width: 100%;
 	margin: 20px;
   display: flex;
   justify-content: space-between;
   flex-direction: row;">
 
-	<div>
-		<input class="lighter" id="lighter-button" type="button" value="" onclick="onIncrementOnClick()" />
-	</div>
-
-	<div id="text-content" style="display:none">
+<div style="width:50%">
+	<div id="text-content" style="width:50%;">
 		<p id="message1" style="display:none">This doesn't capture the sound it makes, a cross between opening a can and striking a match.
 		</p>
 
@@ -80,7 +77,11 @@
 
 		<p id="message3" style="display:none"> Sometimes I miss it</p>
 	</div>
+</div>
 
+	<div style="width:50%">
+		<input class="lighter" id="lighter-button" type="button" value="" onclick="onIncrementOnClick()" />
+	</div>
 
 </div>
 
