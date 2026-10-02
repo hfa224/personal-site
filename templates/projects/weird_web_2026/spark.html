@@ -1,0 +1,87 @@
+{% extends './projects/weird_web_2026/weird_web_template.html' %}
+
+
+
+{% block meta %}
+<title>Spark (weird web october)</title>
+<meta name="description" content="An extract of text with thoughts hidden, a web page for the prompt Reveal">
+{% endblock %}
+
+{% block style %}
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/counters.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/spark.js') }}"></script>
+<link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://helenffion.cafe/projects/spark">
+<link rel="octo:octothorpes" href="Spark">
+
+<style>
+	:root {
+		--bg: black;
+		--fg: ghostwhite;
+	}
+
+	.lighter {
+		background: url("../../../static/images/weird_web/lighter-not-lit.png") no-repeat bottom right;
+		background-size: 200px;
+		width: 220px;
+		height: 300px;
+		border: none;
+	}
+
+	.lighter:active {
+		background: url("../../../static/images/weird_web/lighter-lit.png") no-repeat bottom right;
+		background-size: 210px;
+		width: 220px;
+		height: 300px;
+		border: none;
+	}
+</style>
+
+<script>
+
+
+
+</script>
+
+
+{% endblock %}
+
+{% block header %}
+<div>
+	<a href="{{ url_for('reveal') }}">&lt;- Reveal</a>
+</div>
+<div>
+	<a href="{{ url_for('projects') }}">Weird Web October</a>
+</div>
+<div>
+	...
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div style="
+	width: 60%;
+	margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;">
+
+	<div>
+		<input class="lighter" id="lighter-button" type="button" value="" onclick="onIncrementOnClick()" />
+	</div>
+
+	<div id="text-content" style="display:none">
+		<p id="message1" style="display:none">This doesn't capture the sound it makes, a cross between opening a can and striking a match.
+		</p>
+
+		<p id="message2" style="display:none">I last smoked roughly <span id="targetDate5"> </span>
+		</p>
+
+		<p id="message3" style="display:none"> Sometimes I miss it</p>
+	</div>
+
+
+</div>
+
+{% endblock %}

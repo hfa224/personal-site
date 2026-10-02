@@ -1,5 +1,11 @@
 {% extends './projects/weird_web_2026/weird_web_template.html' %}
 
+{% block meta %}
+    <meta name="description"
+      content="This is a site for weird web october 2026">
+    <title>Weird Web October 2026</title>
+    {% endblock %}
+
 {% block style %}
 <script type="text/javascript" src="{{ url_for('static', filename='scripts/wriggle.js') }}"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='style/wriggle.css') }}">
@@ -7,14 +13,17 @@
 {% endblock %}
 
 {% block header %}
-<h1>
+
+{% endblock %}
+
+{% block content %}
+<section>
+  <h1>
   <w>Weird</w> Web October
 </h1>
 <p>I want to participate in <a href="https://weirdweboctober.website/">Weird Web October</a> this year.</p>
 <hr>
-{% endblock %}
-
-{% block content %}
+</section>
 <section>
   <h3>Prompts</h3>
   <ol>
