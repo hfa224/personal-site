@@ -9,7 +9,7 @@
 
   --font-family: "Space Mono";
   --body-font-family: "Space Mono";
-  
+
   --font-size: 16px;
   --font-weight: 300;
   --line-height: 1.8;
@@ -21,7 +21,9 @@ body {
   height: 100%;
 }
 
-main, header, footer {
+main,
+header,
+footer {
   color: var(--fg);
   font-family: var(--body-font-family);
   font-size: var(--font-size);
@@ -29,7 +31,8 @@ main, header, footer {
   line-height: var(--line-height);
 }
 
-main, footer {
+main,
+footer {
   margin: 0% 15% 0% 15%;
   max-width: var(--body-max-width);
 }
@@ -48,4 +51,12 @@ header {
   font-size: var(--font-size);
   font-weight: var(--font-weight);
   line-height: var(--line-height);
+}
+
+/* On mobile devices, display images in a verticle line */
+@media (max-width: 600px) {
+
+  header {
+    height: 5%;
+  }
 }

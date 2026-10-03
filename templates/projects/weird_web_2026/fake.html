@@ -42,12 +42,7 @@
 
 {% block content %}
 
-<div class="container" style="display: grid;
-	    justify-content: space-between;
-		position: relative;
-		left: -70vw;
-		grid-template-columns: 33% 33% 33%;
-grid-template-rows: 33% 33% 33%;">
+<div class="container">
 	<div class="fish-children" style="animation-delay: calc(1 * 307ms)">
 		<img style="width: 150px" src="{{ url_for('static', filename='images/weird_web/soy-sauce-fish.png') }}">
 	</div>
@@ -91,6 +86,6 @@ grid-template-rows: 33% 33% 33%;">
 
 {% block footer %}
 
-<span class="note"> Wait... they'll come back around.</span>
+<div class="note"> Wait... they'll come back around.</div>
 
 {% endblock %}
