@@ -1,9 +1,8 @@
-
-
-body, header {
+body,
+header {
     background-color: #0de8ff;
     /*opacity: 0.8; */
-    background-image:  radial-gradient(circle at 50% 100%, transparent 20%, #45bcf7 21%, #45bcf7 34%, transparent 35%, transparent), radial-gradient(circle at 50% 0%, transparent 20%, #45bcf7 21%, #45bcf7 34%, transparent 35%, transparent);
+    background-image: radial-gradient(circle at 50% 100%, transparent 20%, #45bcf7 21%, #45bcf7 34%, transparent 35%, transparent), radial-gradient(circle at 50% 0%, transparent 20%, #45bcf7 21%, #45bcf7 34%, transparent 35%, transparent);
     background-position: 0 0, -20px 0;
     background-size: 40px 30px;
 }
@@ -18,11 +17,11 @@ main {
 }
 
 .fish-children {
-  position: relative;
-  animation: slide-in 10s infinite, wiggle 2s infinite;
-  
-  transform-origin: center;
-  animation-timing-function: ease-in-out;
+    position: relative;
+    animation: slide-in 10s infinite, wiggle 2s infinite;
+
+    transform-origin: center;
+    animation-timing-function: ease-in-out;
 }
 
 .note {
@@ -34,54 +33,63 @@ main {
 
 .container {
     display: grid;
-	    justify-content: space-between;
-		position: relative;
-		left: -70vw;
-		grid-template-columns: 33% 33% 33%;
-grid-template-rows: 33% 33% 33%;
+    justify-content: space-between;
+    position: relative;
+    left: -70vw;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
 }
 
 /* On mobile devices, display images in a verticle line */
-	@media (max-width: 600px) {
+@media (max-width: 600px) {
 
-	    header {
-	        height: 5%;
-	    }
+    .container {
+        left: -90vw;
+    }
 
-        .note {
-    width: 100%;
+    header {
+        height: 5%;
+    }
+
+    .note {
+        width: 100%;
+    }
 }
-	}
 
 @keyframes slide-in {
-  from {
-    translate: 0 0;
-  }
+    from {
+        translate: 0 0;
+    }
 
-  to {
-    translate: 170vw  0;
-  }
+    to {
+        translate: 170vw 0;
+    }
 }
 
 @keyframes wiggle {
-  0% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  20%{
-    transform: translateY(-2px) rotate(-3deg);
-  }
-  40%{
-    transform: translateY(-2px) rotate(3deg);
-  }
-  60%{
-    transform: translateY(2px) rotate(-3deg);
-  }
-  80%{
-    transform: translateY(-2px) rotate(3deg);
-  }
-  100% {
-    transform: translateY(0px) rotate(0deg);
-  }
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    20% {
+        transform: translateY(-2px) rotate(-3deg);
+    }
+
+    40% {
+        transform: translateY(-2px) rotate(3deg);
+    }
+
+    60% {
+        transform: translateY(2px) rotate(-3deg);
+    }
+
+    80% {
+        transform: translateY(-2px) rotate(3deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
 }
 
 
