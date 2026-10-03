@@ -40,11 +40,21 @@ main {
     grid-template-rows: 33% 33% 33%;
 }
 
+@keyframes slide-in {
+    from {
+        translate: 0 0;
+    }
+
+    to {
+        translate: 170vw 0;
+    }
+}
+
 /* On mobile devices, display images in a verticle line */
 @media (max-width: 600px) {
 
     .container {
-        left: -90vw;
+        left: -100vw;
     }
 
     header {
@@ -54,16 +64,16 @@ main {
     .note {
         width: 100%;
     }
-}
 
-@keyframes slide-in {
+    @keyframes slide-in {
     from {
         translate: 0 0;
     }
 
     to {
-        translate: 170vw 0;
+        translate: 190vw 0;
     }
+}
 }
 
 @keyframes wiggle {
