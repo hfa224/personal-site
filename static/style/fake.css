@@ -1,34 +1,43 @@
 
 
-body {
+body, header {
     background-color: #0de8ff;
     /*opacity: 0.8; */
     background-image:  radial-gradient(circle at 50% 100%, transparent 20%, #45bcf7 21%, #45bcf7 34%, transparent 35%, transparent), radial-gradient(circle at 50% 0%, transparent 20%, #45bcf7 21%, #45bcf7 34%, transparent 35%, transparent);
     background-position: 0 0, -20px 0;
     background-size: 40px 30px;
-    overflow-x: hidden
 }
 
-main, footer {
+body {
+    overflow-x: hidden;
+}
+
+main {
     width: 100%;
     margin: 0px;
 }
 
 .fish-children {
-  display:inline-block;
-  animation: slide-in 20s infinite, wiggle 2s infinite;
+  position: relative;
+  animation: slide-in 10s infinite, wiggle 2s infinite;
   
  /* transform-origin: center;
   animation-timing-function: ease-in-out;*/
 }
 
+.note {
+    border: solid 10px #45bcf7;
+    background-color: #0de8ff;
+    padding: 10px;
+}
+
 @keyframes slide-in {
   from {
-    translate: -10vw 0;
+    translate: 0 0;
   }
 
   to {
-    translate: 100vw  0;
+    translate: 170vw  0;
   }
 }
 

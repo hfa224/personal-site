@@ -21,7 +21,7 @@ body {
   height: 100%;
 }
 
-main, header {
+main, header, footer {
   color: var(--fg);
   font-family: var(--body-font-family);
   font-size: var(--font-size);
