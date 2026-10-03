@@ -1,14 +1,13 @@
 {% extends './projects/weird_web_2026/weird_web_template.html' %}
 
 {% block meta %}
-    <meta name="description"
-      content="This is a site for weird web october 2026">
-    <title>Weird Web October 2026</title>
-    {% endblock %}
+<meta name="description" content="This is a site for weird web october 2026">
+<title>Weird Web October 2026</title>
+{% endblock %}
 
 {% block style %}
 <script type="text/javascript" src="{{ url_for('static', filename='scripts/wriggle.js') }}"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style/wriggle.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='style/wriggle.css') }}">
 
 {% endblock %}
 
@@ -19,10 +18,10 @@
 {% block content %}
 <section>
   <h1>
-  <w>Weird</w> Web October
-</h1>
-<p>I want to participate in <a href="https://weirdweboctober.website/">Weird Web October</a> this year.</p>
-<hr>
+    <w>Weird</w> Web October
+  </h1>
+  <p>I want to participate in <a href="https://weirdweboctober.website/">Weird Web October</a> this year.</p>
+  <hr>
 </section>
 <section>
   <h3>Prompts</h3>
@@ -36,17 +35,26 @@
       <p>I'm currently reading Carol, by Patricia Highsmith. One of my favourite things about Highsmith's writing is how
         she articulates her character's inner thoughts so well. Here's a quote about her writing I like:</p>
 
-        <p>"[Highsmith's] characters are irrational,and they leap to life in their very lack of
+      <p>"[Highsmith's] characters are irrational,and they leap to life in their very lack of
         reason; suddenly we realize how unbelievably rational most fictional characters are as they lead their lives
         from A to Z, like commuters always taking the same train." - Graham Greene</p>
     </details>
-        <li><a href="{{ url_for('spark') }}">Spark</a></li>
+    <li><a href="{{ url_for('spark') }}">Spark</a></li>
     <details>
       <summary>
         Notes
       </summary>
       <p>I used <a href="https://app.dithermark.com/">dithermark</a> for some dithering.</p>
-      <p>I can't get the mobile view working... and the sparking you get from a lighter which was the inspiration for this isn't captured... but nevermind!</p>
+      <p>I can't get the mobile view working... and the sparking you get from a lighter which was the inspiration for
+        this isn't captured... but nevermind!</p>
+    </details>
+    <li><a href="{{ url_for('fake') }}">Fake</a></li>
+    <details>
+      <summary>
+        Notes
+      </summary>
+      <p>Inspired by this <a href="https://www.reddit.com/r/PhilosophyMemes/comments/iqk156/best_illustration_of_baudrillards_theory/">philosophy meme</a>.</p>
+      <p>Background from <a href="https://www.magicpattern.design/tools/css-backgrounds">Magic Pattern</a>, 'fish' image from wikipedia.</p>
     </details>
   </ol>
   <hr>

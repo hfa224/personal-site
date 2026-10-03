@@ -36,6 +36,7 @@ main, footer {
 
 header {
   width: 96%;
+  height: 1%;
   background: var(--bg);
   border-bottom: solid darkgrey 1px;
   display: flex;

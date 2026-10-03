@@ -60,6 +60,12 @@ def spark():
     """Renders weird web page"""
     return render_template("projects/weird_web_2026/spark.html")
 
+
+@app.route("/projects/fake/")
+def fake():
+    """Renders weird web page"""
+    return render_template("projects/weird_web_2026/fake.html")
+
 @app.route("/counters/")
 def counters():
     """Renders counters page"""
