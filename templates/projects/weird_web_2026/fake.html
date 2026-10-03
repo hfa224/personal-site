@@ -1,0 +1,91 @@
+{% extends './projects/weird_web_2026/weird_web_template.html' %}
+
+
+
+{% block meta %}
+<title>Fake (weird web october)</title>
+<meta name="description" content="Some little fish, a web page for the prompt Fake">
+{% endblock %}
+
+{% block style %}
+<!-- script type="text/javascript" src="{{ url_for('static', filename='scripts/counters.js') }}"></script -->
+<!-- script type="text/javascript" src="{{ url_for('static', filename='scripts/spark.js') }}"></script -->
+<link rel="stylesheet" href="{{ url_for('static', filename='style/fake.css') }}">
+<link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://helenffion.cafe/projects/fake">
+<link rel="octo:octothorpes" href="Fake">
+
+<style>
+
+</style>
+
+<script>
+
+
+
+</script>
+
+
+{% endblock %}
+
+{% block header %}
+<div>
+	<a href="{{ url_for('spark') }}">&lt;- Spark</a>
+</div>
+<div>
+	<a href="{{ url_for('projects') }}">Weird Web October</a>
+</div>
+<div>
+	...
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+	<div class="fish-children" style="animation-delay: calc(1 * 307ms)">
+		<img style="width: 150px" src="{{ url_for('static', filename='images/weird_web/soy-sauce-fish.png') }}">
+	</div>
+	<div class="fish-children" style="animation-delay: calc(10 * 307ms)">
+		<img style="width: 150px" src="{{ url_for('static', filename='images/weird_web/soy-sauce-fish.png') }}">
+	</div>
+	<div class="fish-children" style="animation-delay: calc(8 * 307ms)">
+		<img style="width: 150px" src="{{ url_for('static', filename='images/weird_web/soy-sauce-fish.png') }}">
+	</div>
+	<div class="fish-children" style="animation-delay: calc(3 * 307ms)">
+		<img style="width: 150px" src="{{ url_for('static', filename='images/weird_web/soy-sauce-fish.png') }}">
+	</div>
+	
+	<div class="fish-children" style="animation-delay: calc(12 * 307ms)">
+		<img style="width: 150px" src="{{ url_for('static', filename='images/weird_web/soy-sauce-fish.png') }}">
+	</div>
+	
+	<div class="fish-children" style="animation-delay: calc(5 * 307ms)">
+		<img style="width: 150px" src="{{ url_for('static', filename='images/weird_web/soy-sauce-fish.png') }}">
+	</div>
+	
+	<div class="fish-children" style="animation-delay: calc(4 * 307ms)">
+		<img style="width: 150px" src="{{ url_for('static', filename='images/weird_web/soy-sauce-fish.png') }}">
+	</div>
+	
+	<div class="fish-children" style="animation-delay: calc(9 * 307ms)">
+		<img style="width: 150px" src="{{ url_for('static', filename='images/weird_web/soy-sauce-fish.png') }}">
+	</div>
+	
+	<div class="fish-children" style="animation-delay: calc(6 * 307ms)">
+		<img style="width: 150px" src="{{ url_for('static', filename='images/weird_web/soy-sauce-fish.png') }}">
+	</div>
+	
+	<div class="fish-children" style="animation-delay: calc(1 * 307ms)">
+		<img style="width: 150px" src="{{ url_for('static', filename='images/weird_web/soy-sauce-fish.png') }}">
+	</div>
+
+</div>
+
+{% endblock %}
+
+{% block footer %}
+
+<div class="note"> Wait... they'll come back around.</div>
+
+{% endblock %}
