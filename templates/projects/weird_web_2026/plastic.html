@@ -20,6 +20,10 @@
 <script>
 
 document.addEventListener("DOMContentLoaded", function () {
+    
+    const intro_popover = document.getElementById("intro-popover");
+    intro_popover.showPopover();
+
   addPopoverListeners()
 });
 
@@ -45,6 +49,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <div popover class="note" id="my-popover">Pete Martell. He's heading to the lake to go fishing.
     <button popovertarget="my-popover" popovertargetaction="hide">×</button>
+</div>
+
+<div id="intro-popover" class="note" popover>
+
+  <p>Sorry, this doesn't work so well on mobile.</p>
+  <p>If you like, you can listen to <a href="https://www.youtube.com/watch?v=khMlcTE7lw8"  target="_blank">Laura Palmer's Theme</a>.
+    <button popovertarget="intro-popover" popovertargetaction="hide">×</button>
 </div>
 
 
