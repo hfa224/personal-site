@@ -45,6 +45,10 @@ header a {
 /* On mobile devices, display images in a verticle line */
 @media (max-width: 600px) {
 
+    main {
+        width: 100%;
+    }
+
     .container {
         left: -100vw;
     }
