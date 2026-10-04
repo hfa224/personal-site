@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Geist+Pixel&family=Playfair:wght@300;400;700&display=swap");
+
+:root {
+  --font-family: "Geist Pixel";
+  --body-font-family: "Arial";
+}
+
+body,
+header {
+    /*opacity: 0.8; */
+	background: url("../../../static/images/background/twin_peaks.jpg") no-repeat top right;
+    background-size: cover;
+    font-family: var(--body-font-family);
+}
+
+img {max-width:100%; height:auto}
+
+header a {
+    font-weight: 700;
+	-webkit-text-stroke: 0.5px #45cf1d;
+	color: #82180d;
+	text-shadow: .05em .05em 2px #000;
+}
+  
+
+.note {
+    background: none;
+    border: none;
+    font-family: var(--font-family);
+    text-align: center;
+            font-size:20px;
+            font-weight: 300;
+            color: #ffffff;
+           text-shadow:
+                -2px -2px 0 #000,
+                2px -2px 0 #000,
+                -2px 2px 0 #000,
+                2px 2px 0 #000,
+                -3px 0px 0 #000,
+                3px 0px 0 #000,
+                0px -3px 0 #000,
+                0px 3px 0 #000;
+}
+
+/* On mobile devices, display images in a verticle line */
+@media (max-width: 600px) {
+
+    main {
+        width: 100%;
+        margin: 0;
+    }
+
+    .container {
+        left: -100vw;
+    }
+
+    header {
+        height: 5%;
+    }
+
+    .note {
+        width: 100%;
+    }
+
+    @keyframes slide-in {
+    from {
+        translate: 0 0;
+    }
+
+    to {
+        translate: 190vw 0;
+    }
+}
+}

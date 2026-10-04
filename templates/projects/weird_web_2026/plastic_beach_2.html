@@ -1,0 +1,61 @@
+{% extends './projects/weird_web_2026/weird_web_template.html' %}
+
+
+
+{% block meta %}
+<title>Plastic (weird web october)</title>
+<meta name="description" content="Some little fish, a web page for the prompt Plastic">
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/plastic.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/plastic.js') }}"></script>
+
+<style>
+
+</style>
+
+<script>
+
+
+
+</script>
+
+
+{% endblock %}
+
+{% block header %}
+<div>
+	<a href="{{ url_for('fake') }}">&lt;- Fake</a>
+</div>
+<div>
+	<a href="{{ url_for('projects') }}">Weird Web October</a>
+</div>
+<div>
+	...
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<svg viewBox="0 0 768 480">
+  <image width="768" height="480" xlink:href="{{ url_for('static', filename='images/weird_web/plastic/beach-1.png') }}"/>
+  <a href="{{ url_for('plastic_3') }}">  
+  <rect
+       style="fill:transparent"
+       id="rect1"
+       width="89.90712"
+       height="78.018578"
+       x="309.84521"
+       y="291.26935" /></a>
+</svg>
+
+{% endblock %}
+
+{% block footer %}
+
+
+
+
+{% endblock %}

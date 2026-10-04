@@ -66,6 +66,22 @@ def fake():
     """Renders weird web page"""
     return render_template("projects/weird_web_2026/fake.html")
 
+@app.route("/projects/plastic/")
+def plastic():
+    """Renders weird web page"""
+    return render_template("projects/weird_web_2026/plastic.html")
+
+@app.route("/projects/plastic/beach/")
+def plastic_2():
+    """Renders weird web page"""
+    return render_template("projects/weird_web_2026/plastic_beach_2.html")
+
+
+@app.route("/projects/plastic/end-of-the-log/")
+def plastic_3():
+    """Renders weird web page"""
+    return render_template("projects/weird_web_2026/plastic_beach_3.html")
+
 @app.route("/counters/")
 def counters():
     """Renders counters page"""

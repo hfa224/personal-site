@@ -1,0 +1,80 @@
+{% extends './projects/weird_web_2026/weird_web_template.html' %}
+
+
+
+{% block meta %}
+<title>Plastic (weird web october)</title>
+<meta name="description" content="RIP Laura Palmer, a web page for the prompt Plastic">
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/plastic.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/plastic.js') }}"></script>
+<link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://helenffion.cafe/projects/plastic">
+<link rel="octo:octothorpes" href="Plastic">
+
+<style>
+
+</style>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    
+    const intro_popover = document.getElementById("intro-popover");
+    intro_popover.showPopover();
+
+  addPopoverListeners()
+});
+
+</script>
+
+
+{% endblock %}
+
+{% block header %}
+<div>
+    <a href="{{ url_for('fake') }}">&lt;- Fake</a>
+</div>
+<div>
+    <a href="{{ url_for('projects') }}">Weird Web October</a>
+</div>
+<div>
+    ...
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div popover class="note" id="my-popover">Pete Martell. He's heading to the lake to go fishing.
+    <button popovertarget="my-popover" popovertargetaction="hide">×</button>
+</div>
+
+<div id="intro-popover" class="note" popover>
+
+  <p>Sorry, if you're on mobile this doesn't work so well. Click or touch areas on the image.</p>
+  <p>If you like, you can listen to <a href="https://www.youtube.com/watch?v=khMlcTE7lw8"  target="_blank">Laura Palmer's Theme</a>.
+    <button popovertarget="intro-popover" popovertargetaction="hide">×</button>
+</div>
+
+
+<svg viewBox="0 0 768 480">
+    <image width="768" height="480"
+        xlink:href="{{ url_for('static', filename='images/weird_web/plastic/pete_martell_2.png') }}" />
+    <rect style="fill:transparent; cursor: pointer;" id="pete-martell" width="80.247681" height="263.7771" x="428.73065"
+        y="214.73685" />
+    <a href="{{ url_for('plastic_2') }}">
+        <rect style="fill:transparent;cursor: pointer;" id="laura-palmers-body" width="78.761612" height="52.755417"
+            x="135.97523" y="287.55417" />
+    </a>
+</svg>
+
+{% endblock %}
+
+{% block footer %}
+
+
+
+
+{% endblock %}

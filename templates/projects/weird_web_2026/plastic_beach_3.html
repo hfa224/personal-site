@@ -1,0 +1,65 @@
+{% extends './projects/weird_web_2026/weird_web_template.html' %}
+
+
+
+{% block meta %}
+<title>Plastic (weird web october)</title>
+<meta name="description" content="Some little fish, a web page for the prompt Plastic">
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/plastic.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/plastic.js') }}"></script>
+
+<style>
+
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  addBeach3PopoverListeners()
+});
+
+
+</script>
+
+
+{% endblock %}
+
+{% block header %}
+<div>
+  <a href="{{ url_for('fake') }}">&lt;- Fake</a>
+</div>
+<div>
+  <a href="{{ url_for('projects') }}">Weird Web October</a>
+</div>
+<div>
+  ...
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div popover id="face-popover">
+  <image src="{{ url_for('static', filename='images/weird_web/plastic/normal_tp101-0162.jpg') }}" />
+  <div class="note"><i>She's dead... wrapped in plastic...<i></div>
+</div>
+
+
+<svg viewBox="0 0 768 480">
+  <image width="768" height="480"
+    xlink:href="{{ url_for('static', filename='images/weird_web/plastic/beach-2.png') }}" />
+
+  <rect style="fill:transparent; cursor: pointer;" id="laura-palmers-body-close-up" width="196.161" height="151.57895"
+    x="269.72137" y="222.91022" />
+</svg>
+
+{% endblock %}
+
+{% block footer %}
+
+
+
+
+{% endblock %}
