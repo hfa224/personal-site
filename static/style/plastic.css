@@ -1,0 +1,40 @@
+
+:root {
+  --font-family: "Helvetica";
+  --body-font-family: "Helvetica";
+}
+
+body,
+header {
+    /*opacity: 0.8; */
+	background: url("../../../static/images/background/seabed.png") repeat top right;
+    background-position: 0 0, -20px 0;
+}
+
+img {max-width:100%; height:auto}
+
+/* On mobile devices, display images in a verticle line */
+@media (max-width: 600px) {
+
+    .container {
+        left: -100vw;
+    }
+
+    header {
+        height: 5%;
+    }
+
+    .note {
+        width: 100%;
+    }
+
+    @keyframes slide-in {
+    from {
+        translate: 0 0;
+    }
+
+    to {
+        translate: 190vw 0;
+    }
+}
+}

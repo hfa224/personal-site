@@ -66,6 +66,12 @@ def fake():
     """Renders weird web page"""
     return render_template("projects/weird_web_2026/fake.html")
 
+@app.route("/projects/plastic/")
+def plastic():
+    """Renders weird web page"""
+    return render_template("projects/weird_web_2026/plastic.html")
+
+
 @app.route("/counters/")
 def counters():
     """Renders counters page"""
