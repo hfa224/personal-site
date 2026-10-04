@@ -2,7 +2,7 @@
 
 :root {
   --font-family: "Geist Pixel";
-  --body-font-family: "Jacquard 12";
+  --body-font-family: "Arial";
 }
 
 body,
@@ -10,14 +10,14 @@ header {
     /*opacity: 0.8; */
 	background: url("../../../static/images/background/twin_peaks.jpg") no-repeat top right;
     background-size: cover;
+    font-family: var(--body-font-family);
 }
 
 img {max-width:100%; height:auto}
 
 header a {
-	font-size: 1.5rem;
-    font-weight: 500;
-	-webkit-text-stroke: 1px #45cf1d;
+    font-weight: 700;
+	-webkit-text-stroke: 0.5px #45cf1d;
 	color: #82180d;
 	text-shadow: .05em .05em 2px #000;
 }
