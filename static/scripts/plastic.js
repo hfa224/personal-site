@@ -9,7 +9,14 @@ function addPopoverListeners() {
     });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("dom loaded")
-  addPopoverListeners()
-});
+function addBeach3PopoverListeners() {
+    
+    const target2 = document.getElementById('laura-palmers-body-close-up');
+    const popover2 = document.getElementById('face-popover');
+
+    target2.addEventListener('click', () => {
+        popover2.showPopover();
+    });
+}
+
+
