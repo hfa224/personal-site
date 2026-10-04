@@ -8,17 +8,19 @@
 body,
 header {
     /*opacity: 0.8; */
-	background: url("../../../static/images/background/seabed.png") repeat top right;
-    background-position: 0 0, -20px 0;
+	background: url("../../../static/images/background/twin_peaks.jpg") no-repeat top right;
+    background-size: cover;
 }
 
 img {max-width:100%; height:auto}
 
-    .pinetrees {
-    border-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAACRElEQVR4AdTXUYobQQxF0clsLovKdxaV1U36dHSNqabBMP5IBS5SvaeqloQDyefH3Z/fP78+cOenq0HnNfLwql6dO5jzfaNT8L+Ez3NrT50/zr/+/PgAD3cdq4EaVCcHD+lFGtQgXQ4eRt9oo7qGKSDHTHJu1ZmH9CINapAuBw/pRRrUIF0OHkbfaKPT8WNznddoSpjyGRrW+s48PN+R01DdGnlQe7DhRo+uz7/x62Sd8035THp1a8x/viNPX+s756s92GijS+fnVmk3kyU/4jHt+ft2Bxly5KcX09UgXY780Tfa6NL5uR2aqSDHTHYb1MAdyHF7YQw1cAdyjF3YaKO1/K5oG3jXe/PORhv1u8B0/vhbbyvgIf/d0dvwLcjRd+QHG23UFDi6PrcpRxPJkZ/+3dh73kbvybH4G210naTzGk2JJl39V8/d9xbu7vEw/oYbbdKZ4BLyTYlLwYuCu+i9u2uLv9FG69yU6Nyk/85fj38DpH83+hZ6v/c68zDnjTaqazSRHDPJ2zfZd4q+hbvv8Q422miTvSu2mXe9N+9svNE2cvwuzt9n55nsNlT37nvz7oYbnc7PLdpKq5MjP72YrgbpcuSnF9PVIF2Oxd9oo0vnDXaJpkT1RRouF0bgofoiDVN2CTyMsdFGdY0mnQkuIV/tM+mXCyPkP9+Rp0/ZJSz+RhttFFNimeT8fxSNh+qLNKhBuhw8pBdpUIN0OXiQH2y40aPrc3umQBPKkZ9eTFeDdDny09eoBtXJUZ38YJuN/gUAAP//RQfo9wAAAAZJREFUAwBP3Uxhlj3UoQAAAABJRU5ErkJggg==') 14 /  14px / 0 round;
-    border-width:  14px;
-    border-style:  solid; 
-  }
+header a {
+	font-size: 1.5rem;
+    font-weight: 500;
+	-webkit-text-stroke: 1px #45cf1d;
+	color: #82180d;
+	text-shadow: .05em .05em 2px #000;
+}
   
 
 .note {
