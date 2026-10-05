@@ -1,0 +1,83 @@
+{% extends './projects/weird_web_2026/weird_web_template.html' %}
+
+
+
+{% block meta %}
+<title>Sheet (weird web october)</title>
+<meta name="description" content="RIP spreadsheet sites, a web page for the prompt Sheet">
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/sheet.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/sheets_wwo.js') }}"></script>
+<link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://helenffion.cafe/projects/sheet">
+<link rel="octo:octothorpes" href="Sheet">
+
+<style>
+
+</style>
+
+<script>
+
+</script>
+
+
+{% endblock %}
+
+{% block header %}
+<div>
+    <a href="{{ url_for('plastic') }}">&lt;- Plastic</a>
+</div>
+<div>
+    <a href="{{ url_for('projects') }}">Weird Web October</a>
+</div>
+<div>
+    ...
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<section>
+    This was going to be a spreadsheet site with a link to <a href="https://ambient.institute/i/sheets/index.html">the original instructions I used for spreadsheet sites</a>.</p>
+
+    <p>Unfortunately, and responsibly they've taken the instructions down because they were outdated... But I should have known that!
+        I had to mess around with google cloud console for my own spreadsheet set up.</p>
+    <p>Increased security is necessary... but these new cloud consoles are a drag. Why can't you let me hack around with my own google account?</p>
+
+    <p>I've used a sheet site to display my current reading status before. Below is a subset of that list, restricted to stories that are available to read online. I hope you find something you enjoy.</p>
+    <p>I'll add a placeholder here to add updated instructions on creating google sheets site.</p>
+</section>
+<section>
+  <table id="data-table">
+    <thead>
+      <tr>
+        <th class="title">Title</th>
+        <th class="title">Author</th>
+        <th class="type">Type</th>
+        <th class="review">Review</th>
+        <!-- th class="date-started">Date started</th>
+        <th class="date-finished">Date finished</th -->
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+
+</section>
+<section>
+<p>Below is what the underlying spreadsheet looks like:</p>
+
+	<img style="width:100%" src="{{ url_for('static', filename='images/weird_web/google_sheet.png') }}">
+</section>
+
+{% endblock %}
+
+{% block footer %}
+
+
+
+
+{% endblock %}

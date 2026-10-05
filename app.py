@@ -82,6 +82,11 @@ def plastic_3():
     """Renders weird web page"""
     return render_template("projects/weird_web_2026/plastic_beach_3.html")
 
+@app.route("/projects/sheet/")
+def sheet():
+    """Renders weird web page"""
+    return render_template("projects/weird_web_2026/sheet.html")
+
 @app.route("/counters/")
 def counters():
     """Renders counters page"""
