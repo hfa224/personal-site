@@ -9,6 +9,12 @@ background: linear-gradient(0deg,rgba(252, 109, 0, 1) 0%, rgba(255, 206, 99, 1) 
   border: none;
 }
 
+.corner-button {
+  position:relative; x: 550px; y: 10;
+  border: none;
+  background: transparent;
+}
+
 
 /* On mobile devices, display images in a verticle line */
 @media (max-width: 600px) {
