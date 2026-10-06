@@ -1,0 +1,85 @@
+{% extends './projects/weird_web_2026/weird_web_template.html' %}
+
+
+
+{% block meta %}
+<title>Plastic (weird web october)</title>
+<meta name="description" content="RIP Laura Palmer, a web page for the prompt Plastic">
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/analog.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/analog.js') }}"></script>
+<link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://helenffion.cafe/projects/analog">
+<link rel="octo:octothorpes" href="Analog">
+
+<style>
+
+</style>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  addViewBoxListeners()
+});
+
+</script>
+
+
+{% endblock %}
+
+{% block header %}
+<div>
+    <a href="{{ url_for('sheet') }}">&lt;- Sheet</a>
+</div>
+<div>
+    <a href="{{ url_for('projects') }}">Weird Web October</a>
+</div>
+<div>
+    ...
+</div>
+
+{% endblock %}
+
+{% block content %}
+<div style="margin:auto">
+<div popover class="note" id="close-up-popover">
+    Just text
+    <svg viewBox="0 0 1404 2066" width="1404" height="2066">    
+        <image xlink:href="{{ url_for('static', filename='images/weird_web/diary/page_crop.jpg') }}" />
+
+        <rect style="fill:transparent; cursor: pointer;" id="page" width="240" height="300" x="240"
+            y="60" />
+    </svg>
+    <button popovertarget="close-up-popover" popovertargetaction="hide">×</button>
+</div>
+
+<svg id="viewbox1" viewBox="0 0 571 430" width="571" height="430">
+    <image width="571" height="430"
+        xlink:href="{{ url_for('static', filename='images/weird_web/diary/diary_4.jpg') }}" />
+    <rect style="fill:transparent; cursor: pointer;" id="book-cover" width="240" height="300" x="240"
+        y="60" />
+</svg>
+
+<svg id="viewbox2" style="display:none" viewBox="0 0 571 430" width="571" height="430">
+    <image width="571" height="430"
+        xlink:href="{{ url_for('static', filename='images/weird_web/diary/diary_2.jpg') }}" />
+    <rect style="fill:transparent; cursor: pointer;" id="empty-page" width="240" height="300" x="240"
+        y="60" />
+</svg>
+
+<svg id="viewbox3" style="display:none" viewBox="0 0 571 430" width="571" height="430">
+    <image width="571" height="430"
+        xlink:href="{{ url_for('static', filename='images/weird_web/diary/diary_3.jpg') }}" />
+    <rect style="fill:transparent; cursor: pointer;" id="written-page" width="240" height="300" x="240"
+        y="60" />
+</svg>
+</div>
+{% endblock %}
+
+{% block footer %}
+
+
+
+
+{% endblock %}
