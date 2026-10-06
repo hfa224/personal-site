@@ -42,9 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
 {% endblock %}
 
 {% block content %}
-<div style="margin:auto">
+<div style="
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;">
 <div popover class="note" id="close-up-popover">
-    Just text
     <svg viewBox="0 0 562 827" width="562" height="827">    
         <image xlink:href="{{ url_for('static', filename='images/weird_web/diary/page_crop.jpg') }}" />
 <a href="https://kayleerowena.com/projects/weirdweb/2026/plastic" target="_blank">
@@ -64,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <button popovertarget="close-up-popover" popovertargetaction="hide">×</button>
 </div>
 
-<svg id="viewbox1" viewBox="0 0 571 430" width="571" height="430">
+<svg id="viewbox1" style="display:block" viewBox="0 0 571 430" width="571" height="430">
     <image width="571" height="430"
         xlink:href="{{ url_for('static', filename='images/weird_web/diary/diary_4.jpg') }}" />
     <rect style="fill:transparent; cursor: pointer;" id="book-cover" width="240" height="300" x="240"
