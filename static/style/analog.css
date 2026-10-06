@@ -1,4 +1,10 @@
 
+
+.body {
+  background: #fc6d00;
+background: linear-gradient(0deg,rgba(252, 109, 0, 1) 0%, rgba(255, 206, 99, 1) 100%);
+}
+
 .note {
   border: none;
 }
