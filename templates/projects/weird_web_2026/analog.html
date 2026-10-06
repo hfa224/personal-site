@@ -42,11 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 {% endblock %}
 
 {% block content %}
-<div style="
-  width: 100%;
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center;">
+<div style="margin: auto">
 <div popover class="note" id="close-up-popover">
     <svg viewBox="0 0 562 827" width="562" height="827">    
         <image xlink:href="{{ url_for('static', filename='images/weird_web/diary/page_crop.jpg') }}" />
