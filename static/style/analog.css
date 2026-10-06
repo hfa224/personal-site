@@ -2,3 +2,17 @@
 .note {
   border: none;
 }
+
+
+/* On mobile devices, display images in a verticle line */
+@media (max-width: 600px) {
+
+    main {
+        width: 100%;
+        margin: 0;
+    }
+
+    .note {
+        width: 100%;
+    }
+}
