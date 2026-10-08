@@ -1,0 +1,80 @@
+{% extends './projects/weird_web_2026/weird_web_template.html' %}
+
+
+{% block meta %}
+<title>Skeumorphism (weird web october)</title>
+<meta name="description" content="Some nonsense, a web page for the prompt Skeumorphism">
+{% endblock %}
+
+{% block style %}
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/skeumorphism.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='style/skeumorphism.css') }}">
+<link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://helenffion.cafe/projects/skeumorphism">
+<link rel="octo:octothorpes" href="Skeumorphism">
+
+<script>
+
+	function onClick() {
+		// make lyrics visible, change gif image
+		document.querySelector("#bird").classList.toggle("fade-out");
+		document.querySelector("#computer").classList.toggle("hidden");
+		document.querySelector("#computer").classList.toggle("fade-in");
+		document.querySelector(".envelope").classList.toggle("hidden");
+		document.querySelector(".envelope").classList.toggle("fade-in");
+
+		document.getElementById("email-button").disabled = true;
+		document.getElementById("email-button").innerHTML = "Sent!"; 
+	}
+
+</script>
+
+{% endblock %}
+
+{% block header %}
+<div><a href="{{ url_for('sheet') }}">&lt;- Sheet</a></div>
+<div>
+	<a href="{{ url_for('projects') }}">Weird Web October</a>
+</div>
+<div>
+	...
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<section>
+<div class="email-image-container">
+	<img id="bird" class="email-image"
+		src="{{ url_for('static', filename='images/weird_web/skeumorphism/animated-email-image-0597.gif') }}">
+	<img id="computer" class="email-image hidden"
+		src="{{ url_for('static', filename='images/weird_web/skeumorphism/animated-email-image-0635.gif') }}">
+</div>
+
+<button id="email-button" onClick="onClick()">Send an email?</button>
+</section>
+<br>
+<section>
+<div class="border envelope hidden">
+
+	<p>♫ When you send an email, you must give thanks ♫</p>
+	<p>♫ To the postmasters who came before ♫</p>
+	<p><i>Good morning postmaster! Anything for me?</i></p>
+	<p><i>Just some old shit</i></p>
+	<p>♫ When you send an email, this represents progress ♫</p>
+	<p>♫ Like a robot shoeing a horse ♫</p>
+	<p><i>Give me your hoof</i></p>
+	<p><i>* Whirring and banging noises*</i></p>
+	<p><i>My beautiful horse!</i></p>
+	<hr>
+	<p>(This is the <a href="https://en.wikipedia.org/wiki/Three_Bean_Salad">three bean salad</a> <a href="https://beansoundboard.boats/#Emails">email jingle</a>.)</p>
+
+</div>
+</section>
+{% endblock %}
+
+{% block footer %}
+
+
+
+{% endblock %}

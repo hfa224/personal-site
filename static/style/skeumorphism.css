@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&family=Caveat&family=Lexend:wght@300;400;700&display=swap');
+
+:root {
+    --dark-grey: #333333;
+    --ghost-white: #F4F4F8;
+    --bg: var(--ghost-white);
+    --fg: var(--dark-grey);
+
+    --font-family: "Space Mono";
+    --body-font-family: "Space Mono";
+}
+
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--body-font-family);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+main {
+    text-align: center;
+}
+
+.email-button {
+    background-image: url('../images/weird_web/skeumorphism/animated-email-image-0597.gif');
+    background-size: cover;
+    height: 150px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.border {
+    text-align: center;
+
+}
+
+.email-image-container {
+  position: relative;
+  margin: auto;
+  width: 168px;
+  height: 105px;
+  overflow: hidden;
+}
+
+.email-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+.fade-out {
+  animation: fade-out 2s ease-out forwards;
+}
+
+.fade-in {
+  animation: fade-in 2s ease-out forwards;
+}
+
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    display: block;
+  }
+
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.envelope {
+    border-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAABm0lEQVR4AdSSwW0DMQwEEzeUltJCKkkLaSkV2a/RYxaEdJBs0AaMxZIUOSTu9vX3c3+H/+3jTX4D9P/79/PK3/tVb1frZu8HqBt28wHK9wqoPXGUS7gOT556K3XE7YkHKIluGqC+gH21AHVcBF/VE3edPXUBSqKbBigXAdSeeKXVRap697fnXYCS6KYB6ovYn17A/e2ZF6Akuuk2KN/UTHcX3wbdBVh9P0BnF3Geb+mqus/Ms8gAJdBVA3R2oVOLXJ0ToKdATvcZoGzIN3N60Go/5sPDuwFKoKsGKJuw2avAmcd8zw1QF3TxATrb7FngXJL5nhOgLujiByibsJkAX2aZDw+DByiBrhqgbFLpqUWq/sQ9J0Bd0MUPUL6NVWXzq7ranzoONUAJdNVtUDaf6e4BtkF3AVbfByjfHA3siZ9S97dnToCS6KYByrcGqD3xSquLVPXub8+7ACXRTQPUF7GvFqCOi+CreuKus6cuQEl00wDlIoDaE0e5gOvw5Km3UkfcnniAkuimA5TNV9WLVO9W62bvB6gbdvMPAAAA//8t27xGAAAABklEQVQDAIqP1snrNXkBAAAAAElFTkSuQmCC') 14 / 14px / 0 round;
+    border-width: 14px;
+    border-style: solid;
+}
