@@ -53,6 +53,11 @@ header {
   line-height: var(--line-height);
 }
 
+footer {
+  position: fixed;
+  bottom: 0px;
+}
+
 /* On mobile devices, display images in a verticle line */
 @media (max-width: 600px) {
 
