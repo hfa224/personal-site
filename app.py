@@ -87,6 +87,12 @@ def sheet():
     """Renders weird web page"""
     return render_template("projects/weird_web_2026/sheet.html")
 
+@app.route("/projects/skeumorphism/")
+def skeumorphism():
+    """Renders weird web page"""
+    return render_template("projects/weird_web_2026/skeumorphism.html")
+
+
 @app.route("/counters/")
 def counters():
     """Renders counters page"""
