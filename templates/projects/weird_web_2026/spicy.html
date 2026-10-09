@@ -1,0 +1,87 @@
+{% extends './projects/weird_web_2026/weird_web_template.html' %}
+
+
+{% block meta %}
+<title>Skeumorphism (weird web october)</title>
+<meta name="description" content="Some nonsense, a web page for the prompt Spicy">
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/spicy.css') }}">
+<link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://helenffion.cafe/projects/spicy">
+<link rel="octo:octothorpes" href="Spicy">
+
+{% endblock %}
+
+{% block header %}
+<div><a href="{{ url_for('skeumorphism') }}">&lt;- Skeumorphism</a></div>
+<div>
+	<a href="{{ url_for('projects') }}">Weird Web October</a>
+</div>
+<div>
+	...
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<section>
+
+	<body>
+		<div class="flex-box">
+			<div>
+				<div class="radish-container">
+					<div class="radish-top"></div>
+					<div style="left:30px;" class="radish-top"></div>
+					<div style="left:40px;" class="radish-top"></div>
+					<div class="radish-body"></div>
+				</div>
+				<div style="transform: rotate(60deg)" class="radish-container">
+					<div class="radish-top"></div>
+					<div style="left:30px;" class="radish-top"></div>
+					<div style="left:40px;" class="radish-top"></div>
+					<div class="radish-body"></div>
+				</div>
+				<div style="transform: rotate(-40deg)" class="radish-container">
+					<div class="radish-top"></div>
+					<div style="left:30px;" class="radish-top"></div>
+					<div style="left:40px;" class="radish-top"></div>
+					<div class="radish-body"></div>
+				</div>
+				<div style="transform: rotate(92deg)" class="radish-container">
+					<div class="radish-top"></div>
+					<div style="left:30px;" class="radish-top"></div>
+					<div style="left:40px;" class="radish-top"></div>
+					<div class="radish-body"></div>
+				</div>
+			</div>
+			<div class="text">
+				<h1>Radishes!</h1>
+				<p>Radishes aren't capsaicin spicy, but they are a member of the mustard family and can have a strong,
+					peppery flavour.</p>
+				<p>Radishes contain natural chemical compounds called <i>glucosinolates</i>, which aren't firey by
+					themselves.
+					When a radish is bitten into, an enzyme called <i>myrosinase</i> is triggered, to break down the
+					glucosinolates into various
+					metabolites. This includes pungent compounds known as <i>isothiocyanates</i>, which produce the
+					flavour. </p>
+				</p>
+				<p>In Oaxaca they hold a festival called <a href="https://en.wikipedia.org/wiki/Night_of_the_Radishes">
+					Night of the Radishes</a>, where large radishes are carved into various scenes.</p>
+				<p>I created this page because I had a craving for radishes, and I have fond memories of eating them
+					from the garden when I was a child. Unfortunately, I cannot find any in the supermarket near me. If
+					you can find radishes, you can eat them raw, in a salad, or with butter and salt (as I've heard the
+					French do).</p>
+				<p> They may be spicy or mild, because it depends on the growing conditions; with warmer weather and
+					stressful conditions producing more pungent radishes. Happy eating!</p>
+			</div>
+		</div>
+</section>
+{% endblock %}
+
+{% block footer %}
+
+
+
+{% endblock %}
