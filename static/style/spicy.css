@@ -26,6 +26,8 @@ header {
   /* or inline-flex */
   flex-direction: row;
   font-size: 19px;
+  overflow: hidden;
+  height: 100%;
 }
 
 a {
@@ -80,6 +82,15 @@ a:visited {
 /* On mobile devices, display images in a verticle line */
 @media (max-width: 600px) {
 
+  body {
+    margin: 0;
+  }
+
+  main {
+    width: 100%;
+    margin: 0;
+  }
+
   .radish-container {
     background: transparent;
     width: 100px;
@@ -87,6 +98,13 @@ a:visited {
     position: relative;
   }
 
+  .flex-box {
+  display: flex;
+  /* or inline-flex */
+  flex-direction: row;
+  font-size: 19px;
+  overflow: auto;
+}
 
   .radish-body {
     background: #e95474;
