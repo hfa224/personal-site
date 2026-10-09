@@ -92,6 +92,11 @@ def skeumorphism():
     """Renders weird web page"""
     return render_template("projects/weird_web_2026/skeumorphism.html")
 
+@app.route("/projects/spicy/")
+def spicy():
+    """Renders weird web page"""
+    return render_template("projects/weird_web_2026/spicy.html")
+
 
 @app.route("/counters/")
 def counters():
