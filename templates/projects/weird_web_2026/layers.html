@@ -1,0 +1,71 @@
+{% extends './projects/weird_web_2026/weird_web_template.html' %}
+
+
+{% block meta %}
+<title>Layers (weird web october)</title>
+<meta name="description" content="Cryptic clues, a web page for the prompt Layers">
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/layers.css') }}">
+<link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://helenffion.cafe/projects/layers">
+<link rel="octo:octothorpes" href="Layers">
+
+{% endblock %}
+
+{% block header %}
+<div><a href="{{ url_for('spicy') }}">&lt;- Spicy</a></div>
+<div>
+	<a href="{{ url_for('projects') }}">Weird Web October</a>
+</div>
+<div>
+	...
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div style="display:flex;flex-direction: row;justify-content:space-evenly;height:80%;">
+	<div style="width:50%;">
+		<p><img style="float:left" src="{{ url_for('static', filename='images/stickers/hen.png') }}">
+		Sometimes, layers can be chickens, often in cryptic crosswords.
+		<details>
+			<summary>What is a cryptic crossword?</summary>
+			<p>Cryptic Crosswords are a type of crossword where the clue is written as wordplay, rather than a "stright"
+				definition. e.g.,
+				a crossword clue for "Dog" may be: "Male sheep (3)", and a cryptic clue may be "To scar in reverse for butter (3)".</p>
+			<p> The cryptic clue contains 2 parts: a defintion (usually trickier than a regular clue),
+				and wordplay which enables you to solve for the answer independently of the definition (in this case, To scar
+				(mar)
+				reversed gives Ram, the solution -> an animal that butts).</p>
+			<p>Cryptic crosswords have quite formal rules for the type of wordplay which is allowed which can be
+				inscrutable
+				to a beginner. I learnt to do them at work through doing the <a
+					href="https://www.theguardian.com/crosswords/series/cryptic">Guardian cryptic</a> every lunchtime with
+					my colleagues.</p>
+			</p>
+	</div>
+	</details>
+	<div style="width:50%;padding-top:10px;">
+		Here's a list of some other alternate definitions:
+
+		<p>Is a flower a flower 🌺, or a <a
+				href="https://www.theguardian.com/crosswords/crossword-blog/2019/feb/18/cryptic-crosswords-for-beginners-river-clues-answers">flower</a>
+			🌊?</p>
+		<p>Is lower to lower ⬇️, or a lower 🐄?</p>
+		<p>Is a butter butter 🧈, or a butter 🐏?</p>
+		<p>Is a shower a shower 🚿, or a shower 📺?</p>
+		<p>Is close to be close, or to close?</p>
+		<p>Is detail to detail, or to de-tail?</p>
+	</div>
+</div>
+<p>With thanks to <a href="https://a.ndr.ooo/weird/2026/layers/">androo</a> for the hen sticker, which is much nicer than the available emojis :)</p>
+
+{% endblock %}
+
+{% block footer %}
+
+
+
+{% endblock %}
