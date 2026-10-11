@@ -1,0 +1,58 @@
+{% extends './projects/weird_web_2026/weird_web_template.html' %}
+
+
+{% block meta %}
+<title>Stuck (weird web october)</title>
+<meta name="description" content="Stop overthinking!!!, a web page for the prompt Stuck">
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/stuck.css') }}">
+<link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://helenffion.cafe/projects/stuck">
+<link rel="octo:octothorpes" href="Stuck">
+
+{% endblock %}
+
+{% block header %}
+<div><a href="{{ url_for('spicy') }}">&lt;- Spicy</a></div>
+<div>
+  <a href="{{ url_for('projects') }}">Weird Web October</a>
+</div>
+<div>
+  ...
+</div>
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>For my fellow ruminators</h1>
+  <div class="review">
+    <span class="big-number">1.</span> Thinking is fine, over-thinking is unhelpful.
+  </div>
+
+  <div class="review">
+    <span class="big-number">2.</span> We love to analyse our feelings and we should be neutrally observing them
+    instead. You are not your feelings, you can watch them with a dispassionate distance.
+  </div>
+
+  <div class="review">
+    <span class="big-number">3.</span> <img
+      src="{{ url_for('static', filename='images/weird_web/cows/cow-1.png') }}"
+      style="transform: rotateY(180deg);"> Think of the cow, who ruminates on food to gain more nutrition from it's
+    sparse diet. That's what we're doing! And even the cow eventually shits it out. We are chewing grass forever, for
+    comfort not new insight.
+  </div>
+  <div class="review">
+    <span class="big-number">5.</span>Thinking over your problems can reinforce them, but trying something new can
+    create new pathways.
+  </div>
+  <h1>Take action!!!!</h1>
+</div>
+{% endblock %}
+
+{% block footer %}
+
+
+
+{% endblock %}

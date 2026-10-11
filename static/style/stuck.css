@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Isometra&display=swap");
+
+:root {
+  --dark-grey: #333333;
+  --moonstone: #2AB7CA;
+  --ghost-white: #F4F4F8;
+  --bg: var(--ghost-white);
+  --fg: var(--dark-grey);
+  --body-font-family: "Roboto Serif";
+}
+
+html,
+body {
+  background-repeat: no-repeat;
+  margin: 0px;
+  background: linear-gradient(to bottom, #d7e4f9, #c6ffad, #ffb320, #ffda04) fixed;
+  font-family: var(--body-font-family);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+main {
+  margin: auto;
+  width: 70%;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Isometra";
+  font-size: 3em;
+}
+
+.container {
+  display: flex;
+  row-gap: 1em;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.review {
+  padding: 20px;
+  background: white;
+  text-align: left;
+}
+
+.big-number {
+  font-size: 5em;
+  float: left;
+  line-height: 0.5em;
+}
+
+.review img {
+  height: 200px;
+  float: right;
+  padding: 20px;
+}
+
+/* On mobile devices, display images in a verticle line */
+@media (max-width: 600px) {
+
+  .container {
+    display: flex;
+    row-gap: 1em;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  main {
+  margin: auto;
+  width:90%;
+  text-align: center;
+}
+
+
+h1 {
+  font-family: "Isometra";
+  font-size: 2em;
+}
+
+  .review {
+    padding: 5px;
+    background: white;
+    text-align: auto;
+  }
+
+  .big-number {
+    font-size: 2em;
+    font-weight: bold;
+    float: left;
+    line-height: 0.5em;
+  }
+
+  .review img {
+    height: 100px;
+    float: right;
+    padding: 5px;
+  }
+}
