@@ -1,133 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Isometra&display=swap");
 
 :root {
   --dark-grey: #333333;
+  --moonstone: #2AB7CA;
   --ghost-white: #F4F4F8;
-  --radish-pink: #e95474;
-  --light-green: #9FDB56;
   --bg: var(--ghost-white);
-  --fg: var(--radish-pink);
-  --body-font-family: "Fraunces";
+  --fg: var(--dark-grey);
+  --body-font-family: "Roboto Serif";
 }
 
-body,
-header {
-
-  background: var(--bg);
-  color: var(--fg);
+html,
+body {
+  background-repeat: no-repeat;
+  margin: 0px;
+  background: linear-gradient(to bottom, #d7e4f9, #c6ffad, #ffb320, #ffda04) fixed;
   font-family: var(--body-font-family);
-  font-size: 19px;
-  font-weight: 300;
-  line-height: 1.8;
+  font-size: 13px;
+  font-weight: 400;
 }
 
-.flex-box {
+main {
+  margin: auto;
+  width: 70%;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Isometra";
+  font-size: 3em;
+}
+
+.container {
   display: flex;
-  /* or inline-flex */
-  flex-direction: row;
-  font-size: 19px;
-  overflow: hidden;
-  height: 100%;
+  row-gap: 1em;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-a {
-  color: var(--fg);
-  text-decoration: none;
+.review {
+  padding: 20px;
+  background: white;
+  text-align: left;
 }
 
-a:hover {
-  color: var(--fg);
-  text-decoration: underline dotted;
+.big-number {
+  font-size: 5em;
+  float: left;
+  line-height: 0.5em;
 }
 
-a:visited {
-  color: var(--light-green)
-}
-
-/* radish stuff */
-
-.radish-container {
-  background: transparent;
-  width: 200px;
+.review img {
   height: 200px;
-  position: relative;
-}
-
-
-.radish-body {
-  background: #e95474;
-  background: linear-gradient(180deg, rgba(233, 84, 116, 1) 63%, rgba(255, 255, 255, 1) 92%);
-  /*clip-path: circle(70px);*/
-  border-radius: 40% 40% 60% 60%;
-  /* border-radius: 60% 60% 40% 40% / 50% 50% 50% 50%;*/
-  width: 130px;
-  height: 120px;
-  position: absolute;
-  left: 10px;
-  top: 50px;
-  z-index: 2;
-}
-
-.radish-top {
-  position: absolute;
-  left: 40px;
-  top: 10px;
-  z-index: 1;
-  width: 0;
-  height: 0;
-  border-bottom: 80px solid #9FDB56;
-  border-right: 40px solid transparent;
+  float: right;
+  padding: 20px;
 }
 
 /* On mobile devices, display images in a verticle line */
 @media (max-width: 600px) {
 
-  body {
-    margin: 0;
+  .container {
+    display: flex;
+    row-gap: 1em;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 
   main {
-    width: 100%;
-    margin: 0;
-  }
-
-  .radish-container {
-    background: transparent;
-    width: 100px;
-    height: 100px;
-    position: relative;
-  }
-
-  .flex-box {
-  display: flex;
-  /* or inline-flex */
-  flex-direction: row;
-  font-size: 19px;
-  overflow: auto;
+  margin: 0;
+  text-align: center;
 }
 
-  .radish-body {
-    background: #e95474;
-    background: linear-gradient(180deg, rgba(233, 84, 116, 1) 63%, rgba(255, 255, 255, 1) 92%);
-    /*clip-path: circle(70px);*/
-    border-radius: 40% 40% 60% 60%;
-    /* border-radius: 60% 60% 40% 40% / 50% 50% 50% 50%;*/
-    width: 65px;
-    height: 60px;
-    position: absolute;
-    left: 5%;
-    top: 25px;
-    z-index: 2;
+
+h1 {
+  font-family: "Isometra";
+  font-size: 2em;
+}
+
+  .review {
+    padding: 5px;
+    background: white;
+    text-align: justify;
   }
 
-  .radish-top {
-    position: absolute;
-    left: 20px;
-    top: 10px;
-    z-index: 1;
-    width: 0;
-    height: 0;
-    border-bottom: 20px solid #9FDB56;
-    border-right: 20px solid transparent;
+  .big-number {
+    font-size: 2em;
+    font-weight: bold;
+    float: left;
+    line-height: 0.5em;
+  }
+
+  .review img {
+    height: 100px;
+    float: right;
+    padding: 5px;
   }
 }
