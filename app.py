@@ -97,6 +97,11 @@ def spicy():
     """Renders weird web page"""
     return render_template("projects/weird_web_2026/spicy.html")
 
+@app.route("/projects/stuck/")
+def stuck():
+    """Renders weird web page"""
+    return render_template("projects/weird_web_2026/stuck.html")
+
 
 @app.route("/counters/")
 def counters():

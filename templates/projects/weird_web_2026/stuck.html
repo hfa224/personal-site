@@ -1,0 +1,36 @@
+{% extends './projects/weird_web_2026/weird_web_template.html' %}
+
+
+{% block meta %}
+<title>Spicy (weird web october)</title>
+<meta name="description" content="Stop overthinking!!!, a web page for the prompt Stuck">
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='style/stuck.css') }}">
+<link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://helenffion.cafe/projects/stuc">
+<link rel="octo:octothorpes" href="Stuck">
+
+{% endblock %}
+
+{% block header %}
+<div><a href="{{ url_for('spicy') }}">&lt;- Spicy</a></div>
+<div>
+	<a href="{{ url_for('projects') }}">Weird Web October</a>
+</div>
+<div>
+	...
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+
+{% endblock %}
+
+{% block footer %}
+
+
+
+{% endblock %}
