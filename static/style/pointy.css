@@ -66,6 +66,16 @@ h1 {
   font-weight: 800;
 }
 
+.subtitle {
+    line-height: 0.5em;
+    font-size: 2em;
+      color: white;
+  filter: drop-shadow(0 0 0.5rem black); 
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+}
+
 .words {
   position: absolute;
   left: 95px;
