@@ -1,0 +1,47 @@
+{% extends './projects/weird_web_2026/weird_web_template.html' %}
+
+
+{% block meta %}
+<title>Pointy (weird web october)</title>
+<meta name="description" content="It's conker season, a web page for the prompt Pointy">
+{% endblock %}
+
+{% block style %}
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/pointy.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='style/pointy.css') }}">
+<link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://helenffion.cafe/projects/pointy">
+<link rel="octo:octothorpes" href="Pointy">
+
+{% endblock %}
+
+{% block header %}
+<div><a href="{{ url_for('stuck') }}">&lt;- Stuck</a></div>
+<div>
+  <a href="{{ url_for('projects') }}">Weird Web October</a>
+</div>
+<div>
+  ...
+</div>
+
+{% endblock %}
+
+{% block content %}
+<div class="container" style="margin:auto; text-align:center;">
+<h1>It's conker season!</h1>
+    <div class="box" id="clicker">
+  </div>
+
+    <div class="prize-container" id="prize">
+      <img class="rotate star" 
+      src="{{ url_for('static', filename='images/weird_web/conkers/star.png') }}">
+      <img  class="conker"
+      src="{{ url_for('static', filename='images/weird_web/conkers/conker.png') }}">
+      <p class="prize-text"><h1>A Shiny Conker!</h1></p>
+    </div>
+{% endblock %}
+
+{% block footer %}
+
+
+
+{% endblock %}

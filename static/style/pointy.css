@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Eczar&family=Lexend:wght@100..900&display=swap");
+
+html {
+  height: 100%;
+  background: url(../../static/images/weird_web/conkers/conkers_floor.jpg) repeat; 
+  background-size: contain;
+}
+
+body, main {
+    font-family: 'Times New Roman', Times, serif;
+    background: transparent;
+    color: white;
+    font-family: 'Eczar';
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  position: relative;
+  cursor: pointer;
+    background: url(../../static/images/weird_web/conkers/conker_crop_2.png) no-repeat; 
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+
+.green {
+    background: url(../../static/images/weird_web/conkers/open-conker-crop.png) no-repeat; 
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+
+.prize-container {
+    position:relative;height:400px;display:none;
+}
+
+.conker {
+    position:absolute;height:150px;top:33%;left:42%;
+}
+
+.star {
+    height:400px;
+}
+
+.rotate {
+  transform-origin: center;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-name: yoyo;
+  animation-timing-function: linear;
+}
+
+@keyframes yoyo {
+  from { transform: rotate(  0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+h1 {
+  font-size: 5em;
+  filter: drop-shadow(0 0 0.75rem black); 
+  line-height:0.5em;
+  font-weight: 800;
+}
+
+.words {
+  position: absolute;
+  left: 95px;
+  top: 30px;
+  font-size: 60px;
+  transform: rotate(20deg);
+  color: white;
+  filter: drop-shadow(0 0 0.5rem black); 
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.up {
+  left: 210px;
+  top: 30px;
+  transform: rotate(20deg);
+}
+
+.down {
+  left: 210px;
+  top: 140px;
+  transform: rotate(50deg);
+}
+.right {
+  left: -60px;
+  top: 120px;
+  transform: rotate(-20deg);
+}
+.left {
+  left: -100px;
+  top: 40px;
+  transform: rotate(-40deg);
+}
+
+.elementToFadeInAndOut {
+    -webkit-animation: fadeinout 1s linear forwards;
+    animation: fadeinout 1s linear forwards;
+}
+
+@-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+
+/* On mobile devices, adjust conker placement */
+@media (max-width: 600px) {
+
+    .star {
+        height: 300px;
+    }
+    h1 {
+        line-height: 1em;
+        font-size: 3em;
+    }
+    .conker {
+    position:absolute;height:150px;top:20%;left:30%;
+}
+}
