@@ -26,9 +26,10 @@
 {% endblock %}
 
 {% block content %}
-<div class="container" style="width:100%;margin:auto; text-align:center;">
+<div class="container" style="width:50%;margin:auto; text-align:center;">
 <h1>It's conker season!</h1>
     <div class="box" id="clicker">
+  </div>
 
     <div class="prize-container" id="prize">
       <img class="rotate" style="height:400px"
@@ -36,7 +37,6 @@
       <img  class="conker"
       src="{{ url_for('static', filename='images/weird_web/conkers/conker.png') }}">
     </div>
-  </div>
 {% endblock %}
 
 {% block footer %}

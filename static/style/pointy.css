@@ -60,23 +60,23 @@ body, main {
 }
 
 .up {
-  left: 95px;
+  left: 210px;
   top: 30px;
   transform: rotate(20deg);
 }
 
 .down {
-  left: 95px;
+  left: 210px;
   top: 140px;
   transform: rotate(50deg);
 }
 .right {
-  left: 180px;
+  left: -40px;
   top: 60px;
   transform: rotate(-20deg);
 }
 .left {
-  left: 20px;
+  left: -20px;
   top: 40px;
   transform: rotate(-40deg);
 }

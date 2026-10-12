@@ -8,9 +8,10 @@ function onClickEventHandler() {
     if (clickCounter >= 10) {
         clicker.classList.add("green")
     } if (clickCounter >= 20) {
-        clicker.style.display = "none";
+        clicker.style.display = 'none';
         var prize = document.getElementById("prize")
-        prize.style.display = "block";
+        prize.style.display = 'block';
+        clicker.removeEventListener('click', this.onClickEventHandler);
     } else {
     }
 }
