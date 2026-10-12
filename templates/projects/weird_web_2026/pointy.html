@@ -26,30 +26,17 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-  <h1>For my fellow ruminators</h1>
-  <div class="review">
-    <span class="big-number">1.</span> Thinking is fine, over-thinking is unhelpful.
-  </div>
+<div class="container" style="width:100%;margin:auto; text-align:center;">
+<h1>It's conker season!</h1>
+    <div class="box" id="clicker">
 
-  <div class="review">
-    <span class="big-number">2.</span> We love to analyse our feelings and we should be neutrally observing them
-    instead. You are not your feelings, you can watch them with a dispassionate distance.
+    <div class="prize-container" id="prize">
+      <img class="rotate" style="height:400px"
+      src="{{ url_for('static', filename='images/weird_web/conkers/star.png') }}">
+      <img  class="conker"
+      src="{{ url_for('static', filename='images/weird_web/conkers/conker.png') }}">
+    </div>
   </div>
-
-  <div class="review">
-    <span class="big-number">3.</span> <img
-      src="{{ url_for('static', filename='images/weird_web/cows/cow-1.png') }}"
-      style="transform: rotateY(180deg);"> Think of the cow, who ruminates on food to gain more nutrition from it's
-    sparse diet. That's what we're doing! And even the cow eventually shits it out. We are chewing grass forever, for
-    comfort not new insight.
-  </div>
-  <div class="review">
-    <span class="big-number">5.</span>Thinking over your problems can reinforce them, but trying something new can
-    create new pathways.
-  </div>
-  <h1>Take action!!!!</h1>
-</div>
 {% endblock %}
 
 {% block footer %}

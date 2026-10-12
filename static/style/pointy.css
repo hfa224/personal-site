@@ -1,0 +1,97 @@
+html {
+  height: 100%;
+}
+
+body, main {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  position: relative;
+  cursor: pointer;
+    background: url(../../static/images/weird_web/conkers/conker_crop_2.png) no-repeat; 
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+
+.green {
+    background: url(../../static/images/weird_web/conkers/open-conker-crop.png) no-repeat; 
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+
+.prize-container {
+    position:relative;height:400px;display:none;
+}
+
+.conker {
+    position:absolute;height:150px;top:150px;left:200px;
+}
+
+.rotate {
+  transform-origin: center;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-name: yoyo;
+  animation-timing-function: linear;
+}
+
+@keyframes yoyo {
+  from { transform: rotate(  0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.words {
+  position: absolute;
+  left: 95px;
+  top: 30px;
+  font-size: 60px;
+  transform: rotate(20deg);
+  color: black;
+  /*-webkit-text-fill-color: white;
+  -webkit-text-stroke: 1px;*/
+}
+
+.up {
+  left: 95px;
+  top: 30px;
+  transform: rotate(20deg);
+}
+
+.down {
+  left: 95px;
+  top: 140px;
+  transform: rotate(50deg);
+}
+.right {
+  left: 180px;
+  top: 60px;
+  transform: rotate(-20deg);
+}
+.left {
+  left: 20px;
+  top: 40px;
+  transform: rotate(-40deg);
+}
+
+.elementToFadeInAndOut {
+    -webkit-animation: fadeinout 0.5s linear forwards;
+    animation: fadeinout 0.5s linear forwards;
+}
+
+@-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
