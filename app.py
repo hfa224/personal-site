@@ -102,6 +102,10 @@ def stuck():
     """Renders weird web page"""
     return render_template("projects/weird_web_2026/stuck.html")
 
+@app.route("/projects/pointy/")
+def pointy():
+    """Renders weird web page"""
+    return render_template("projects/weird_web_2026/pointy.html")
 
 @app.route("/counters/")
 def counters():
