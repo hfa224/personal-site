@@ -5,9 +5,9 @@ function onClickEventHandler() {
     var clicker = document.getElementById("clicker")
     createOwDiv(document);
     clickCounter = clickCounter + 1;
-    if (clickCounter >= 10) {
+    if (clickCounter >= 5) {
         clicker.classList.add("green")
-    } if (clickCounter >= 20) {
+    } if (clickCounter >= 10) {
         clicker.style.display = 'none';
         var prize = document.getElementById("prize")
         prize.style.display = 'block';

@@ -1,9 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Eczar&family=Lexend:wght@100..900&display=swap");
+
 html {
   height: 100%;
+  background: url(../../static/images/weird_web/conkers_floor.jpg) repeat; 
+  background-size: contain;
 }
 
 body, main {
     font-family: 'Times New Roman', Times, serif;
+    background: transparent;
+    color: white;
+    font-family: 'Eczar';
 }
 
 .box {
@@ -32,7 +39,7 @@ body, main {
 }
 
 .conker {
-    position:absolute;height:150px;top:150px;left:200px;
+    position:absolute;height:150px;top:120px;left:450px;
 }
 
 .rotate {
@@ -48,15 +55,31 @@ body, main {
   to   { transform: rotate(360deg); }
 }
 
+h1 {
+  font-size: 5em;
+  filter: drop-shadow(0 0 0.75rem black); 
+  line-height:0.5em;
+  font-weight: 800;
+}
+
 .words {
   position: absolute;
   left: 95px;
   top: 30px;
   font-size: 60px;
   transform: rotate(20deg);
-  color: black;
-  /*-webkit-text-fill-color: white;
-  -webkit-text-stroke: 1px;*/
+  color: white;
+  filter: drop-shadow(0 0 0.5rem black); 
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
 }
 
 .up {
@@ -71,19 +94,19 @@ body, main {
   transform: rotate(50deg);
 }
 .right {
-  left: -40px;
-  top: 60px;
+  left: -60px;
+  top: 120px;
   transform: rotate(-20deg);
 }
 .left {
-  left: -20px;
+  left: -100px;
   top: 40px;
   transform: rotate(-40deg);
 }
 
 .elementToFadeInAndOut {
-    -webkit-animation: fadeinout 0.5s linear forwards;
-    animation: fadeinout 0.5s linear forwards;
+    -webkit-animation: fadeinout 1s linear forwards;
+    animation: fadeinout 1s linear forwards;
 }
 
 @-webkit-keyframes fadeinout {
