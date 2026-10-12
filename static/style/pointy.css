@@ -130,7 +130,11 @@ h1 {
     .star {
         height: 300px;
     }
+    h1 {
+        line-height: 1em;
+        font-size: 3em;
+    }
     .conker {
-    position:absolute;height:150px;top:20%;left:50%;
+    position:absolute;height:150px;top:20%;left:30%;
 }
 }
