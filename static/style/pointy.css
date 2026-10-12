@@ -2,7 +2,7 @@
 
 html {
   height: 100%;
-  background: url(../../static/images/weird_web/conkers_floor.jpg) repeat; 
+  background: url(../../static/images/weird_web/conkers/conkers_floor.jpg) repeat; 
   background-size: contain;
 }
 
@@ -39,7 +39,11 @@ body, main {
 }
 
 .conker {
-    position:absolute;height:150px;top:120px;left:450px;
+    position:absolute;height:150px;top:33%;left:42%;
+}
+
+.star {
+    height:400px;
 }
 
 .rotate {
@@ -117,4 +121,16 @@ h1 {
 @keyframes fadeinout {
   0%,100% { opacity: 0; }
   50% { opacity: 1; }
+}
+
+
+/* On mobile devices, adjust conker placement */
+@media (max-width: 600px) {
+
+    .star {
+        height: 300px;
+    }
+    .conker {
+    position:absolute;height:150px;top:20%;left:50%;
+}
 }
