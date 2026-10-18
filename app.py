@@ -198,7 +198,7 @@ def photos_2024_12_01():
 
 def produce_photo_page(photos_folder_name):
     """Renders the photo template page for the photos in the given photos_folder_name"""
-    photo_folder_name = "images/" + photos_folder_name
+    photo_folder_name = "images/photos/" + photos_folder_name
     image_list = []
     for file in os.listdir(os.path.join("static", photo_folder_name)):
         if "txt" not in file:
@@ -206,7 +206,7 @@ def produce_photo_page(photos_folder_name):
     # sort list
     image_list.sort()
     with open(
-        "static/images/" + photos_folder_name + "/descriptions.txt", encoding="utf-8"
+        "static/images/photos/" + photos_folder_name + "/descriptions.txt", encoding="utf-8"
     ) as f:
         lines = [put_links_in_descriptions(line.rstrip("\n")) for line in f]
     return render_template(
