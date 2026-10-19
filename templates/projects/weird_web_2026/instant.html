@@ -1,0 +1,38 @@
+{% extends './projects/weird_web_2026/weird_web_template.html' %}
+
+
+{% block meta %}
+<title>Instant (weird web october)</title>
+<meta name="description" content="Counting, a web page for the prompt Instant">
+{% endblock %}
+
+{% block style %}
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/instant.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='style/instant.css') }}">
+<link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://helenffion.cafe/projects/instant">
+<link rel="octo:octothorpes" href="Instant">
+
+{% endblock %}
+
+{% block header %}
+<div><a href="{{ url_for('sheet') }}">&lt;- Pointy</a></div>
+<div>
+	<a href="{{ url_for('projects') }}">Weird Web October</a>
+</div>
+<div>
+	<a href="{{ url_for('spicy') }}">...</a>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<div id="target" class="fade-out">Text</div>
+
+{% endblock %}
+
+{% block footer %}
+
+
+
+{% endblock %}
