@@ -1,0 +1,68 @@
+{% extends './projects/weird_web_2026/weird_web_template.html' %}
+
+
+
+{% block meta %}
+<title>Distort (weird web october)</title>
+<meta name="description" content="Some little fish, a web page for the prompt Distort">
+{% endblock %}
+
+{% block style %}
+
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/distort.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='style/distort.css') }}">
+<link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://helenffion.cafe/projects/distort">
+<link rel="octo:octothorpes" href="Distort">
+
+<style>
+
+</style>
+
+<script>
+
+
+
+</script>
+
+
+{% endblock %}
+
+{% block header %}
+<div>
+  <a href="{{ url_for('spark') }}">&lt;- Spark</a>
+</div>
+<div>
+  <a href="{{ url_for('projects') }}">Weird Web October</a>
+</div>
+<div>
+  <a href="{{ url_for('plastic') }}">Plastic - &gt;</a>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <box1 id="cat"></box1>
+  <box2 id="eye"></box2>
+  <box3 id="bird">
+  </box3>
+  <box4></box4>
+  <box5></box5>
+  <content>
+    "A ghost bird might be a hawk in one place, a crow in another, depending on the context. The sparrow that shot up
+    into the blue sky one morning might transform mid-flight into an osprey the next. This was the way of things here.
+    There were no reasons so mighty that they could override the desire to be in accord with the tides and the passage
+    of seasons and the rhythms underlying everything around me."
+    “Bodies could be beacons, too, Saul knew. A lighthouse was a fixed beacon for a fixed purpose; a person was a moving
+    one. But people still emanated light in their way, still shone across the miles as a warning, an invitation, or even
+    just a static signal. People opened up so they became a brightness, or they went dark. They turned their light
+    inward sometimes, so you couldn’t see it, because they had no other choice.”
+    <a href="https://css-tricks.com/grainy-gradients/">Grainy Gradients</a>
+  </content>
+</div>
+{% endblock %}
+
+{% block footer %}
+
+
+{% endblock %}
