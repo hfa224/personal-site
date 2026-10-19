@@ -107,6 +107,11 @@ def pointy():
     """Renders weird web page"""
     return render_template("projects/weird_web_2026/pointy.html")
 
+@app.route("/projects/distort/")
+def distort():
+    """Renders weird web page"""
+    return render_template("projects/weird_web_2026/distort.html")
+
 @app.route("/counters/")
 def counters():
     """Renders counters page"""

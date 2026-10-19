@@ -1,0 +1,59 @@
+{% extends './projects/weird_web_2026/weird_web_template.html' %}
+
+
+
+{% block meta %}
+<title>Distort (weird web october)</title>
+<meta name="description" content="A web page for the prompt Distort">
+{% endblock %}
+
+{% block style %}
+
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/distort.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='style/distort.css') }}">
+<link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://helenffion.cafe/projects/distort">
+<link rel="octo:octothorpes" href="Distort">
+
+<style>
+
+</style>
+
+<script>
+
+
+
+</script>
+
+
+{% endblock %}
+
+{% block header %}
+<div>
+  <a href="{{ url_for('pointy') }}">&lt;- Pointy</a>
+</div>
+<div>
+  <a href="{{ url_for('projects') }}">Weird Web October</a>
+</div>
+<div>
+  <a href="">...</a>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <box1 id="cat"></box1>
+  <box2 id="eye"></box2>
+  <box3 id="bird">
+  </box3>
+  <content>
+   “We were neither what we had been nor what we would become once we reached our destination.”
+<cite>Annihilation, Jeff VanderMeer</cite>
+  </content>
+</div>
+{% endblock %}
+
+{% block footer %}
+
+
+{% endblock %}
