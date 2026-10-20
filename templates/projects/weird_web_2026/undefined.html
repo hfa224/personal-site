@@ -1,0 +1,53 @@
+{% extends './projects/weird_web_2026/weird_web_template.html' %}
+
+
+
+{% block meta %}
+<title>Undefined (weird web october)</title>
+<meta name="description" content="A web page for the prompt Undefined">
+{% endblock %}
+
+{% block style %}
+
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/undefeined.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='style/undefined.css') }}">
+<link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://helenffion.cafe/projects/undefined">
+<link rel="octo:octothorpes" href="Undefined" >
+<style>
+
+</style>
+
+<script>
+
+
+
+</script>
+
+
+{% endblock %}
+
+{% block header %}
+<div>
+  <a href="{{ url_for('distort') }}">&lt;- Distorted</a>
+</div>
+<div>
+  <a href="{{ url_for('projects') }}">Weird Web October</a>
+</div>
+<div>
+  <a href="">...</a>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h2>You're derefencing a null pointer!</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bLHL75H_VEM?si=Kq2HmC3rTm4rgN0F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+
+
+{% endblock %}
