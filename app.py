@@ -112,6 +112,11 @@ def distort():
     """Renders weird web page"""
     return render_template("projects/weird_web_2026/distort.html")
 
+@app.route("/projects/undefined/")
+def undefined():
+    """Renders weird web page"""
+    return render_template("projects/weird_web_2026/undefined.html")
+
 @app.route("/counters/")
 def counters():
     """Renders counters page"""
