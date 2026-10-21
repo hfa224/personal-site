@@ -53,8 +53,15 @@ main {
 }
 
 .face {
-    width: 200px;
-    height: 100px;
+    width: 300px;
+    height: 200px;
 }
+
+.text {
+    position: absolute;
+    top: -40px;
+    left: 100px;
+}
+
 
 }
