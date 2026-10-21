@@ -117,6 +117,11 @@ def undefined():
     """Renders weird web page"""
     return render_template("projects/weird_web_2026/undefined.html")
 
+@app.route("/projects/illusion/")
+def illusion():
+    """Renders weird web page"""
+    return render_template("projects/weird_web_2026/illusion.html")
+
 @app.route("/counters/")
 def counters():
     """Renders counters page"""
