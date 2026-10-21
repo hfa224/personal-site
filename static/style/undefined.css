@@ -21,25 +21,3 @@ code {
     background: blue;
     color: white;
 }
-
-
-/* Extra small devices (phones, 600px and down) */
-@media (max-width: 600px) {
-
-    .container>box2 {
-    grid-area: b;
-    border: 1px solid white;
-    background-position: bottom 80px right 250px;
-}
-    .container {
-        display: grid;
-        width: 580px;
-        height: 400px;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 2fr;
-        /* 3 rows, 2 columns */
-        grid-template-areas:
-            "a b c"
-            "f f f";
-    }
-}

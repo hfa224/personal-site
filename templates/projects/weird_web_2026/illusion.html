@@ -1,0 +1,62 @@
+{% extends './projects/weird_web_2026/weird_web_template.html' %}
+
+
+
+{% block meta %}
+<title>Illusion (weird web october)</title>
+<meta name="description" content="A web page for the prompt Illusion">
+{% endblock %}
+
+{% block style %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style/illusion.css') }}">
+<link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://helenffion.cafe/projects/illusion">
+<link rel="octo:octothorpes" href="Illusion" >
+<style>
+
+</style>
+
+<script>
+
+
+
+</script>
+
+
+{% endblock %}
+
+{% block header %}
+<div>
+  <a href="{{ url_for('undefined') }}">&lt;- Undefined</a>
+</div>
+<div>
+  <a href="{{ url_for('projects') }}">Weird Web October</a>
+</div>
+<div>
+  <a href="">...</a>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <img class="face" src="{{ url_for('static', filename='images/weird_web/illusion/cropped_face_small.jpg') }}" >
+  <div class="text">
+    Ahhhhhhhhhhhhhh!
+  </div>
+</div>
+<div class="definition">
+<p>pareidolia, <b>noun</b>:</p>
+<p>The tendency to perceive a specific, often meaningful image in a random or ambiguous visual pattern.
+  Face pareidolia is the perception of illusory faces in inanimate objects.</p>
+</div>
+{% endblock %}
+
+{% block footer %}
+
+
+{% endblock %}
