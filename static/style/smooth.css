@@ -1,0 +1,60 @@
+
+
+:root {
+  --font-size: 15px;
+}
+
+body, main {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  background-color: #ffcfc4;
+  color: #0f261f;
+}
+
+a {
+  color: #ff616b;
+}
+
+a:hover {
+  color: #ff616b;
+}
+
+a:visited {
+  color: #ff616b;
+}
+
+.dog-div {
+    margin-right: 10px;
+  float:left;
+  width: 250px;
+}
+
+body img {
+  width: 250px;
+  cursor: grab;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+body img {
+  width: 300px;
+  cursor: grab;
+}
+
+
+.dog-div {
+    width: 90%;
+  float:none;
+}
+
+footer, main {
+  margin: 0% 5% 0% 5%;
+}
+
+}

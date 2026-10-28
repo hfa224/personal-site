@@ -1,0 +1,57 @@
+{% extends './projects/weird_web_2026/weird_web_template.html' %}
+
+
+
+{% block meta %}
+<title>Smooth (weird web october)</title>
+<meta name="description" content="Can I smooth your dog? A web page for the prompt Smooth">
+{% endblock %}
+
+{% block style %}
+
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/smooth.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='style/smooth.css') }}">
+<link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://helenffion.cafe/projects/smooth">
+<link rel="octo:octothorpes" href="Smooth" >
+<style>
+
+</style>
+
+<script>
+
+
+
+</script>
+
+
+{% endblock %}
+
+{% block header %}
+<div>
+  <a href="{{ url_for('illusion') }}">&lt;- Illusion</a>
+</div>
+<div>
+  <a href="{{ url_for('projects') }}">Weird Web October</a>
+</div>
+<div>
+  <a href="">...</a>
+</div>
+
+{% endblock %}
+
+{% block content %}
+ <h2>Bristol dialect</h2>
+<div class="dog-div"><p><img id="dog" style="draggable: false" src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/bluebottles/westie-1.webp"></p><p>(Use your mouse or hand to smooth me)</p></div>
+    <p>I'm from the UK and in my 20s I moved to a city called Bristol in the south-west of England.</p>
+    <p>The south west of england is known as the West Country. It has it's own accent and dialect, with various sub-accents. If you're not familiar with the West Country accent, you could imagine the typical on-screen pirate accent, because it's similar; this may be because Edward Teach (Blackbeard) was a native of Bristol, and West Country native Robert Newton's performance in the 1950 Disney film Treasure Island is credited with popularising the stereotypical West Country "pirate voice" <a href="https://en.wikipedia.org/wiki/West_Country_English#Social_stigma_and_future_of_the_dialect">[1]</a>.</p>
+<p><a href="https://en.wikipedia.org/wiki/West_Country_English#Vocabulary">Here is a list of West Country vocabulary</a>, including <b>Smooth</b> (said as "smoove"). In the west country (and parts of wales) it means "to stroke", as in "Can I smooth that dog?".</p>
+    <p>P.s if you want to hear bristol accents, please watch this delightful BBC archives video on the "Bristol L" a dialect feature which is now dying out.</p>
+    <p><details><summary>BBC archives video</summary>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/OyKzYBRfyfw?si=bg7h6JfIQq0cDRCG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></details></p>
+    <p>Image from <a href="https://www.tumblr.com/slipng/tagged/dogs%20png">slipng on tumblr</a></p>
+{% endblock %}
+
+{% block footer %}
+
+
+{% endblock %}

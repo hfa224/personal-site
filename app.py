@@ -122,6 +122,11 @@ def illusion():
     """Renders weird web page"""
     return render_template("projects/weird_web_2026/illusion.html")
 
+@app.route("/projects/smooth/")
+def smooth():
+    """Renders weird web page"""
+    return render_template("projects/weird_web_2026/smooth.html")
+
 @app.route("/counters/")
 def counters():
     """Renders counters page"""
