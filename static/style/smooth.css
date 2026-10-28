@@ -25,7 +25,7 @@ a:visited {
 }
 
 body img {
-  width: 200px;
+  width: 300px;
   cursor: grab;
   float:left;
     -webkit-user-drag: none;
@@ -33,4 +33,13 @@ body img {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+body img {
+  width: 300px;
+  cursor: grab;
+}
+
 }
