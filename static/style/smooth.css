@@ -42,4 +42,8 @@ body img {
   cursor: grab;
 }
 
+footer, main {
+  margin: 0% 5% 0% 5%;
+}
+
 }
