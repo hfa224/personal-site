@@ -1,0 +1,36 @@
+
+
+:root {
+  --font-size: 15px;
+}
+
+body, main {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  background-color: #ffcfc4;
+  color: #0f261f;
+}
+
+a {
+  color: #ff616b;
+}
+
+a:hover {
+  color: #ff616b;
+}
+
+a:visited {
+  color: #ff616b;
+}
+
+body img {
+  width: 200px;
+  cursor: grab;
+  float:left;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
