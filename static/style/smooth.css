@@ -24,10 +24,15 @@ a:visited {
   color: #ff616b;
 }
 
-body img {
-  width: 300px;
-  cursor: grab;
+.dog-div {
+    margin-right: 10px;
   float:left;
+  width: 250px;
+}
+
+body img {
+  width: 250px;
+  cursor: grab;
     -webkit-user-drag: none;
     user-select: none;
     -moz-user-select: none;
@@ -40,6 +45,12 @@ body img {
 body img {
   width: 300px;
   cursor: grab;
+}
+
+
+.dog-div {
+    width: 90%;
+  float:none;
 }
 
 footer, main {
