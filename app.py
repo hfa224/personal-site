@@ -127,6 +127,11 @@ def smooth():
     """Renders weird web page"""
     return render_template("projects/weird_web_2026/smooth.html")
 
+@app.route("/projects/pastel/")
+def pastel():
+    """Renders weird web page"""
+    return render_template("projects/weird_web_2026/pastel.html")
+
 @app.route("/counters/")
 def counters():
     """Renders counters page"""

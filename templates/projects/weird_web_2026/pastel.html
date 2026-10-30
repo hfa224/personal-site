@@ -1,0 +1,71 @@
+{% extends './projects/weird_web_2026/weird_web_template.html' %}
+
+
+
+{% block meta %}
+<title>Pastel (weird web october)</title>
+<meta name="description" content="A web page for the prompt Pastel">
+{% endblock %}
+
+{% block style %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&family=UnifrakturMaguntia&family=Send+Flowers&display=swap"
+  rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style/pastel.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='scripts/pastel.js') }}"></script>
+<link rel="preload" as="fetch" href="https://octothorp.es/?uri=https://helenffion.cafe/projects/pastel">
+<link rel="octo:octothorpes" href="Pastel">
+<style>
+
+</style>
+
+<script>
+
+
+
+</script>
+
+
+{% endblock %}
+
+{% block header %}
+<div>
+  <a href="{{ url_for('smooth') }}">&lt;- Smooth</a>
+</div>
+<div>
+  <a href="{{ url_for('projects') }}">Weird Web October</a>
+</div>
+<div>
+  <a href="">Spooky -&gt;</a>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+
+<img style="width: 400px;"
+  src="{{ url_for('static', filename='images/weird_web/pastel/Screenshot 2026-10-30 103620.png') }}">
+
+<p class="speech">You have gone too far. You have married Fester. You have destroyed his spirit. You have taken him from
+  us.
+  All that I could forgive. But, Debbie ...</p>
+
+<p>
+
+  <button class="speech" onclick="rotateStyle()">Pastels?</button>
+
+</p>
+
+{% endblock %}
+
+{% block footer %}
+
+
+{% endblock %}
